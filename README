@@ -13,7 +13,7 @@ Options:
   -k KEY, --key=KEY     export objects as a dict of objects keyed by KEY
 
 
-Description of fields given per country, as defined by data sources (note that fields may be blank, depending on availability):
+Description of fields given per country, as defined by data sources (note that some fields may be blank):
 	Entity:			Country name as shown in "Administrative Subdivisions of Countries"
 	short_name_en: 		Country's official English short name
 	short_name_fr: 		Country's offical French short name
@@ -25,10 +25,10 @@ Description of fields given per country, as defined by data sources (note that f
 	IOC: 			Codes assigned by the International Olympics Committee
 	FIFA: 			Codes assigned by the Fédération Internationale de Football Association
 	DS: 			Distinguishing signs of vehicles in international traffic (oval bumper sticker codes)
-	WMO: 			Country abbreviations used in weather reports from the World Meteorological Organization
+	WMO: 			Country abbreviations by the World Meteorological Organization
 	GAUL: 			Global Administrative Unit Layers from the Food and Agriculture Organization
 	MARC: 			MAchine-Readable Cataloging codes from the Library of Congress
-	Dial: 			Country code from ITU-T recommendation E.164 (international dialing code), sometimes followed by area code
+	Dial: 			Country code from ITU-T recommendation E.164, sometimes followed by area code
 	Independent: 		Country status, based on the CIA World Factbook
 
 
@@ -39,5 +39,6 @@ ISO 3166 offical English and French short names from:
 Many country codes from:
 	http://www.statoids.com/wab.html
 
-Special thanks to Gwillim Law for his excellent statoids.com site (some of the field descriptions are excerpted from his site),
-which is more up-to-date than most similar resources and is much easier to scrape than multiple Wikipedia pages.
+Special thanks to Gwillim Law for his excellent statoids.com site (some of the field descriptions
+are excerpted from his site), which is more up-to-date than most similar resources and is much
+easier to scrape than multiple Wikipedia pages.
