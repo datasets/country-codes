@@ -1,0 +1,43 @@
+Python script to fetch current ISO 3466 country information
+and output a JSON document of combined country code information.
+Per-country JSON documents may be keyed by any of the fields below.
+
+
+Usage: get_countries_of_earth.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -o OUTFILE, --output=OUTFILE
+                        write data to OUTFILE
+  -l, --list            export objects as a list of objects
+  -k KEY, --key=KEY     export objects as a dict of objects keyed by KEY
+
+
+Description of fields given per country, as defined by data sources (note that fields may be blank, depending on availability):
+	Entity:			Country name as shown in "Administrative Subdivisions of Countries"
+	short_name_en: 		Country's official English short name
+	short_name_fr: 		Country's offical French short name
+	ISO3166-1-Alpha-2: 	Alpha-2 codes from ISO 3166-1
+	ISO3166-1-Alpha-3: 	Alpha-3 codes from ISO 3166-1 (synonymous with World Bank Codes)
+	ISO3166-1-numeric: 	Numeric codes from ISO 3166-1
+	ITU: 			Codes assigned by the International Telecommunications Union
+	FIPS: 			Codes from the U.S. standard FIPS PUB 10-4
+	IOC: 			Codes assigned by the International Olympics Committee
+	FIFA: 			Codes assigned by the Fédération Internationale de Football Association
+	DS: 			Distinguishing signs of vehicles in international traffic (oval bumper sticker codes)
+	WMO: 			Country abbreviations used in weather reports from the World Meteorological Organization
+	GAUL: 			Global Administrative Unit Layers from the Food and Agriculture Organization
+	MARC: 			MAchine-Readable Cataloging codes from the Library of Congress
+	Dial: 			Country code from ITU-T recommendation E.164 (international dialing code), sometimes followed by area code
+	Independent: 		Country status, based on the CIA World Factbook
+
+
+Sources:
+ISO 3166 offical English and French short names from:
+	http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm
+
+Many country codes from:
+	http://www.statoids.com/wab.html
+
+Special thanks to Gwillim Law for his excellent statoids.com site (some of the field descriptions are excerpted from his site),
+which is more up-to-date than most similar resources and is much easier to scrape than multiple Wikipedia pages.
