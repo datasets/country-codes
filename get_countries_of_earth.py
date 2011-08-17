@@ -3,7 +3,7 @@
 # vim: ai ts=4 sts=4 et sw=4
 import codecs
 import urllib
-from optparse import OptionParser
+import argparse
 from lxml import html
 
 try:
@@ -133,14 +133,14 @@ def fetch_and_write(options):
     json.dump(country_info, stream, ensure_ascii=False, indent=2, encoding='utf-8')
 
 if __name__ == "__main__":
-    parser = OptionParser()
-    parser.add_option("-o", "--output", dest="outfile", default="countries-of-earth.json",
+    parser = argparse.ArgumentParser(description='Fetch current ISO 3166 country codes and other standards and output as JSON file')
+    parser.add_argument("-o", "--output", dest="outfile", default="countries-of-earth.json",
                         help="write data to OUTFILE", metavar="OUTFILE")
-    parser.add_option("-l", "--list", dest="as_list", default=False, action="store_true",
+    parser.add_argument("-l", "--list", dest="as_list", default=False, action="store_true",
                         help="export objects as a list of objects")
-    parser.add_option("-k", "--key", dest="key", default="ISO3166-1-Alpha-2",
+    parser.add_argument("-k", "--key", dest="key", default="ISO3166-1-Alpha-2",
                         help="export objects as a dict of objects keyed by KEY", metavar="KEY")
     
-    (options, args) = parser.parse_args()
+    args = parser.parse_args()
 
-    fetch_and_write(options)
+    fetch_and_write(args)
