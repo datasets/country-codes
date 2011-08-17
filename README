@@ -19,7 +19,7 @@ Description of fields given per country, as defined by data sources (note that s
 	short_name_fr: 		Country's offical French short name
 	ISO3166-1-Alpha-2: 	Alpha-2 codes from ISO 3166-1
 	ISO3166-1-Alpha-3: 	Alpha-3 codes from ISO 3166-1 (synonymous with World Bank Codes)
-	ISO3166-1-numeric: 	Numeric codes from ISO 3166-1
+	ISO3166-1-numeric: 	Numeric codes from ISO 3166-1 (synonymous with UN Statistics M49 Codes)
 	ITU: 			Codes assigned by the International Telecommunications Union
 	FIPS: 			Codes from the U.S. standard FIPS PUB 10-4
 	IOC: 			Codes assigned by the International Olympics Committee
