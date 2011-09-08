@@ -3,6 +3,10 @@ and output a JSON document of combined country code information.
 Per-country JSON documents may be keyed by any of the fields below.
 
 
+If CSV output is needed, csvkit has a `in2csv` utility that will convert the JSON nicely.
+See http://csvkit.rtfd.org/ and https://github.com/onyxfish/csvkit
+
+
 Usage: get_countries_of_earth.py [options]
 
 Options:
