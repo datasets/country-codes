@@ -34,11 +34,19 @@ Description of fields given per country, as defined by data sources (note that s
 	MARC: 			MAchine-Readable Cataloging codes from the Library of Congress
 	Dial: 			Country code from ITU-T recommendation E.164, sometimes followed by area code
 	Independent: 		Country status, based on the CIA World Factbook
+	currency_name:		ISO 4217 currency name
+	currency_short_name_en: ISO 4217 country name
+	currency_alphabetic_code:ISO 4217 currency alphabetic code
+	currency_numeric_code: 	ISO 4217 currency alphabetic code
+	currency_minor_unit:	ISO 4217 currency number of minor units
 
 
 Sources:
 ISO 3166 offical English and French short names from:
 	http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm
+
+ISO 4217 currency codes from:
+	http://www.currency-iso.org/dl_iso_table_a1.xml
 
 Many country codes from:
 	http://www.statoids.com/wab.html
@@ -46,3 +54,12 @@ Many country codes from:
 Special thanks to Gwillim Law for his excellent statoids.com site (some of the field descriptions
 are excerpted from his site), which is more up-to-date than most similar resources and is much
 easier to scrape than multiple Wikipedia pages.
+
+
+TODO
+- extract ITU data from MS Word documents (maybe use `antiword`?)
+	list of docs: http://www.itu.int/en/publications/ITU-T/Pages/publications.aspx?parent=T-SP&view=T-SP1
+	E.164: http://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2011-MSW-E.doc
+	E.164 dialing: http://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164C-2010-MSW-E.doc
+	Legal Time: http://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-LT.1-2011-MSW-E.doc
+	E.212 MCC + MNC: http://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.212B-2010-MSW-E.doc
