@@ -4,6 +4,7 @@
 import codecs
 import urllib
 import argparse
+import json
 from lxml import html
 from lxml import etree
 
@@ -15,19 +16,18 @@ RED = '\033[91m'
 BOLD = '\033[1m'
 ENDC = '\033[0m'
 
+
 def print_info(string):
     print GREEN + string + ENDC
+
 
 def print_warn(string):
     print YELLOW + string + ENDC
 
+
 def print_error(string):
     print RED + string + ENDC
 
-try:
-    import simplejson as json
-except ImportError:
-    import json
 
 def fetch_and_write(options):
     # fetch ISO short names in English and French
@@ -55,7 +55,7 @@ def fetch_and_write(options):
                 if ';' in line:
                     semi = line.index(';')
                     name = line[:semi]
-                    alpha2 = line[semi+1:]
+                    alpha2 = line[semi + 1:]
                     if name and alpha2:
                         iso_names.update({alpha2: {'short_name_en': name}})
                         en_names.update({name: alpha2})
@@ -70,7 +70,7 @@ def fetch_and_write(options):
                 if ';' in line:
                     semi = line.index(';')
                     name = line[:semi]
-                    alpha2 = line[semi+1:]
+                    alpha2 = line[semi + 1:]
                     if name and alpha2:
                         if alpha2 in iso_names:
                             # alpha2 should be in iso_names because
@@ -97,7 +97,9 @@ def fetch_and_write(options):
 
     # i dislike some of statoid's column names, so here i have renamed
     # a few to be more descriptive
-    column_names = ["Entity", "ISO3166-1-Alpha-2","ISO3166-1-Alpha-3","ISO3166-1-numeric","ITU","FIPS","IOC","FIFA","DS","WMO","GAUL","MARC","Dial","is_independent"]
+    column_names = ["Entity", "ISO3166-1-Alpha-2", "ISO3166-1-Alpha-3",
+                    "ISO3166-1-numeric", "ITU", "FIPS", "IOC", "FIFA", "DS",
+                    "WMO", "GAUL", "MARC", "Dial", "is_independent"]
     alpha2_key = "ISO3166-1-Alpha-2"
 
     # comment out the preceding two lines and
@@ -157,59 +159,66 @@ def fetch_and_write(options):
             ckey = cinfo[keyed_by]
             country_info.update({ckey: cinfo})
 
-    # fetch iso currency codes 
-    currency_url = "http://www.currency-iso.org/dl_iso_table_a1.xml"
+    # fetch iso currency codes
+    currency_url = "http://www.currency-iso.org/content/dam/isocy/downloads/dl_iso_table_a1.xml"
     print_info('Fetching currency codes...')
     currencies_xml_str = urllib.urlopen(currency_url).read()
     currencies = etree.fromstring(currencies_xml_str)
 
-    currency_tag_map = {\
-            u"ENTITY": u"currency_short_name_en",
-            u"CURRENCY": u"currency_name",
-            u"ALPHABETIC_CODE": u"currency_alphabetic_code",
-            u"NUMERIC_CODE": u"currency_numeric_code",
-            u"MINOR_UNIT": u"currency_minor_unit"
+    # map source's tag names to our property names
+    currency_tag_map = {
+        u"ENTITY": u"currency_short_name_en",
+        u"CURRENCY": u"currency_name",
+        u"ALPHABETIC_CODE": u"currency_alphabetic_code",
+        u"NUMERIC_CODE": u"currency_numeric_code",
+        u"MINOR_UNIT": u"currency_minor_unit"
     }
+    # reconcile country names, add entries for non-country-based currencies
     currency_country_name_map = {
-            u"CONGO, THE DEMOCRATIC REPUBLIC OF": "CONGO, THE DEMOCRATIC REPUBLIC OF THE",
-            u"EUROPEAN UNION ": None,
-            u"HEARD ISLAND AND McDONALD ISLANDS": "HEARD ISLAND AND MCDONALD ISLANDS",
-            u"INTERNATIONAL MONETARY FUND (IMF) ": None,
-            u"KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF": "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",
-            u"LAO PEOPLE’S DEMOCRATIC REPUBLIC": "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
-            u"MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP": None,
-            u"SERBIA ": "SERBIA",
-            u"SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS \"SUCRE\"": None,
-            u"Vatican City State (HOLY SEE)": "HOLY SEE (VATICAN CITY STATE)",
-            u"VIRGIN ISLANDS (BRITISH)": "VIRGIN ISLANDS, BRITISH",
-            u"VIRGIN ISLANDS (US)": "VIRGIN ISLANDS, U.S.",
-            u"ZZ01_Bond Markets Unit European_EURCO": None,
-            u"ZZ02_Bond Markets Unit European_EMU-6": None,
-            u"ZZ03_Bond Markets Unit European_EUA-9": None,
-            u"ZZ04_Bond Markets Unit European_EUA-17": None,
-            u"ZZ05_UIC-Franc": None,
-            u"ZZ06_Testing_Code": None,
-            u"ZZ07_No_Currency": None,
-            u"ZZ08_Gold": None,
-            u"ZZ09_Palladium": None,
-            u"ZZ10_Platinum": None,
-            u"ZZ11_Silver": None,
+        u"CONGO, THE DEMOCRATIC REPUBLIC OF": "CONGO, THE DEMOCRATIC REPUBLIC OF THE",
+        u"HEARD ISLAND AND McDONALD ISLANDS": "HEARD ISLAND AND MCDONALD ISLANDS",
+        u"KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF": "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",
+        u"LAO PEOPLE’S DEMOCRATIC REPUBLIC": "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
+        u"SERBIA ": "SERBIA",
+        u"PALESTINIAN TERRITORY, OCCUPIED": "PALESTINE, STATE OF",
+        u"Vatican City State (HOLY SEE)": "HOLY SEE (VATICAN CITY STATE)",
+        u"VIRGIN ISLANDS (BRITISH)": "VIRGIN ISLANDS, BRITISH",
+        u"VIRGIN ISLANDS (US)": "VIRGIN ISLANDS, U.S.",
+        u"MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP": None,
+        u"INTERNATIONAL MONETARY FUND (IMF)": None,
+        u"SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS \"SUCRE\" ": None,
+        u"EUROPEAN UNION ": None,
+        u"ZZ01_Bond Markets Unit European_EURCO": None,
+        u"ZZ02_Bond Markets Unit European_EMU-6": None,
+        u"ZZ03_Bond Markets Unit European_EUA-9": None,
+        u"ZZ04_Bond Markets Unit European_EUA-17": None,
+        u"ZZ05_UIC-Franc": None,
+        u"ZZ06_Testing_Code": None,
+        u"ZZ07_No_Currency": None,
+        u"ZZ08_Gold": None,
+        u"ZZ09_Palladium": None,
+        u"ZZ10_Platinum": None,
+        u"ZZ11_Silver": None,
     }
     for iso_currency_element in currencies.iterchildren():
         currency_dict = {}
         for currency_tag in iso_currency_element.iterchildren():
-            currency_dict.update({currency_tag_map[currency_tag.tag]: currency_tag.text})
+            currency_dict.update({
+                currency_tag_map[currency_tag.tag]: currency_tag.text})
         currency_alpha2 = None
-        currency_name = currency_dict['currency_short_name_en'].replace(u'\xa0',u'')
+        currency_name = currency_dict['currency_short_name_en'].replace(u'\xa0', u'')
         try:
             currency_alpha2 = en_names[currency_name]
         except KeyError:
-            currency_alpha2 = en_names.get(currency_country_name_map.get(currency_name))
+            currency_alpha2 = en_names.get(
+                currency_country_name_map.get(currency_name))
 
         if currency_alpha2:
             country_info[currency_alpha2].update(currency_dict)
         else:
-            print_warn('Failed to match currency data for country: %s' % currency_name)
+            if currency_name not in currency_country_name_map:
+                print_warn('Failed to match currency data for country: "%s"'
+                           % currency_name)
 
     # dump dict as json to file
     output_filename = "countries-of-earth.json"
@@ -228,7 +237,7 @@ if __name__ == "__main__":
                         help="export objects as a list of objects")
     parser.add_argument("-k", "--key", dest="key", default="ISO3166-1-Alpha-2",
                         help="export objects as a dict of objects keyed by KEY", metavar="KEY")
-    
+
     args = parser.parse_args()
 
     fetch_and_write(args)
