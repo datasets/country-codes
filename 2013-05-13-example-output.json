@@ -1542,7 +1542,7 @@
   }, 
   "PS": {
     "FIFA": "PLE", 
-    "currency_short_name_en": "PALESTINIAN TERRITORY, OCCUPIED", 
+    "currency_short_name_en": "PALESTINE, STATE OF", 
     "Dial": "970", 
     "ITU": " ", 
     "MARC": "gzwj", 
@@ -2749,7 +2749,7 @@
     "ISO3166-1-numeric": "800", 
     "GAUL": "253", 
     "FIPS": "UG", 
-    "currency_minor_unit": "2", 
+    "currency_minor_unit": "0", 
     "short_name_fr": "OUGANDA", 
     "WMO": "UG", 
     "ISO3166-1-Alpha-2": "UG", 
