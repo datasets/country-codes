@@ -1,11 +1,13 @@
-Python script to fetch current ISO 3166 country information
-and output a JSON document of combined country code information.
-Per-country JSON documents may be keyed by any of the fields below.
+DataPackage of current country code information in Simple Data Format.
+See datapackage.json for package description.
+See http://www.dataprotocols.org for more information.
 
-
-If CSV output is needed, csvkit has a `in2csv` utility that will convert the JSON nicely.
+CSV output is provided via csvkit's `in2csv` utility.
 See http://csvkit.rtfd.org/ and https://github.com/onyxfish/csvkit
 
+Additionally, this package includes a Python script to fetch current country information
+and output a JSON document of combined country code information.
+Per-country JSON documents may be keyed by any of the fields below.
 
 Usage: get_countries_of_earth.py [options]
 
@@ -55,6 +57,10 @@ Special thanks to Gwillim Law for his excellent statoids.com site (some of the f
 are excerpted from his site), which is more up-to-date than most similar resources and is much
 easier to scrape than multiple Wikipedia pages.
 
+
+License:
+	To my knowledge, the included standards are freely avaiable for non-commercial purposes.
+	Check the original sources for specific restrictions.
 
 TODO
 - extract ITU data from MS Word documents (maybe use `antiword`?)
