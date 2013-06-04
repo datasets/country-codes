@@ -214,7 +214,12 @@ def fetch_and_write(options):
                 currency_country_name_map.get(currency_name))
 
         if currency_alpha2:
-            country_info[currency_alpha2].update(currency_dict)
+            if options.as_list:
+                cinfo = [c for c in country_info if c['ISO3166-1-Alpha-2'] == currency_alpha2]
+                if len(cinfo) > 0:
+                    cinfo[0].update(currency_dict)
+            else:
+                country_info[currency_alpha2].update(currency_dict)
         else:
             if currency_name not in currency_country_name_map:
                 print_warn('Failed to match currency data for country: "%s"'
