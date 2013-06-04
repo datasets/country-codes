@@ -21,8 +21,8 @@
   ],
   "resources": [
     {
-      "url": "https://raw.github.com/ewheeler/current-countries-of-earth/master/current-countries-of-earth.csv",
-      "path": "current-countries-of-earth.csv",
+      "url": "https://raw.github.com/ewheeler/current-countries-of-earth/master/data/current-countries-of-earth.csv",
+      "path": "data/current-countries-of-earth.csv",
       "schema": {
         "fields": [
           {
