@@ -5,6 +5,14 @@
   "last_modified": "2013-06-04T15:35:04.550422",
   "hash": "385dfca7b9e19fd5ff10503a75e2f615",
   "datapackage_version": "1.0-beta.3",
+  "licenses": [
+    {
+      "id": "odc-pddl",
+      "name": "Public Domain Dedication and License",
+      "version": "1.0",
+      "url": "http://opendatacommons.org/licenses/pddl/1.0/"
+    }
+  ],
   "sources": [
     {
       "name": "International Organization for Standardization",
