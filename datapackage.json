@@ -1,8 +1,8 @@
 {
-  "name": "current-countries-of-earth",
+  "name": "country-codes-comprehensive",
   "title": "Collection of country codes for current countries of Earth",
   "format": "csv",
-  "last_modified": "2013-06-04T15:35:04.550422",
+  "last_modified": "2013-06-17T15:36:33.391400",
   "hash": "385dfca7b9e19fd5ff10503a75e2f615",
   "datapackage_version": "1.0-beta.3",
   "licenses": [
@@ -29,7 +29,7 @@
   ],
   "resources": [
     {
-      "url": "https://raw.github.com/ewheeler/current-countries-of-earth/master/data/current-countries-of-earth.csv",
+      "url": "https://raw.github.com/ewheeler/country-codes-comprehensive/master/data/country-codes-comprehensive.csv",
       "path": "data/current-countries-of-earth.csv",
       "schema": {
         "fields": [
@@ -123,6 +123,6 @@
   ],
   "maintainers":[{
     "name": "Evan Wheeler",
-    "web": "https://github.com/ewheeler/current-countries-of-earth"
+    "web": "https://github.com/ewheeler/country-codes-comprehensive"
   }]
 }
