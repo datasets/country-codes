@@ -29,6 +29,69 @@ def print_error(string):
     print RED + string + ENDC
 
 
+def process_statoids_row(tr):
+    row = []
+    for td in tr.iterchildren():
+        if len(td.keys()) > 0:
+            if td.get('colspan') is not None:
+                # if a cell is taking up more than one column,
+                # append the same number of blanks to the row
+                assert td.get('colspan').isdigit()
+                for col in xrange(int(td.get('colspan'))):
+                    row.append('')
+                continue
+        if len(td.getchildren()) == 1:
+            if td.find("code") is not None:
+                # some cells contain more than one code,
+                # so append a list also containing the code
+                # that appears after the child element (<br>)
+                if len(td.find("code").getchildren()) > 0:
+                    if td.find('.//br') is not None:
+                        row.append(td.find('code').text + ',' + td.find('.//br').tail)
+                        continue
+                    if td.find('.//a') is not None:
+                        anchor = td.find('.//a')
+                        # UK has 4 FIFA codes
+                        if row[1] == "GB":
+                            assert anchor.text == "1"
+                            row.append("ENG,NIR,SCO,WAL")
+                            continue
+                        # MARC treats United States Minor Outlying Islands
+                        # as five countries
+                        if row[1] == "UM":
+                            assert anchor.text == "b"
+                            row.append("ji,xf,wk,uc,up")
+                            continue
+                # some cells contain anchor to footnote,
+                # so append only the content of the code element
+                row.append(td.find("code").text)
+                continue
+            else:
+                if td.find('.//a') is not None:
+                    anchor = td.find('.//a')
+                    # FIPS treats United States Minor Outlying Islands
+                    # as nine countries
+                    if len(row) > 1 and row[1] == "UM":
+                        assert anchor.text == "a"
+                        row.append("FQ,HQ,DQ,JQ,KQ,MQ,BQ,LQ,WQ")
+                        continue
+        row.append(td.text_content())
+    return row
+
+def clean_line(line):
+    try:
+        line = line.decode('utf8')
+        line = line.rstrip()
+        if ';' in line:
+            semi = line.index(';')
+            name = line[:semi]
+            alpha2 = line[semi + 1:]
+            return (name, alpha2)
+        return (None, None)
+    except UnicodeDecodeError:
+        print_warn('Unable to decode country name: %s' % line)
+
+
 def fetch_and_write(options):
     # fetch ISO short names in English and French
     print_info('Fetching English country names and codes...')
@@ -46,48 +109,29 @@ def fetch_and_write(options):
     # urllib.urlretrieve returns a tuple of (localfile, headers)
     with open(iso_names_en[0], "rU") as fin:
         for line in fin:
-            try:
-                line = line.decode('utf8')
-                # strip line endings, etc
-                line = line.rstrip()
-                # fields are semicolon delineated,
-                # so split into separate parts
-                if ';' in line:
-                    semi = line.index(';')
-                    name = line[:semi]
-                    alpha2 = line[semi + 1:]
-                    if name and alpha2:
-                        iso_names.update({alpha2: {'short_name_en': name}})
-                        en_names.update({name: alpha2})
-            except UnicodeDecodeError:
-                print_warn('Unable to decode ENGLISH country name: %s' % line)
+            name, alpha2 = clean_line(line)
+            if name and alpha2:
+                iso_names.update({alpha2: {'short_name_en': name}})
+                en_names.update({name: alpha2})
 
     with open(iso_names_fr[0], "rU") as fin:
         for line in fin:
-            try:
-                line = line.decode('utf8')
-                line = line.rstrip()
-                if ';' in line:
-                    semi = line.index(';')
-                    name = line[:semi]
-                    alpha2 = line[semi + 1:]
-                    if name and alpha2:
-                        if alpha2 in iso_names:
-                            # alpha2 should be in iso_names because
-                            # english was parsed first,
-                            # so append french name to list
-                            names = iso_names[alpha2]
-                            names.update({'short_name_fr': name})
-                            iso_names.update({alpha2: names})
-                        else:
-                            # hopefully this doesnt happen, but
-                            # in case there was no english name,
-                            # add french with a blank space where
-                            # english should be
-                            names = {'short_name_en': '', 'short_name_fr': name}
-                            iso_names.update({alpha2: names})
-            except UnicodeDecodeError:
-                print_warn('Unable to decode FRENCH country name: %s' % line)
+            name, alpha2 = clean_line(line)
+            if name and alpha2:
+                if alpha2 in iso_names:
+                    # alpha2 should be in iso_names because
+                    # english was parsed first,
+                    # so append french name to list
+                    names = iso_names[alpha2]
+                    names.update({'short_name_fr': name})
+                    iso_names.update({alpha2: names})
+                else:
+                    # hopefully this doesnt happen, but
+                    # in case there was no english name,
+                    # add french with a blank space where
+                    # english should be
+                    names = {'short_name_en': '', 'short_name_fr': name}
+                    iso_names.update({alpha2: names})
 
     # fetch content of statoids.com country code page
     statoids_url = "http://www.statoids.com/wab.html"
@@ -120,17 +164,13 @@ def fetch_and_write(options):
     # so fetch half of the rows and zip each row together
     # with the corresponding column name
     for tr in doc.find_class('e'):
-        row = []
-        for td in tr.iterchildren():
-            row.append(td.text_content())
+        row = process_statoids_row(tr)
         row_dict = dict(zip(column_names, row))
         table_rows.update({row_dict[alpha2_key]: row_dict})
 
-    # now do the same for the other half
+    # and again for the other half
     for tr in doc.find_class('o'):
-        row = []
-        for td in tr.iterchildren():
-            row.append(td.text_content())
+        row = process_statoids_row(tr)
         row_dict = dict(zip(column_names, row))
         table_rows.update({row_dict[alpha2_key]: row_dict})
 
@@ -147,7 +187,7 @@ def fetch_and_write(options):
     # the items that are pulled from iso.org
     for alpha2, info in table_rows.iteritems():
         # ignore this crap that was parsed from other tables on the page
-        if alpha2 in ['Codes', 'Codes Codes', 'Codes Codes Codes']:
+        if alpha2 in ['', 'Codes', 'Codes Codes', 'Codes Codes Codes']:
             continue
         cinfo = info
         # add iso.org's names to combined dict of this country's info
