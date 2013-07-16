@@ -2,8 +2,8 @@
   "name": "country-codes-comprehensive",
   "title": "Collection of country codes for current countries of Earth",
   "format": "csv",
-  "last_modified": "2013-06-27T20:52:15.129510",
-  "hash": "be54f2b511facd24ba316909a1d44181",
+  "last_modified": "2013-07-16T22:41:52.119493",
+  "hash": "fdb74ef13502af2968ca94824752e4a5",
   "datapackage_version": "1.0-beta.3",
   "licenses": [
     {

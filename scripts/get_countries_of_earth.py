@@ -200,18 +200,19 @@ def fetch_and_write(options):
             country_info.update({ckey: cinfo})
 
     # fetch iso currency codes
-    currency_url = "http://www.currency-iso.org/content/dam/isocy/downloads/dl_iso_table_a1.xml"
+    currency_url = "http://www.currency-iso.org/dam/downloads/table_a1.xml"
     print_info('Fetching currency codes...')
     currencies_xml_str = urllib.urlopen(currency_url).read()
     currencies = etree.fromstring(currencies_xml_str)
 
     # map source's tag names to our property names
     currency_tag_map = {
-        u"ENTITY": u"currency_short_name_en",
-        u"CURRENCY": u"currency_name",
-        u"ALPHABETIC_CODE": u"currency_alphabetic_code",
-        u"NUMERIC_CODE": u"currency_numeric_code",
-        u"MINOR_UNIT": u"currency_minor_unit"
+        u"CtryNm": u"currency_short_name_en",
+        u"CcyNm": u"currency_name",
+        u"Ccy": u"currency_alphabetic_code",
+        u"CcyNbr": u"currency_numeric_code",
+        u"CcyMnrUnts": u"currency_minor_unit",
+        u"AddtlInf": u"currency_additional_info"
     }
     # reconcile country names, add entries for non-country-based currencies
     currency_country_name_map = {
@@ -226,8 +227,8 @@ def fetch_and_write(options):
         u"VIRGIN ISLANDS (US)": "VIRGIN ISLANDS, U.S.",
         u"MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP": None,
         u"INTERNATIONAL MONETARY FUND (IMF)": None,
-        u"SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS \"SUCRE\" ": None,
-        u"EUROPEAN UNION ": None,
+        u"SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS \"SUCRE\"": None,
+        u"EUROPEAN UNION": None,
         u"ZZ01_Bond Markets Unit European_EURCO": None,
         u"ZZ02_Bond Markets Unit European_EMU-6": None,
         u"ZZ03_Bond Markets Unit European_EUA-9": None,
@@ -240,30 +241,34 @@ def fetch_and_write(options):
         u"ZZ10_Platinum": None,
         u"ZZ11_Silver": None,
     }
-    for iso_currency_element in currencies.iterchildren():
-        currency_dict = {}
-        for currency_tag in iso_currency_element.iterchildren():
-            currency_dict.update({
-                currency_tag_map[currency_tag.tag]: currency_tag.text})
-        currency_alpha2 = None
-        currency_name = currency_dict['currency_short_name_en'].replace(u'\xa0', u'')
-        try:
-            currency_alpha2 = en_names[currency_name]
-        except KeyError:
-            currency_alpha2 = en_names.get(
-                currency_country_name_map.get(currency_name))
+    for iso_currency_table in currencies.iterchildren():
+        for iso_currency_element in iso_currency_table.iterchildren():
+            currency_dict = {}
+            for currency_tag in iso_currency_element.iterchildren():
+                # ignore newly added additional info field
+                if currency_tag_map[currency_tag.tag] == "currency_additional_info":
+                    continue
+                currency_dict.update({
+                    currency_tag_map[currency_tag.tag]: currency_tag.text})
+            currency_alpha2 = None
+            currency_name = currency_dict['currency_short_name_en'].replace(u'\xa0', u'')
+            try:
+                currency_alpha2 = en_names[currency_name]
+            except KeyError:
+                currency_alpha2 = en_names.get(
+                    currency_country_name_map.get(currency_name))
 
-        if currency_alpha2:
-            if options.as_list:
-                cinfo = [c for c in country_info if c['ISO3166-1-Alpha-2'] == currency_alpha2]
-                if len(cinfo) > 0:
-                    cinfo[0].update(currency_dict)
+            if currency_alpha2:
+                if options.as_list:
+                    cinfo = [c for c in country_info if c['ISO3166-1-Alpha-2'] == currency_alpha2]
+                    if len(cinfo) > 0:
+                        cinfo[0].update(currency_dict)
+                else:
+                    country_info[currency_alpha2].update(currency_dict)
             else:
-                country_info[currency_alpha2].update(currency_dict)
-        else:
-            if currency_name not in currency_country_name_map:
-                print_warn('Failed to match currency data for country: "%s"'
-                           % currency_name)
+                if currency_name not in currency_country_name_map:
+                    print_warn('Failed to match currency data for country: "%s"'
+                            % currency_name)
 
     # dump dict as json to file
     output_filename = "countries-of-earth.json"
