@@ -41,6 +41,12 @@ def process_statoids_row(tr):
                     row.append('')
                 continue
         if len(td.getchildren()) == 1:
+            if td.find('.//br') is not None:
+                if len(td.getchildren()) == 1:
+                    if td.getchildren()[0].tag == 'br':
+                        td.text = td.text + " " + td.getchildren()[0].tail
+                        row.append(td.text)
+                        continue
             if td.find("code") is not None:
                 # some cells contain more than one code,
                 # so append a list also containing the code
@@ -91,6 +97,53 @@ def clean_line(line):
     except UnicodeDecodeError:
         print_warn('Unable to decode country name: %s' % line)
 
+def capitalize_country_name(name):
+    # replace all-caps name with capitalized country name
+    cap_list = []
+    always_lower = ['AND', 'THE', 'OF', 'PART', 'DA', 'DE', 'ET', 'DU', 'DES',
+                    'LA']
+    for w in name.split():
+        if w == 'MCDONALD':
+            cap_list.append('McDonald')
+        if w.find('.') > 0:
+            cap_list.append(w.upper())
+            continue
+        if w.find('\'') > 0:
+            # d'Ivoire instead of D'ivoire
+            s = w.split('\'')
+            if len(s[0]) == 1:
+                cap_list.append(s[0].lower() + '\'' + s[1].capitalize())
+                continue
+        if w.find('-') > 0:
+            # Timor-Leste instead of Timor-leste
+            cap_list.append('-'.join([s.capitalize() for s in w.split('-')]))
+            continue
+
+        if w.startswith('('):
+            w = w.replace('(', '')
+            if w in always_lower:
+                w = w.lower()
+            else:
+                w = w.capitalize()
+            cap_list.append('(' + w)
+            continue
+
+        if w[-1] == ')':
+            w = w.replace(')', '')
+            if w in always_lower:
+                w = w.lower()
+            else:
+                w = w.capitalize()
+            cap_list.append(w + ')')
+            continue
+
+        if w in always_lower:
+            cap_list.append(w.lower())
+            continue
+        cap_list.append(w.capitalize())
+
+    capitalized = " ".join(cap_list)
+    return capitalized
 
 def fetch_and_write(options):
     # fetch ISO short names in English and French
@@ -100,10 +153,10 @@ def fetch_and_write(options):
     iso_names_fr = urllib.urlretrieve('http://www.iso.org/iso/list-fr1-semic.txt')
 
     # dict for combining en and fr names
-    # {alpha2: {'short_name_en': en, 'short_name_fr': fr}}
+    # {alpha2: {'name': en, 'name_fr': fr}}
     iso_names = {}
 
-    # dict for looking up alpha2 from short_name_en
+    # dict for looking up alpha2 from name
     en_names = {}
 
     # urllib.urlretrieve returns a tuple of (localfile, headers)
@@ -111,7 +164,7 @@ def fetch_and_write(options):
         for line in fin:
             name, alpha2 = clean_line(line)
             if name and alpha2:
-                iso_names.update({alpha2: {'short_name_en': name}})
+                iso_names.update({alpha2: {'name': name}})
                 en_names.update({name: alpha2})
 
     with open(iso_names_fr[0], "rU") as fin:
@@ -123,14 +176,14 @@ def fetch_and_write(options):
                     # english was parsed first,
                     # so append french name to list
                     names = iso_names[alpha2]
-                    names.update({'short_name_fr': name})
+                    names.update({'name_fr': name})
                     iso_names.update({alpha2: names})
                 else:
                     # hopefully this doesnt happen, but
                     # in case there was no english name,
                     # add french with a blank space where
                     # english should be
-                    names = {'short_name_en': '', 'short_name_fr': name}
+                    names = {'name': '', 'name_fr': name}
                     iso_names.update({alpha2: names})
 
     # fetch content of statoids.com country code page
@@ -192,6 +245,9 @@ def fetch_and_write(options):
         cinfo = info
         # add iso.org's names to combined dict of this country's info
         cinfo.update(iso_names[alpha2])
+        # replace all-caps name with capitalized country name
+        cinfo.update({'name': capitalize_country_name(cinfo['name'])})
+        cinfo.update({'name_fr': capitalize_country_name(cinfo['name_fr'])})
         # add combined dict to global (pun intented) data structure
         if options.as_list:
             country_info.append(cinfo)
@@ -207,7 +263,7 @@ def fetch_and_write(options):
 
     # map source's tag names to our property names
     currency_tag_map = {
-        u"CtryNm": u"currency_short_name_en",
+        u"CtryNm": u"currency_country_name",
         u"CcyNm": u"currency_name",
         u"Ccy": u"currency_alphabetic_code",
         u"CcyNbr": u"currency_numeric_code",
@@ -251,7 +307,7 @@ def fetch_and_write(options):
                 currency_dict.update({
                     currency_tag_map[currency_tag.tag]: currency_tag.text})
             currency_alpha2 = None
-            currency_name = currency_dict['currency_short_name_en'].replace(u'\xa0', u'')
+            currency_name = currency_dict['currency_country_name'].replace(u'\xa0', u'')
             try:
                 currency_alpha2 = en_names[currency_name]
             except KeyError:
