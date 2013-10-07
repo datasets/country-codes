@@ -1,9 +1,9 @@
 {
   "name": "country-codes-comprehensive",
-  "title": "Collection of country codes for current countries of Earth",
+  "title": "List of Countries and Associated Codes including ISO 2/3 digit codes (ISO-3166)",
   "format": "csv",
-  "last_modified": "2013-07-16T22:41:52.119493",
-  "hash": "fdb74ef13502af2968ca94824752e4a5",
+  "last_modified": "2013-10-07T14:59:31.079732",
+  "hash": "d06959f73899a11787d173d3edbe4b88",
   "datapackage_version": "1.0-beta.3",
   "licenses": [
     {
@@ -119,7 +119,7 @@
             "type": "integer"
           },
           {
-            "id": "currency_short_name_en",
+            "id": "currency_country_name",
             "description": "ISO 4217 country name",
             "type": "string"
           },
@@ -129,12 +129,12 @@
             "type": "string"
           },
           {
-            "id": "short_name_en",
+            "id": "name",
             "description": "Country's official English short name",
             "type": "string"
           },
           {
-            "id": "short_name_fr",
+            "id": "name_fr",
             "description": "Country's offical French short name",
             "type": "string"
           }
