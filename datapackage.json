@@ -27,43 +27,18 @@
   ],
   "resources": [
     {
-      "url": "https://raw.github.com/ewheeler/country-codes-comprehensive/master/data/country-codes-comprehensive.csv",
-      "path": "data/current-countries-of-earth.csv",
+      "url": "https://raw.github.com/datasets/country-codes/master/data/country-codes.csv",
+      "path": "data/country-codes.csv",
       "schema": {
         "fields": [
           {
-            "name": "DS",
-            "description": "Distinguishing signs of vehicles in international traffic",
+            "name": "name",
+            "description": "Country's official English short name",
             "type": "string"
           },
           {
-            "name": "Dial",
-            "description": "Country code from ITU-T recommendation E.164, sometimes followed by area code",
-            "type": "string"
-          },
-          {
-            "name": "Entity",
-            "description": "Country name as shown in 'Administrative Subdivisions of Countries'",
-            "type": "string"
-          },
-          {
-            "name": "FIFA",
-            "description": "Codes assigned by the Fédération Internationale de Football Association",
-            "type": "string"
-          },
-          {
-            "name": "FIPS",
-            "description": "Codes from the U.S. standard FIPS PUB 10-4",
-            "type": "string"
-          },
-          {
-            "name": "GAUL",
-            "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
-            "type": "integer"
-          },
-          {
-            "name": "IOC",
-            "description": "Codes assigned by the International Olympics Committee",
+            "name": "name_fr",
+            "description": "Country's offical French short name",
             "type": "string"
           },
           {
@@ -97,8 +72,43 @@
             "type": "string"
           },
           {
+            "name": "DS",
+            "description": "Distinguishing signs of vehicles in international traffic",
+            "type": "string"
+          },
+          {
+            "name": "Dial",
+            "description": "Country code from ITU-T recommendation E.164, sometimes followed by area code",
+            "type": "string"
+          },
+          {
+            "name": "FIFA",
+            "description": "Codes assigned by the Fédération Internationale de Football Association",
+            "type": "string"
+          },
+          {
+            "name": "FIPS",
+            "description": "Codes from the U.S. standard FIPS PUB 10-4",
+            "type": "string"
+          },
+          {
+            "name": "GAUL",
+            "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
+            "type": "integer"
+          },
+          {
+            "name": "IOC",
+            "description": "Codes assigned by the International Olympics Committee",
+            "type": "string"
+          },
+          {
             "name": "currency_alphabetic_code",
             "description": "ISO 4217 currency alphabetic code",
+            "type": "string"
+          },
+          {
+            "name": "currency_country_name",
+            "description": "ISO 4217 country name",
             "type": "string"
           },
           {
@@ -117,23 +127,8 @@
             "type": "integer"
           },
           {
-            "name": "currency_country_name",
-            "description": "ISO 4217 country name",
-            "type": "string"
-          },
-          {
             "name": "is_independent",
             "description": "Country status, based on the CIA World Factbook",
-            "type": "string"
-          },
-          {
-            "name": "name",
-            "description": "Country's official English short name",
-            "type": "string"
-          },
-          {
-            "name": "name_fr",
-            "description": "Country's offical French short name",
             "type": "string"
           }
         ]
