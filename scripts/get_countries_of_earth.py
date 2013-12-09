@@ -5,6 +5,9 @@ import codecs
 import urllib
 import argparse
 import json
+import operator
+import collections
+
 from lxml import html
 from lxml import etree
 
@@ -218,22 +221,22 @@ def fetch_and_write(options):
     # with the corresponding column name
     for tr in doc.find_class('e'):
         row = process_statoids_row(tr)
-        row_dict = dict(zip(column_names, row))
+        row_dict = collections.OrderedDict(zip(column_names, row))
+        # statoids-assigned 'Entity' name is not really a standard
+        row_dict.pop('Entity')
         table_rows.update({row_dict[alpha2_key]: row_dict})
 
     # and again for the other half
     for tr in doc.find_class('o'):
         row = process_statoids_row(tr)
-        row_dict = dict(zip(column_names, row))
+        row_dict = collections.OrderedDict(zip(column_names, row))
+        # statoids-assigned 'Entity' name is not really a standard
+        row_dict.pop('Entity')
         table_rows.update({row_dict[alpha2_key]: row_dict})
 
-    if options.as_list:
-        # list to hold combined country info
-        country_info = []
-    else:
-        # dict to hold combined country info
-        country_info = {}
-        keyed_by = options.key
+    # dict to hold combined country info
+    country_info = {}
+    keyed_by = options.key
 
     # iterate through all the table_rows
     # TODO this assumes that statoids will have all of
@@ -249,11 +252,8 @@ def fetch_and_write(options):
         cinfo.update({'name': capitalize_country_name(cinfo['name'])})
         cinfo.update({'name_fr': capitalize_country_name(cinfo['name_fr'])})
         # add combined dict to global (pun intented) data structure
-        if options.as_list:
-            country_info.append(cinfo)
-        else:
-            ckey = cinfo[keyed_by]
-            country_info.update({ckey: cinfo})
+        ckey = cinfo[keyed_by]
+        country_info.update({ckey: cinfo})
 
     # fetch iso currency codes
     currency_url = "http://www.currency-iso.org/dam/downloads/table_a1.xml"
@@ -272,6 +272,8 @@ def fetch_and_write(options):
     }
     # reconcile country names, add entries for non-country-based currencies
     currency_country_name_map = {
+        u"MACEDONIA, THE FORMER \nYUGOSLAV REPUBLIC OF": "MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF",
+        u"SAINT HELENA, ASCENSION AND \nTRISTAN DA CUNHA": "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA",
         u"CONGO, THE DEMOCRATIC REPUBLIC OF": "CONGO, THE DEMOCRATIC REPUBLIC OF THE",
         u"HEARD ISLAND AND McDONALD ISLANDS": "HEARD ISLAND AND MCDONALD ISLANDS",
         u"KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF": "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",
@@ -307,7 +309,11 @@ def fetch_and_write(options):
                 currency_dict.update({
                     currency_tag_map[currency_tag.tag]: currency_tag.text})
             currency_alpha2 = None
-            currency_name = currency_dict['currency_country_name'].replace(u'\xa0', u'')
+            # remove random line breaks, etc
+            currency_name = currency_dict['currency_country_name'].replace(u'\xa0', u'').replace(u'\n', u'').replace(u'\r', u'')
+            if currency_name is not None:
+                # replace name with line breaks, etc removed
+                currency_dict['currency_country_name'] = currency_name
             try:
                 currency_alpha2 = en_names[currency_name]
             except KeyError:
@@ -315,19 +321,18 @@ def fetch_and_write(options):
                     currency_country_name_map.get(currency_name))
 
             if currency_alpha2:
-                if options.as_list:
-                    cinfo = [c for c in country_info if c['ISO3166-1-Alpha-2'] == currency_alpha2]
-                    if len(cinfo) > 0:
-                        cinfo[0].update(currency_dict)
-                else:
-                    country_info[currency_alpha2].update(currency_dict)
+                country_info[currency_alpha2].update(currency_dict)
             else:
                 if currency_name not in currency_country_name_map:
                     print_warn('Failed to match currency data for country: "%s"'
                             % currency_name)
 
+    # reorganize data for export
+    if options.as_list:
+        # if exporting as list, sort by country name
+        country_info = sorted(country_info.values(), key=operator.itemgetter('name'))
     # dump dict as json to file
-    output_filename = "countries-of-earth.json"
+    output_filename = "data/country-codes.json"
     if options.outfile:
         output_filename = options.outfile
     f = open(output_filename, mode='w')
@@ -337,7 +342,7 @@ def fetch_and_write(options):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Fetch current ISO 3166 country codes and other standards and output as JSON file')
-    parser.add_argument("-o", "--output", dest="outfile", default="countries-of-earth.json",
+    parser.add_argument("-o", "--output", dest="outfile", default="data/country-codes.json",
                         help="write data to OUTFILE", metavar="OUTFILE")
     parser.add_argument("-l", "--list", dest="as_list", default=False, action="store_true",
                         help="export objects as a list of objects")
