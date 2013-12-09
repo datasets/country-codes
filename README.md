@@ -26,25 +26,27 @@ This package includes a Python script to fetch current country information
 and output a JSON document of combined country code information.
 Per-country JSON documents may be keyed by any of the fields below.
 
-CSV output is provided via the `in2csv` utility from [csvkit](http://github.com/onyxfish/csvkit)
+CSV output is provided via the `in2csv` and `csvcut` utilities from [csvkit](http://github.com/onyxfish/csvkit)
 
 Run **scripts/get_countries_of_earth.py --help** for usage information
 
-### data/country-codes-comprehensive.csv
+### data/country-codes.csv
 
 Install requirements:
 
     pip install -r scripts/requirements.pip
 
 
-Run the python script:
+Run the python script to generate json file:
 
-    python scripts/get_countries_of_earth.py -l --output=data/country-codes-comprehensive.json
+    python scripts/get_countries_of_earth.py -l
 
 
-Convert json file to csv:
+Convert json file to csv (and reorder columns):
 
-    in2csv data/country-codes-comprehensive.json > data/country-codes-comprehensive.csv
+    in2csv data/country-codes.json > data/country-codes.csv
+    python scripts/reorder_columns.py
+
 
 ## License
 
