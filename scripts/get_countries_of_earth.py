@@ -148,6 +148,92 @@ def capitalize_country_name(name):
     capitalized = " ".join(cap_list)
     return capitalized
 
+
+def get_currency_data(country_info, en_names):
+    # fetch iso currency codes
+    currency_url = "http://www.currency-iso.org/dam/downloads/table_a1.xml"
+    print_info('Fetching currency codes...')
+    currencies_xml_str = urllib.urlopen(currency_url).read()
+    currencies = etree.fromstring(currencies_xml_str)
+
+    # map source's tag names to our property names
+    currency_tag_map = {
+        u"CtryNm": u"currency_country_name",
+        u"CcyNm": u"currency_name",
+        u"Ccy": u"currency_alphabetic_code",
+        u"CcyNbr": u"currency_numeric_code",
+        u"CcyMnrUnts": u"currency_minor_unit",
+        u"AddtlInf": u"currency_additional_info"
+    }
+    # reconcile country names, add entries for non-country-based currencies
+    currency_country_name_map = {
+        u"MACEDONIA, THE FORMER \nYUGOSLAV REPUBLIC OF": "MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF",
+        u"SAINT HELENA, ASCENSION AND \nTRISTAN DA CUNHA": "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA",
+        u"CONGO, THE DEMOCRATIC REPUBLIC OF": "CONGO, THE DEMOCRATIC REPUBLIC OF THE",
+        u"HEARD ISLAND AND McDONALD ISLANDS": "HEARD ISLAND AND MCDONALD ISLANDS",
+        u"KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF": "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",
+        u"LAO PEOPLE’S DEMOCRATIC REPUBLIC": "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
+        u"SERBIA ": "SERBIA",
+        u"PALESTINIAN TERRITORY, OCCUPIED": "PALESTINE, STATE OF",
+        u"Vatican City State (HOLY SEE)": "HOLY SEE (VATICAN CITY STATE)",
+        u"VIRGIN ISLANDS (BRITISH)": "VIRGIN ISLANDS, BRITISH",
+        u"VIRGIN ISLANDS (US)": "VIRGIN ISLANDS, U.S.",
+        u"MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP": None,
+        u"INTERNATIONAL MONETARY FUND (IMF)": None,
+        u"SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS \"SUCRE\"": None,
+        u"EUROPEAN UNION": None,
+        u"ZZ01_Bond Markets Unit European_EURCO": None,
+        u"ZZ02_Bond Markets Unit European_EMU-6": None,
+        u"ZZ03_Bond Markets Unit European_EUA-9": None,
+        u"ZZ04_Bond Markets Unit European_EUA-17": None,
+        u"ZZ05_UIC-Franc": None,
+        u"ZZ06_Testing_Code": None,
+        u"ZZ07_No_Currency": None,
+        u"ZZ08_Gold": None,
+        u"ZZ09_Palladium": None,
+        u"ZZ10_Platinum": None,
+        u"ZZ11_Silver": None,
+    }
+
+    def process_element(country):
+        currency_dict = {}
+        for currency_tag in country.iterchildren():
+            # ignore newly added additional info field
+            if currency_tag_map[currency_tag.tag] == "currency_additional_info":
+                break
+            # skip 'same day', 'next day', etc variations
+            elif (currency_tag_map[currency_tag.tag] == "currency_name") and (len(currency_tag.items()) > 0):
+                if currency_tag.items()[0][0] == 'IsFund':
+                    break
+            else:
+                currency_dict.update({
+                    currency_tag_map[currency_tag.tag]: currency_tag.text})
+                currency_alpha2 = None
+                # remove random line breaks, etc
+                currency_name = currency_dict['currency_country_name'].replace(u'\xa0', u'').replace(u'\n', u'').replace(u'\r', u'')
+                if currency_name is not None:
+                    # replace name with line breaks, etc removed
+                    currency_dict['currency_country_name'] = currency_name
+                try:
+                    currency_alpha2 = en_names[currency_name]
+                except KeyError:
+                    currency_alpha2 = en_names.get(
+                        currency_country_name_map.get(currency_name))
+
+                if currency_alpha2:
+                    country_info[currency_alpha2].update(currency_dict)
+                else:
+                    if currency_name not in currency_country_name_map:
+                        print_warn('Failed to match currency data for country: "%s"'
+                                   % currency_name)
+        return
+
+    for iso_currency_table in currencies.iterchildren():
+        for country in iso_currency_table.iterchildren():
+            process_element(country)
+
+    return country_info
+
 def fetch_and_write(options):
     # fetch ISO short names in English and French
     print_info('Fetching English country names and codes...')
@@ -255,77 +341,7 @@ def fetch_and_write(options):
         ckey = cinfo[keyed_by]
         country_info.update({ckey: cinfo})
 
-    # fetch iso currency codes
-    currency_url = "http://www.currency-iso.org/dam/downloads/table_a1.xml"
-    print_info('Fetching currency codes...')
-    currencies_xml_str = urllib.urlopen(currency_url).read()
-    currencies = etree.fromstring(currencies_xml_str)
-
-    # map source's tag names to our property names
-    currency_tag_map = {
-        u"CtryNm": u"currency_country_name",
-        u"CcyNm": u"currency_name",
-        u"Ccy": u"currency_alphabetic_code",
-        u"CcyNbr": u"currency_numeric_code",
-        u"CcyMnrUnts": u"currency_minor_unit",
-        u"AddtlInf": u"currency_additional_info"
-    }
-    # reconcile country names, add entries for non-country-based currencies
-    currency_country_name_map = {
-        u"MACEDONIA, THE FORMER \nYUGOSLAV REPUBLIC OF": "MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF",
-        u"SAINT HELENA, ASCENSION AND \nTRISTAN DA CUNHA": "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA",
-        u"CONGO, THE DEMOCRATIC REPUBLIC OF": "CONGO, THE DEMOCRATIC REPUBLIC OF THE",
-        u"HEARD ISLAND AND McDONALD ISLANDS": "HEARD ISLAND AND MCDONALD ISLANDS",
-        u"KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF": "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",
-        u"LAO PEOPLE’S DEMOCRATIC REPUBLIC": "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
-        u"SERBIA ": "SERBIA",
-        u"PALESTINIAN TERRITORY, OCCUPIED": "PALESTINE, STATE OF",
-        u"Vatican City State (HOLY SEE)": "HOLY SEE (VATICAN CITY STATE)",
-        u"VIRGIN ISLANDS (BRITISH)": "VIRGIN ISLANDS, BRITISH",
-        u"VIRGIN ISLANDS (US)": "VIRGIN ISLANDS, U.S.",
-        u"MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP": None,
-        u"INTERNATIONAL MONETARY FUND (IMF)": None,
-        u"SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS \"SUCRE\"": None,
-        u"EUROPEAN UNION": None,
-        u"ZZ01_Bond Markets Unit European_EURCO": None,
-        u"ZZ02_Bond Markets Unit European_EMU-6": None,
-        u"ZZ03_Bond Markets Unit European_EUA-9": None,
-        u"ZZ04_Bond Markets Unit European_EUA-17": None,
-        u"ZZ05_UIC-Franc": None,
-        u"ZZ06_Testing_Code": None,
-        u"ZZ07_No_Currency": None,
-        u"ZZ08_Gold": None,
-        u"ZZ09_Palladium": None,
-        u"ZZ10_Platinum": None,
-        u"ZZ11_Silver": None,
-    }
-    for iso_currency_table in currencies.iterchildren():
-        for iso_currency_element in iso_currency_table.iterchildren():
-            currency_dict = {}
-            for currency_tag in iso_currency_element.iterchildren():
-                # ignore newly added additional info field
-                if currency_tag_map[currency_tag.tag] == "currency_additional_info":
-                    continue
-                currency_dict.update({
-                    currency_tag_map[currency_tag.tag]: currency_tag.text})
-            currency_alpha2 = None
-            # remove random line breaks, etc
-            currency_name = currency_dict['currency_country_name'].replace(u'\xa0', u'').replace(u'\n', u'').replace(u'\r', u'')
-            if currency_name is not None:
-                # replace name with line breaks, etc removed
-                currency_dict['currency_country_name'] = currency_name
-            try:
-                currency_alpha2 = en_names[currency_name]
-            except KeyError:
-                currency_alpha2 = en_names.get(
-                    currency_country_name_map.get(currency_name))
-
-            if currency_alpha2:
-                country_info[currency_alpha2].update(currency_dict)
-            else:
-                if currency_name not in currency_country_name_map:
-                    print_warn('Failed to match currency data for country: "%s"'
-                            % currency_name)
+    country_info = get_currency_data(country_info, en_names)
 
     # reorganize data for export
     if options.as_list:

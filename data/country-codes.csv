@@ -24,7 +24,7 @@ Belize,Belize,BZ,BLZ,084,BLZ,bh,BH,BZ,501,BLZ,BH,28,BIZ,BZD,BELIZE,2,Belize Doll
 Benin,Bénin,BJ,BEN,204,BEN,dm,BJ,DY,229,BEN,BN,29,BEN,XOF,BENIN,0,CFA Franc BCEAO,952,Yes
 Bermuda,Bermudes,BM,BMU,060,BER,bm,BE, ,1-441,BER,BD,30,BER,BMD,BERMUDA,2,Bermudian Dollar,060,Territory of GB
 Bhutan,Bhoutan,BT,BTN,064,BTN,bt, , ,975,BHU,BT,31,BHU,INR,BHUTAN,2,Indian Rupee,356,Yes
-"Bolivia, Plurinational State of","Bolivie, l'État Plurinational de",BO,BOL,068,BOL,bo,BO,BOL,591,BOL,BL,33,BOL,BOV,"BOLIVIA, PLURINATIONAL STATE OF",2,Mvdol,984,Yes
+"Bolivia, Plurinational State of","Bolivie, l'État Plurinational de",BO,BOL,068,BOL,bo,BO,BOL,591,BOL,BL,33,BOL,BOB,"BOLIVIA, PLURINATIONAL STATE OF",2,Boliviano,068,Yes
 "Bonaire, Sint Eustatius and Saba","Bonaire, Saint-Eustache et Saba",BQ,BES,535,ATN,ca,NU,NA,599,ANT,NL,176,AHO,USD,"BONAIRE, SINT EUSTATIUS AND SABA",2,US Dollar,840,Part of NL
 Bosnia and Herzegovina,Bosnie-Herzégovine,BA,BIH,070,BIH,bn,BG,BIH,387,BIH,BK,34,BIH,BAM,BOSNIA AND HERZEGOVINA,2,Convertible Mark,977,Yes
 Botswana,Botswana,BW,BWA,072,BOT,bs,BC,BW,267,BOT,BC,35,BOT,BWP,BOTSWANA,2,Pula,072,Yes
@@ -46,7 +46,7 @@ Chile,Chili,CL,CHL,152,CHL,cl,CH,RCH,56,CHI,CI,51,CHI,CLP,CHILE,0,Chilean Peso,1
 China,Chine,CN,CHN,156,CHN,cc,CI, ,86,CHN,CH,53,CHN,CNY,CHINA,2,Yuan Renminbi,156,Yes
 Christmas Island,"Christmas, Île",CX,CXR,162,CHR,xa,KI,AUS,61,CXR,KT,54, ,AUD,CHRISTMAS ISLAND,2,Australian Dollar,036,Territory of AU
 Cocos (Keeling) Islands,"Cocos (Keeling), Îles",CC,CCK,166,ICO,xb,KK,AUS,61,CCK,CK,56, ,AUD,COCOS (KEELING) ISLANDS,2,Australian Dollar,036,Territory of AU
-Colombia,Colombie,CO,COL,170,CLM,ck,CO,CO,57,COL,CO,57,COL,COU,COLOMBIA,2,Unidad de Valor Real,970,Yes
+Colombia,Colombie,CO,COL,170,CLM,ck,CO,CO,57,COL,CO,57,COL,COP,COLOMBIA,2,Colombian Peso,170,Yes
 Comoros,Comores,KM,COM,174,COM,cq,IC, ,269,COM,CN,58,COM,KMF,COMOROS,0,Comoro Franc,174,Yes
 Congo,Congo,CG,COG,178,COG,cf,CG,RCB,242,CGO,CF,59,CGO,XAF,CONGO,0,CFA Franc BEAC,950,Yes
 "Congo, the Democratic Republic of the","Congo, la République Démocratique du",CD,COD,180,COD,cg,ZR,ZRE,243,COD,CG,68,COD,CDF,"CONGO, THE DEMOCRATIC REPUBLIC OF",2,Congolese Franc,976,Yes
@@ -141,7 +141,7 @@ Martinique,Martinique,MQ,MTQ,474,MRT,mq,MR,F,596,MTQ,MB,158,MRT,EUR,MARTINIQUE,2
 Mauritania,Mauritanie,MR,MRT,478,MTN,mu,MT,RIM,222,MTN,MR,159,MTN,MRO,MAURITANIA,2,Ouguiya,478,Yes
 Mauritius,Maurice,MU,MUS,480,MAU,mf,MA,MS,230,MRI,MP,160,MRI,MUR,MAURITIUS,2,Mauritius Rupee,480,Yes
 Mayotte,Mayotte,YT,MYT,175,MYT,ot, , ,262,MYT,MF,161,MAY,EUR,MAYOTTE,2,Euro,978,Part of FR
-Mexico,Mexique,MX,MEX,484,MEX,mx,MX,MEX,52,MEX,MX,162,MEX,MXV,MEXICO,2,Mexican Unidad de Inversion (UDI),979,Yes
+Mexico,Mexique,MX,MEX,484,MEX,mx,MX,MEX,52,MEX,MX,162,MEX,MXN,MEXICO,2,Mexican Peso,484,Yes
 "Micronesia, Federated States of","Micronésie, États Fédérés de",FM,FSM,583,FSM,fm, , ,691,FSM,FM,163,FSM,USD,"MICRONESIA, FEDERATED STATES OF",2,US Dollar,840,Yes
 "Moldova, Republic of","Moldova, République de",MD,MDA,498,MDA,mv,RM,MD,373,MDA,MD,165,MDA,MDL,"MOLDOVA, REPUBLIC OF",2,Moldovan Leu,498,Yes
 Monaco,Monaco,MC,MCO,492,MCO,mc, ,MC,377,MON,MN,166,MON,EUR,MONACO,2,Euro,978,Yes
@@ -213,7 +213,7 @@ Suriname,Suriname,SR,SUR,740,SUR,sr,SM,SME,597,SUR,NS,233,SUR,SRD,SURINAME,2,Sur
 Svalbard and Jan Mayen,Svalbard et Île Jan Mayen,SJ,SJM,744,NOR, ,SZ, ,47,,"SV,JN",234, ,NOK,SVALBARD AND JAN MAYEN,2,Norwegian Krone,578,Territory of NO
 Swaziland,Swaziland,SZ,SWZ,748,SWZ,sq,SV,SD,268,SWZ,WZ,235,SWZ,SZL,SWAZILAND,2,Lilangeni,748,Yes
 Sweden,Suède,SE,SWE,752,S,sw,SN,S,46,SWE,SW,236,SWE,SEK,SWEDEN,2,Swedish Krona,752,Yes
-Switzerland,Suisse,CH,CHE,756,SUI,sz,SW,CH,41,SUI,SZ,237,SUI,CHW,SWITZERLAND,2,WIR Franc,948,Yes
+Switzerland,Suisse,CH,CHE,756,SUI,sz,SW,CH,41,SUI,SZ,237,SUI,CHF,SWITZERLAND,2,Swiss Franc,756,Yes
 Syrian Arab Republic,"Syrienne, République Arabe",SY,SYR,760,SYR,sy,SY,SYR,963,SYR,SY,238,SYR,SYP,SYRIAN ARAB REPUBLIC,2,Syrian Pound,760,Yes
 "Taiwan, Province of China","Taïwan, Province de Chine",TW,TWN,158, ,ch, ,RC,886,TPE,TW,925,TPE,TWD,"TAIWAN, PROVINCE OF CHINA",2,New Taiwan Dollar,901,Yes
 Tajikistan,Tadjikistan,TJ,TJK,762,TJK,ta,TA,TJ,992,TJK,TI,239,TJK,TJS,TAJIKISTAN,2,Somoni,972,Yes
@@ -233,7 +233,7 @@ Uganda,Ouganda,UG,UGA,800,UGA,ug,UG,EAU,256,UGA,UG,253,UGA,UGX,UGANDA,0,Uganda S
 Ukraine,Ukraine,UA,UKR,804,UKR,un,UR,UA,380,UKR,UP,254,UKR,UAH,UKRAINE,2,Hryvnia,980,Yes
 United Arab Emirates,Émirats Arabes Unis,AE,ARE,784,UAE,ts,ER, ,971,UAE,AE,255,UAE,AED,UNITED ARAB EMIRATES,2,UAE Dirham,784,Yes
 United Kingdom,Royaume-Uni,GB,GBR,826,G,xxk,UK,GB,44,"ENG,NIR,SCO,WAL",UK,256,GBR,GBP,UNITED KINGDOM,2,Pound Sterling,826,Yes
-United States,États-Unis,US,USA,840,USA,xxu,US,USA,1,USA,US,259,USA,USS,UNITED STATES,2,US Dollar (Same day),998,Yes
+United States,États-Unis,US,USA,840,USA,xxu,US,USA,1,USA,US,259,USA,USD,UNITED STATES,2,US Dollar,840,Yes
 United States Minor Outlying Islands,Îles Mineures Éloignées des États-Unis,UM,UMI,581, ,"ji,xf,wk,uc,up", ,USA, ,,"FQ,HQ,DQ,JQ,KQ,MQ,BQ,LQ,WQ",, ,USD,UNITED STATES MINOR OUTLYING ISLANDS,2,US Dollar,840,Territories of US
 Uruguay,Uruguay,UY,URY,858,URG,uy,UY,ROU,598,URU,UY,260,URU,UYU,URUGUAY,2,Peso Uruguayo,858,Yes
 Uzbekistan,Ouzbékistan,UZ,UZB,860,UZB,uz,UZ,UZ,998,UZB,UZ,261,UZB,UZS,UZBEKISTAN,2,Uzbekistan Sum,860,Yes
