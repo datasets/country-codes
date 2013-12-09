@@ -1,9 +1,7 @@
 {
-  "name": "country-codes-comprehensive",
-  "title": "List of Countries and Associated Codes including ISO 2/3 digit codes (ISO-3166)",
+  "name": "country-codes",
+  "title": "Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more",
   "format": "csv",
-  "last_modified": "2013-10-07T14:59:31.079732",
-  "hash": "d06959f73899a11787d173d3edbe4b88",
   "datapackage_version": "1.0-beta.3",
   "licenses": [
     {
@@ -34,107 +32,107 @@
       "schema": {
         "fields": [
           {
-            "id": "DS",
+            "name": "DS",
             "description": "Distinguishing signs of vehicles in international traffic",
             "type": "string"
           },
           {
-            "id": "Dial",
+            "name": "Dial",
             "description": "Country code from ITU-T recommendation E.164, sometimes followed by area code",
             "type": "string"
           },
           {
-            "id": "Entity",
+            "name": "Entity",
             "description": "Country name as shown in 'Administrative Subdivisions of Countries'",
             "type": "string"
           },
           {
-            "id": "FIFA",
+            "name": "FIFA",
             "description": "Codes assigned by the Fédération Internationale de Football Association",
             "type": "string"
           },
           {
-            "id": "FIPS",
+            "name": "FIPS",
             "description": "Codes from the U.S. standard FIPS PUB 10-4",
             "type": "string"
           },
           {
-            "id": "GAUL",
+            "name": "GAUL",
             "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
             "type": "integer"
           },
           {
-            "id": "IOC",
+            "name": "IOC",
             "description": "Codes assigned by the International Olympics Committee",
             "type": "string"
           },
           {
-            "id": "ISO3166-1-Alpha-2",
+            "name": "ISO3166-1-Alpha-2",
             "description": "Alpha-2 codes from ISO 3166-1",
             "type": "string"
           },
           {
-            "id": "ISO3166-1-Alpha-3",
+            "name": "ISO3166-1-Alpha-3",
             "description": "Alpha-3 codes from ISO 3166-1 (synonymous with World Bank Codes)",
             "type": "string"
           },
           {
-            "id": "ISO3166-1-numeric",
+            "name": "ISO3166-1-numeric",
             "description": "Numeric codes from ISO 3166-1 (synonymous with UN Statistics M49 Codes)",
             "type": "integer"
           },
           {
-            "id": "ITU",
+            "name": "ITU",
             "description": "Codes assigned by the International Telecommunications Union",
             "type": "string"
           },
           {
-            "id": "MARC",
+            "name": "MARC",
             "description": "MAchine-Readable Cataloging codes from the Library of Congress",
             "type": "string"
           },
           {
-            "id": "WMO",
+            "name": "WMO",
             "description": "Country abbreviations by the World Meteorological Organization",
             "type": "string"
           },
           {
-            "id": "currency_alphabetic_code",
+            "name": "currency_alphabetic_code",
             "description": "ISO 4217 currency alphabetic code",
             "type": "string"
           },
           {
-            "id": "currency_minor_unit",
+            "name": "currency_minor_unit",
             "description": "ISO 4217 currency number of minor units",
             "type": "integer"
           },
           {
-            "id": "currency_name",
+            "name": "currency_name",
             "description": "ISO 4217 currency name",
             "type": "string"
           },
           {
-            "id": "currency_numeric_code",
+            "name": "currency_numeric_code",
             "description": "ISO 4217 currency numeric code",
             "type": "integer"
           },
           {
-            "id": "currency_country_name",
+            "name": "currency_country_name",
             "description": "ISO 4217 country name",
             "type": "string"
           },
           {
-            "id": "is_independent",
+            "name": "is_independent",
             "description": "Country status, based on the CIA World Factbook",
             "type": "string"
           },
           {
-            "id": "name",
+            "name": "name",
             "description": "Country's official English short name",
             "type": "string"
           },
           {
-            "id": "name_fr",
+            "name": "name_fr",
             "description": "Country's offical French short name",
             "type": "string"
           }
@@ -144,6 +142,6 @@
   ],
   "maintainers":[{
     "name": "Evan Wheeler",
-    "web": "https://github.com/datasets/country-codes-comprehensive"
+    "web": "https://github.com/datasets/country-codes"
   }]
 }
