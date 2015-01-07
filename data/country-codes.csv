@@ -95,7 +95,7 @@ Guinea-Bissau,Guinée-Bissau,GW,GNB,624,GNB,pg,GW, ,245,GNB,PU,105,GBS,XOF,GUIN
 Guyana,Guyana,GY,GUY,328,GUY,gy,GY,GUY,592,GUY,GY,107,GUY,GYD,GUYANA,2,Guyana Dollar,328,Yes
 Haiti,Haïti,HT,HTI,332,HTI,ht,HA,RH,509,HAI,HA,108,HAI,USD,HAITI,2,US Dollar,840,Yes
 Heard Island and McDonald Mcdonald Islands,"Heard-Et-Îles Macdonald, Île",HM,HMD,334, ,hm, ,AUS,672,,HM,109, ,AUD,HEARD ISLAND AND McDONALD ISLANDS,2,Australian Dollar,036,Territory of AU
-Holy See (Vatican City State),Saint-Siège (État de la Cité du Vatican),VA,VAT,336,CVA,vc, ,V,39-06,VAT,VT,110, ,EUR,Vatican City State (HOLY SEE),2,Euro,978,Yes
+Holy See (Vatican City State),Saint-Siège (État de la Cité du Vatican),VA,VAT,336,CVA,vc, ,V,39-06,VAT,VT,110, ,EUR,HOLY SEE (VATICAN CITY STATE),2,Euro,978,Yes
 Honduras,Honduras,HN,HND,340,HND,ho,HO, ,504,HON,HO,111,HON,HNL,HONDURAS,2,Lempira,340,Yes
 Hong Kong,Hong Kong,HK,HKG,344,HKG, ,HK,HK,852,HKG,HK,33364,HKG,HKD,HONG KONG,2,Hong Kong Dollar,344,Part of CN
 Hungary,Hongrie,HU,HUN,348,HNG,hu,HU,H,36,HUN,HU,113,HUN,HUF,HUNGARY,2,Forint,348,Yes
@@ -241,7 +241,7 @@ Vanuatu,Vanuatu,VU,VUT,548,VUT,nn,NV, ,678,VAN,NH,262,VAN,VUV,VANUATU,0,Vatu,54
 "Venezuela, Bolivarian Republic of","Venezuela, République Bolivarienne du",VE,VEN,862,VEN,ve,VN,YV,58,VEN,VE,263,VEN,VEF,"VENEZUELA, BOLIVARIAN REPUBLIC OF",2,Bolivar,937,Yes
 Viet Nam,Viet Nam,VN,VNM,704,VTN,vm,VS,VN,84,VIE,VM,264,VIE,VND,VIET NAM,0,Dong,704,Yes
 "Virgin Islands, British",Îles Vierges Britanniques,VG,VGB,092,VRG,vb,VI,BVI,1-284,VGB,VI,39,IVB,USD,VIRGIN ISLANDS (BRITISH),2,US Dollar,840,Territory of GB
-"Virgin Islands, U.S.",Îles Vierges des États-Unis,VI,VIR,850,VIR,vi,VI,USA,1-340,VIR,VQ,258,ISV,USD,VIRGIN ISLANDS (US),2,US Dollar,840,Territory of US
+"Virgin Islands, U.S.",Îles Vierges des États-Unis,VI,VIR,850,VIR,vi,VI,USA,1-340,VIR,VQ,258,ISV,USD,VIRGIN ISLANDS (U.S.),2,US Dollar,840,Territory of US
 Wallis and Futuna,Wallis et Futuna,WF,WLF,876,WAL,wf,FW,F,681,WLF,WF,266,WAF,XPF,WALLIS AND FUTUNA,0,CFP Franc,953,Territory of FR
 Western Sahara,Sahara Occidental,EH,ESH,732,AOE,ss, , ,212,SAH,WI,268, ,MAD,WESTERN SAHARA,2,Moroccan Dirham,504,In contention
 Yemen,Yémen,YE,YEM,887,YEM,ye,YE,YAR,967,YEM,YM,269,YEM,YER,YEMEN,2,Yemeni Rial,886,Yes
