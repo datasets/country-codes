@@ -120,13 +120,13 @@ Kiribati,Kiribati,KI,KIR,296,KIR,gb,KB, ,686,KIR,KR,135,KIR,AUD,KIRIBATI,2,Aust
 Kuwait,Koweït,KW,KWT,414,KWT,ku,KW,KWT,965,KUW,KU,137,KUW,KWD,KUWAIT,3,Kuwaiti Dinar,414,Yes
 Kyrgyzstan,Kirghizistan,KG,KGZ,417,KGZ,kg,KG,KS,996,KGZ,KG,138,KGZ,KGS,KYRGYZSTAN,2,Som,417,Yes
 Lao People's Democratic Republic,"Lao, République Démocratique Populaire",LA,LAO,418,LAO,ls,LA,LAO,856,LAO,LA,139,LAO,LAK,LAO PEOPLE’S DEMOCRATIC REPUBLIC,2,Kip,418,Yes
-Latvia,Lettonie,LV,LVA,428,LVA,lv,LV,LV,371,LVA,LG,140,LAT,LVL,LATVIA,2,Latvian Lats,428,Yes
+Latvia,Lettonie,LV,LVA,428,LVA,lv,LV,LV,371,LVA,LG,140,LAT,EUR,LATVIA,2,Euro,978,Yes
 Lebanon,Liban,LB,LBN,422,LBN,le,LB,RL,961,LIB,LE,141,LIB,LBP,LEBANON,2,Lebanese Pound,422,Yes
 Lesotho,Lesotho,LS,LSO,426,LSO,lo,LS,LS,266,LES,LT,142,LES,ZAR,LESOTHO,2,Rand,710,Yes
 Liberia,Libéria,LR,LBR,430,LBR,lb,LI,LB,231,LBR,LI,144,LBR,LRD,LIBERIA,2,Liberian Dollar,430,Yes
 Libya,Libye,LY,LBY,434,LBY,ly,LY,LAR,218,LBY,LY,145,LBA,LYD,LIBYA,3,Libyan Dinar,434,Yes
 Liechtenstein,Liechtenstein,LI,LIE,438,LIE,lh, ,FL,423,LIE,LS,146,LIE,CHF,LIECHTENSTEIN,2,Swiss Franc,756,Yes
-Lithuania,Lituanie,LT,LTU,440,LTU,li,LT,LT,370,LTU,LH,147,LTU,LTL,LITHUANIA,2,Lithuanian Litas,440,Yes
+Lithuania,Lituanie,LT,LTU,440,LTU,li,LT,LT,370,LTU,LH,147,LTU,EUR,LITHUANIA,2,Euro,978,Yes
 Luxembourg,Luxembourg,LU,LUX,442,LUX,lu,BX,L,352,LUX,LU,148,LUX,EUR,LUXEMBOURG,2,Euro,978,Yes
 Macao,Macao,MO,MAC,446,MAC, ,MU, ,853,MAC,MC,149,MAC,MOP,MACAO,2,Pataca,446,Part of CN
 "Macedonia, the Former Yugoslav Republic of","Macédoine, l'Ex-république Yougoslave de",MK,MKD,807,MKD,xn,MJ,MK,389,MKD,MK,241,MKD,MKD,"MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF",2,Denar,807,Yes
