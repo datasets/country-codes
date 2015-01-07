@@ -8,9 +8,10 @@ Data comes from multiple sources as follows.
 
 ISO 3166 offical English and French short names are from
 [iso.org](http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm)
+Note: ISO is no longer providing these code lists for free.
 
 ISO 4217 currency codes are from
-[currency-iso.org](http://www.currency-iso.org/dl_iso_table_a1.xml)
+[currency-iso.org](http://www.currency-iso.org/en/home/tables/table-a1.html)
 
 Many other country codes are from
 [statoids.com](http://www.statoids.com/wab.html)
