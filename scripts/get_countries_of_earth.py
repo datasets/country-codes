@@ -55,7 +55,7 @@ def process_statoids_row(tr):
             if td.find('.//br') is not None:
                 if len(td.getchildren()) == 1:
                     if td.getchildren()[0].tag == 'br':
-                        td.text = td.text + " " + td.getchildren()[0].tail
+                        td.text = td.text + "," + td.getchildren()[0].tail
                         row.append(td.text)
                         continue
             if td.find("code") is not None:

@@ -167,7 +167,7 @@ Norway,Norvège,NO,NOR,578,NOR,no,NO,N,47,NOR,NO,186,NOR,NOK,NORWAY,2,Norwegian 
 Oman,Oman,OM,OMN,512,OMA,mk,OM, ,968,OMA,MU,187,OMA,OMR,OMAN,3,Rial Omani,512,Yes
 Pakistan,Pakistan,PK,PAK,586,PAK,pk,PK,PK,92,PAK,PK,188,PAK,PKR,PAKISTAN,2,Pakistan Rupee,586,Yes
 Palau,Palaos,PW,PLW,585,PLW,pw, , ,680,PLW,PS,189,PLW,USD,PALAU,2,US Dollar,840,Yes
-"Palestine, State of","Palestine, État de",PS,PSE,275, ,"gz,wj", , ,970,PLE,"GZ,WE",91 267,PLE,,"PALESTINE, STATE OF",,No universal currency,,In contention
+"Palestine, State of","Palestine, État de",PS,PSE,275, ,"gz,wj", , ,970,PLE,"GZ,WE","91,267",PLE,,"PALESTINE, STATE OF",,No universal currency,,In contention
 Panama,Panama,PA,PAN,591,PNR,pn,PM,PA,507,PAN,PM,191,PAN,USD,PANAMA,2,US Dollar,840,Yes
 Papua New Guinea,Papouasie-Nouvelle-Guinée,PG,PNG,598,PNG,pp,NG,PNG,675,PNG,PP,192,PNG,PGK,PAPUA NEW GUINEA,2,Kina,598,Yes
 Paraguay,Paraguay,PY,PRY,600,PRG,py,PY,PY,595,PAR,PA,194,PAR,PYG,PARAGUAY,0,Guarani,600,Yes
