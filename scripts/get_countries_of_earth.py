@@ -43,6 +43,14 @@ def process_statoids_row(tr):
                 for col in xrange(int(td.get('colspan'))):
                     row.append('')
                 continue
+        if len(td.getchildren()) > 1:
+            if td.find('.//br') is not None:
+                if ((len(row) > 1) and (row[1] == "DO")):
+                    # TIL dominican republic has three dialing codes
+                    # td.text_content() is '1-8091-8291-849'
+                    # so split into list of 5 chars each and join with commas
+                    row.append(','.join(map(''.join, zip(*[iter(td.text_content())]*5))))
+                    continue
         if len(td.getchildren()) == 1:
             if td.find('.//br') is not None:
                 if len(td.getchildren()) == 1:
