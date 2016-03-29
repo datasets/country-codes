@@ -92,7 +92,7 @@
           {
             "name": "GAUL",
             "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
-            "type": "integer"
+            "type": "string"
           },
           {
             "name": "IOC",
