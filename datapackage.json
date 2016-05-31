@@ -11,8 +11,8 @@
   ],
   "sources": [
     {
-      "name": "International Organization for Standardization",
-      "web": "http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm"
+      "name": "Unicode Common Locale Data Repository (CLDR) Project",
+      "web": "https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json"
     },
     {
       "name": "SIX Interbank Clearing Ltd (on behalf of ISO)",
