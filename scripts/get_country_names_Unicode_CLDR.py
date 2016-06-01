@@ -4,7 +4,7 @@ dir_outcome = "data"
 ## Outpuing Lists
 outputfn_tsv_by_locale = "CLDR_country_name_{locale}.tsv"
 outinfn = "country-codes.csv"
-outinfn_bak = "country-codes-bak.csv"
+outinfn_bak = "country-codes-backup.csv"
 
 import os, glob
 import json
@@ -92,26 +92,42 @@ df = pd.DataFrame(outputlist_territories['en'])
 
 df.to_csv(os.path.join('../data',outputfn_tsv_by_locale.format(locale='en')),
           sep='\t', encoding='utf-8',  header = False, index = False)
+df.columns = ['code','name']
+df_indexed = df.set_index(['code'])
 
 df_cc = pd.read_csv(os.path.join('../data',outinfn),
                     sep=',', encoding='utf-8',
                     dtype = {'ISO3166-1-numeric': 'object'},
                     keep_default_na = False, na_values = [])
-
-df.columns = ['code','name']
-df_indexed = df.set_index(['code'])
-
 df_cc_indexd = df_cc.set_index(['ISO3166-1-Alpha-2'])
 
+## Copying the ISO names to "official_name"
+df_cc_indexd ['official_name'] = df_cc_indexd ['name']
+
+## Change the content under the coloumn "name" with CLDR names
 df_cc_indexd ['name'] = [df_indexed['name'][x] for x in list(df_cc_indexd.index)]
+
+##
+df_cc_indexd = df_cc_indexd.reset_index()
+
+## Renaming: name_fr change to official_name_fr
+column_names = [x.replace("name_fr", "official_name_fr") for x in list(df_cc_indexd.columns)]
+df_cc_indexd.columns = column_names
+
+columns_ordered = ['name', 'official_name', 'official_name_fr',
+                   'ISO3166-1-Alpha-2', 'ISO3166-1-Alpha-3', 'ISO3166-1-numeric',
+                   'ITU', 'MARC', 'WMO', 'DS', 'Dial', 'FIFA', 'FIPS', 'GAUL', 'IOC',
+                   'currency_alphabetic_code', 'currency_country_name',
+                   'currency_minor_unit', 'currency_name', 'currency_numeric_code',
+                   'is_independent']
 
 df_out = pd.DataFrame(df_cc_indexd.to_records())
 
-os.rename(os.path.join('../data',outinfn), os.path.join('../data',outinfn_bak))
+#os.rename(os.path.join('../data',outinfn), os.path.join('../data',outinfn_bak))
 
-df_out = df_out.to_csv(os.path.join('../data',outinfn),
-                       columns = list(df_cc.columns),
-                       sep=',', encoding='utf-8',
-                       index  = False,
-                       keep_default_na = False, na_values = [])
+df_out.to_csv(os.path.join('../data',outinfn),
+              columns = list(columns_ordered),
+              sep=',', encoding='utf-8',
+              index  = False,
+              keep_default_na = False, na_values = [])
 

@@ -10,7 +10,7 @@ ISO 3166 customary English short names are from
 [Unicode Common Locale Data Repository (CLDR) Project] (https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json)
 Note: CLDR shorter names "ZZ-alt-short" are used when available
 
-ISO 3166 official French short names are from
+ISO 3166 official English and French short names were from
 [iso.org](http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm)
 Note: ISO is no longer providing these code lists for free.
 

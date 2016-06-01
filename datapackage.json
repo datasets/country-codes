@@ -15,6 +15,10 @@
       "web": "https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json"
     },
     {
+      "name": "International Organization for Standardization",
+      "web": "http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm"
+    },
+    {
       "name": "SIX Interbank Clearing Ltd (on behalf of ISO)",
       "web": "http://www.currency-iso.org/dam/downloads/dl_iso_table_a1.xls"
     },
@@ -31,11 +35,16 @@
         "fields": [
           {
             "name": "name",
+            "description": "Country's customary English short name (CLDR)",
+            "type": "string"
+          },
+          {
+            "name": "official_name",
             "description": "Country's official English short name",
             "type": "string"
           },
           {
-            "name": "name_fr",
+            "name": "official_name_fr",
             "description": "Country's offical French short name",
             "type": "string"
           },
