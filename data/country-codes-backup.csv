@@ -1,0 +1,250 @@
+name,name_fr,ISO3166-1-Alpha-2,ISO3166-1-Alpha-3,ISO3166-1-numeric,ITU,MARC,WMO,DS,Dial,FIFA,FIPS,GAUL,IOC,currency_alphabetic_code,currency_country_name,currency_minor_unit,currency_name,currency_numeric_code,is_independent
+Afghanistan,Afghanistan,AF,AFG,004,AFG,af,AF,AFG,93,AFG,AF,1,AFG,AFN,AFGHANISTAN,2,Afghani,971,Yes
+Albania,Albanie,AL,ALB,008,ALB,aa,AB,AL,355,ALB,AL,3,ALB,ALL,ALBANIA,2,Lek,008,Yes
+Algeria,Algérie,DZ,DZA,012,ALG,ae,AL,DZ,213,ALG,AG,4,ALG,DZD,ALGERIA,2,Algerian Dinar,012,Yes
+American Samoa,Samoa Américaines,AS,ASM,016,SMA,as, ,USA,1-684,ASA,AQ,5,ASA,USD,AMERICAN SAMOA,2,US Dollar,840,Territory of US
+Andorra,Andorre,AD,AND,020,AND,an, ,AND,376,AND,AN,7,AND,EUR,ANDORRA,2,Euro,978,Yes
+Angola,Angola,AO,AGO,024,AGL,ao,AN, ,244,ANG,AO,8,ANG,AOA,ANGOLA,2,Kwanza,973,Yes
+Anguilla,Anguilla,AI,AIA,660,AIA,am, , ,1-264,AIA,AV,9,AIA,XCD,ANGUILLA,2,East Caribbean Dollar,951,Territory of GB
+Antarctica,Antarctique,AQ,ATA,010, ,ay,AA, ,672,ROS,AY,10, ,,ANTARCTICA,,No universal currency,,International
+Antigua and Barbuda,Antigua-Et-Barbuda,AG,ATG,028,ATG,aq,AT, ,1-268,ATG,AC,11,ANT,XCD,ANTIGUA AND BARBUDA,2,East Caribbean Dollar,951,Yes
+Argentina,Argentine,AR,ARG,032,ARG,ag,AG,RA,54,ARG,AR,12,ARG,ARS,ARGENTINA,2,Argentine Peso,032,Yes
+Armenia,Arménie,AM,ARM,051,ARM,ai,AY,AM,374,ARM,AM,13,ARM,AMD,ARMENIA,2,Armenian Dram,051,Yes
+Aruba,Aruba,AW,ABW,533,ABW,aw,NU, ,297,ARU,AA,14,ARU,AWG,ARUBA,2,Aruban Florin,533,Part of NL
+Australia,Australie,AU,AUS,036,AUS,at,AU,AUS,61,AUS,AS,17,AUS,AUD,AUSTRALIA,2,Australian Dollar,036,Yes
+Austria,Autriche,AT,AUT,040,AUT,au,OS,A,43,AUT,AU,18,AUT,EUR,AUSTRIA,2,Euro,978,Yes
+Azerbaijan,Azerbaïdjan,AZ,AZE,031,AZE,aj,AJ,AZ,994,AZE,AJ,19,AZE,AZN,AZERBAIJAN,2,Azerbaijanian Manat,944,Yes
+Bahamas,Bahamas,BS,BHS,044,BAH,bf,BA,BS,1-242,BAH,BF,20,BAH,BSD,BAHAMAS,2,Bahamian Dollar,044,Yes
+Bahrain,Bahreïn,BH,BHR,048,BHR,ba,BN,BRN,973,BHR,BA,21,BRN,BHD,BAHRAIN,3,Bahraini Dinar,048,Yes
+Bangladesh,Bangladesh,BD,BGD,050,BGD,bg,BW,BD,880,BAN,BG,23,BAN,BDT,BANGLADESH,2,Taka,050,Yes
+Barbados,Barbade,BB,BRB,052,BRB,bb,BR,BDS,1-246,BRB,BB,24,BAR,BBD,BARBADOS,2,Barbados Dollar,052,Yes
+Belarus,Bélarus,BY,BLR,112,BLR,bw,BY,BY,375,BLR,BO,26,BLR,BYR,BELARUS,0,Belarussian Ruble,974,Yes
+Belgium,Belgique,BE,BEL,056,BEL,be,BX,B,32,BEL,BE,27,BEL,EUR,BELGIUM,2,Euro,978,Yes
+Belize,Belize,BZ,BLZ,084,BLZ,bh,BH,BZ,501,BLZ,BH,28,BIZ,BZD,BELIZE,2,Belize Dollar,084,Yes
+Benin,Bénin,BJ,BEN,204,BEN,dm,BJ,DY,229,BEN,BN,29,BEN,XOF,BENIN,0,CFA Franc BCEAO,952,Yes
+Bermuda,Bermudes,BM,BMU,060,BER,bm,BE, ,1-441,BER,BD,30,BER,BMD,BERMUDA,2,Bermudian Dollar,060,Territory of GB
+Bhutan,Bhoutan,BT,BTN,064,BTN,bt, , ,975,BHU,BT,31,BHU,INR,BHUTAN,2,Indian Rupee,356,Yes
+"Bolivia, Plurinational State of","Bolivie, l'État Plurinational de",BO,BOL,068,BOL,bo,BO,BOL,591,BOL,BL,33,BOL,BOB,"BOLIVIA, PLURINATIONAL STATE OF",2,Boliviano,068,Yes
+"Bonaire, Sint Eustatius and Saba","Bonaire, Saint-Eustache et Saba",BQ,BES,535,ATN,ca,NU,NA,599,ANT,NL,176,AHO,USD,"BONAIRE, SINT EUSTATIUS AND SABA",2,US Dollar,840,Part of NL
+Bosnia and Herzegovina,Bosnie-Herzégovine,BA,BIH,070,BIH,bn,BG,BIH,387,BIH,BK,34,BIH,BAM,BOSNIA AND HERZEGOVINA,2,Convertible Mark,977,Yes
+Botswana,Botswana,BW,BWA,072,BOT,bs,BC,BW,267,BOT,BC,35,BOT,BWP,BOTSWANA,2,Pula,072,Yes
+Bouvet Island,"Bouvet, Île",BV,BVT,074, ,bv,BV, ,47,,BV,36, ,NOK,BOUVET ISLAND,2,Norwegian Krone,578,Territory of NO
+Brazil,Brésil,BR,BRA,076,B,bl,BZ,BR,55,BRA,BR,37,BRA,BRL,BRAZIL,2,Brazilian Real,986,Yes
+British Indian Ocean Territory,"Océan Indien, Territoire Britannique de l'",IO,IOT,086,BIO,bi, , ,246,,IO,38, ,USD,BRITISH INDIAN OCEAN TERRITORY,2,US Dollar,840,Territory of GB
+Brunei Darussalam,Brunei Darussalam,BN,BRN,096,BRU,bx,BD,BRU,673,BRU,BX,40,BRU,BND,BRUNEI DARUSSALAM,2,Brunei Dollar,096,Yes
+Bulgaria,Bulgarie,BG,BGR,100,BUL,bu,BU,BG,359,BUL,BU,41,BUL,BGN,BULGARIA,2,Bulgarian Lev,975,Yes
+Burkina Faso,Burkina Faso,BF,BFA,854,BFA,uv,HV,BF,226,BFA,UV,42,BUR,XOF,BURKINA FASO,0,CFA Franc BCEAO,952,Yes
+Burundi,Burundi,BI,BDI,108,BDI,bd,BI,RU,257,BDI,BY,43,BDI,BIF,BURUNDI,0,Burundi Franc,108,Yes
+Cambodia,Cambodge,KH,KHM,116,CBG,cb,KP,K,855,CAM,CB,44,CAM,KHR,CAMBODIA,2,Riel,116,Yes
+Cameroon,Cameroun,CM,CMR,120,CME,cm,CM,CAM,237,CMR,CM,45,CMR,XAF,CAMEROON,0,CFA Franc BEAC,950,Yes
+Canada,Canada,CA,CAN,124,CAN,xxc,CN,CDN,1,CAN,CA,46,CAN,CAD,CANADA,2,Canadian Dollar,124,Yes
+Cape Verde,Cap-Vert,CV,CPV,132,CPV,cv,CV, ,238,CPV,CV,47,CPV,CVE,CABO VERDE,2,Cabo Verde Escudo,132,Yes
+Cayman Islands,"Caïmans, Îles",KY,CYM,136,CYM,cj,GC, ,1-345,CAY,CJ,48,CAY,KYD,CAYMAN ISLANDS,2,Cayman Islands Dollar,136,Territory of GB
+Central African Republic,"Centrafricaine, République",CF,CAF,140,CAF,cx,CE,RCA,236,CTA,CT,49,CAF,XAF,CENTRAL AFRICAN REPUBLIC,0,CFA Franc BEAC,950,Yes
+Chad,Tchad,TD,TCD,148,TCD,cd,CD,TCH,235,CHA,CD,50,CHA,XAF,CHAD,0,CFA Franc BEAC,950,Yes
+Chile,Chili,CL,CHL,152,CHL,cl,CH,RCH,56,CHI,CI,51,CHI,CLP,CHILE,0,Chilean Peso,152,Yes
+China,Chine,CN,CHN,156,CHN,cc,CI, ,86,CHN,CH,53,CHN,CNY,CHINA,2,Yuan Renminbi,156,Yes
+Christmas Island,"Christmas, Île",CX,CXR,162,CHR,xa,KI,AUS,61,CXR,KT,54, ,AUD,CHRISTMAS ISLAND,2,Australian Dollar,036,Territory of AU
+Cocos (Keeling) Islands,"Cocos (Keeling), Îles",CC,CCK,166,ICO,xb,KK,AUS,61,CCK,CK,56, ,AUD,COCOS (KEELING) ISLANDS,2,Australian Dollar,036,Territory of AU
+Colombia,Colombie,CO,COL,170,CLM,ck,CO,CO,57,COL,CO,57,COL,COP,COLOMBIA,2,Colombian Peso,170,Yes
+Comoros,Comores,KM,COM,174,COM,cq,IC, ,269,COM,CN,58,COM,KMF,COMOROS,0,Comoro Franc,174,Yes
+Congo,Congo,CG,COG,178,COG,cf,CG,RCB,242,CGO,CF,59,CGO,XAF,CONGO,0,CFA Franc BEAC,950,Yes
+"Congo, the Democratic Republic of the","Congo, la République Démocratique du",CD,COD,180,COD,cg,ZR,ZRE,243,COD,CG,68,COD,,,,,,Yes
+Cook Islands,"Cook, Îles",CK,COK,184,CKH,cw,KU,NZ,682,COK,CW,60,COK,NZD,COOK ISLANDS,2,New Zealand Dollar,554,Associated with NZ
+Costa Rica,Costa Rica,CR,CRI,188,CTR,cr,CS,CR,506,CRC,CS,61,CRC,CRC,COSTA RICA,2,Costa Rican Colon,188,Yes
+Croatia,Croatie,HR,HRV,191,HRV,ci,RH,HR,385,CRO,HR,62,CRO,HRK,CROATIA,2,Croatian Kuna,191,Yes
+Cuba,Cuba,CU,CUB,192,CUB,cu,CU,C,53,CUB,CU,63,CUB,CUP,CUBA,2,Cuban Peso,192,Yes
+Curaçao,Curaçao,CW,CUW,531,,co,,,599,,UC,,,ANG,CURAÇAO,2,Netherlands Antillean Guilder,532,Part of NL
+Cyprus,Chypre,CY,CYP,196,CYP,cy,CY,CY,357,CYP,CY,64,CYP,EUR,CYPRUS,2,Euro,978,Yes
+Czech Republic,"Tchèque, République",CZ,CZE,203,CZE,xr,CZ,CZ,420,CZE,EZ,65,CZE,CZK,CZECH REPUBLIC,2,Czech Koruna,203,Yes
+Côte d'Ivoire,Côte d'Ivoire,CI,CIV,384,CTI,iv,IV,CI,225,CIV,IV,66,CIV,XOF,CÔTE D'IVOIRE,0,CFA Franc BCEAO,952,Yes
+Denmark,Danemark,DK,DNK,208,DNK,dk,DN,DK,45,DEN,DA,69,DEN,DKK,DENMARK,2,Danish Krone,208,Yes
+Djibouti,Djibouti,DJ,DJI,262,DJI,ft,DJ, ,253,DJI,DJ,70,DJI,DJF,DJIBOUTI,0,Djibouti Franc,262,Yes
+Dominica,Dominique,DM,DMA,212,DMA,dq,DO,WD,1-767,DMA,DO,71,DMA,XCD,DOMINICA,2,East Caribbean Dollar,951,Yes
+Dominican Republic,"Dominicaine, République",DO,DOM,214,DOM,dr,DR,DOM,"1-809,1-829,1-849",DOM,DR,72,DOM,DOP,DOMINICAN REPUBLIC,2,Dominican Peso,214,Yes
+Ecuador,Équateur,EC,ECU,218,EQA,ec,EQ,EC,593,ECU,EC,73,ECU,USD,ECUADOR,2,US Dollar,840,Yes
+Egypt,Égypte,EG,EGY,818,EGY,ua,EG,ET,20,EGY,EG,40765,EGY,EGP,EGYPT,2,Egyptian Pound,818,Yes
+El Salvador,El Salvador,SV,SLV,222,SLV,es,ES,ES,503,SLV,ES,75,ESA,USD,EL SALVADOR,2,US Dollar,840,Yes
+Equatorial Guinea,Guinée Équatoriale,GQ,GNQ,226,GNE,eg,GQ, ,240,EQG,EK,76,GEQ,XAF,EQUATORIAL GUINEA,0,CFA Franc BEAC,950,Yes
+Eritrea,Érythrée,ER,ERI,232,ERI,ea, , ,291,ERI,ER,77,ERI,ERN,ERITREA,2,Nakfa,232,Yes
+Estonia,Estonie,EE,EST,233,EST,er,EO,EST,372,EST,EN,78,EST,EUR,ESTONIA,2,Euro,978,Yes
+Ethiopia,Éthiopie,ET,ETH,231,ETH,et,ET,ETH,251,ETH,ET,79,ETH,ETB,ETHIOPIA,2,Ethiopian Birr,230,Yes
+Falkland Islands (Malvinas),"Falkland, Îles (Malvinas)",FK,FLK,238,FLK,fk,FK, ,500,FLK,FK,81,FLK,FKP,FALKLAND ISLANDS (MALVINAS),2,Falkland Islands Pound,238,Territory of GB
+Faroe Islands,"Féroé, Îles",FO,FRO,234,FRO,fa,FA,FO,298,FRO,FO,82,FAR,DKK,FAROE ISLANDS,2,Danish Krone,208,Part of DK
+Fiji,Fidji,FJ,FJI,242,FJI,fj,FJ,FJI,679,FIJ,FJ,83,FIJ,FJD,FIJI,2,Fiji Dollar,242,Yes
+Finland,Finlande,FI,FIN,246,FIN,fi,FI,FIN,358,FIN,FI,84,FIN,EUR,FINLAND,2,Euro,978,Yes
+France,France,FR,FRA,250,F,fr,FR,F,33,FRA,FR,85,FRA,EUR,FRANCE,2,Euro,978,Yes
+French Guiana,Guyane Française,GF,GUF,254,GUF,fg,FG,F,594,GUF,FG,86,FGU,EUR,FRENCH GUIANA,2,Euro,978,Part of FR
+French Polynesia,Polynésie Française,PF,PYF,258,OCE,fp,PF,F,689,TAH,FP,87,FPO,XPF,FRENCH POLYNESIA,0,CFP Franc,953,Territory of FR
+French Southern Territories,Terres Australes Françaises,TF,ATF,260, ,fs, ,F,262,,FS,88, ,EUR,FRENCH SOUTHERN TERRITORIES,2,Euro,978,Territory of FR
+Gabon,Gabon,GA,GAB,266,GAB,go,GO,G,241,GAB,GB,89,GAB,XAF,GABON,0,CFA Franc BEAC,950,Yes
+Gambia,Gambie,GM,GMB,270,GMB,gm,GB,WAG,220,GAM,GA,90,GAM,GMD,GAMBIA,2,Dalasi,270,Yes
+Georgia,Géorgie,GE,GEO,268,GEO,gs,GG,GE,995,GEO,GG,92,GEO,GEL,GEORGIA,2,Lari,981,Yes
+Germany,Allemagne,DE,DEU,276,D,gw,DL,D,49,GER,GM,93,GER,EUR,GERMANY,2,Euro,978,Yes
+Ghana,Ghana,GH,GHA,288,GHA,gh,GH,GH,233,GHA,GH,94,GHA,GHS,GHANA,2,Ghana Cedi,936,Yes
+Gibraltar,Gibraltar,GI,GIB,292,GIB,gi,GI,GBZ,350,GBZ,GI,95,GIB,GIP,GIBRALTAR,2,Gibraltar Pound,292,Territory of GB
+Greece,Grèce,GR,GRC,300,GRC,gr,GR,GR,30,GRE,GR,97,GRE,EUR,GREECE,2,Euro,978,Yes
+Greenland,Groenland,GL,GRL,304,GRL,gl,GL,DK,299,GRL,GL,98,GRL,DKK,GREENLAND,2,Danish Krone,208,Part of DK
+Grenada,Grenade,GD,GRD,308,GRD,gd,GD,WG,1-473,GRN,GJ,99,GRN,XCD,GRENADA,2,East Caribbean Dollar,951,Yes
+Guadeloupe,Guadeloupe,GP,GLP,312,GDL,gp,MF,F,590,GLP,GP,100,GUD,EUR,GUADELOUPE,2,Euro,978,Part of FR
+Guam,Guam,GU,GUM,316,GUM,gu,GM,USA,1-671,GUM,GQ,101,GUM,USD,GUAM,2,US Dollar,840,Territory of US
+Guatemala,Guatemala,GT,GTM,320,GTM,gt,GU,GCA,502,GUA,GT,103,GUA,GTQ,GUATEMALA,2,Quetzal,320,Yes
+Guernsey,Guernesey,GG,GGY,831, ,uik, ,GBG,44,GBG,GK,104, ,GBP,GUERNSEY,2,Pound Sterling,826,Crown dependency of GB
+Guinea,Guinée,GN,GIN,324,GUI,gv,GN,RG,224,GUI,GV,106,GUI,GNF,GUINEA,0,Guinea Franc,324,Yes
+Guinea-Bissau,Guinée-Bissau,GW,GNB,624,GNB,pg,GW, ,245,GNB,PU,105,GBS,XOF,GUINEA-BISSAU,0,CFA Franc BCEAO,952,Yes
+Guyana,Guyana,GY,GUY,328,GUY,gy,GY,GUY,592,GUY,GY,107,GUY,GYD,GUYANA,2,Guyana Dollar,328,Yes
+Haiti,Haïti,HT,HTI,332,HTI,ht,HA,RH,509,HAI,HA,108,HAI,USD,HAITI,2,US Dollar,840,Yes
+Heard Island and McDonald Islands,"Heard-Et-Îles Macdonald, Île",HM,HMD,334, ,hm, ,AUS,672,,HM,109, ,AUD,HEARD ISLAND AND McDONALD ISLANDS,2,Australian Dollar,036,Territory of AU
+Holy See (Vatican City State),Saint-Siège (État de la Cité du Vatican),VA,VAT,336,CVA,vc, ,V,39-06,VAT,VT,110, ,EUR,HOLY SEE (VATICAN CITY STATE),2,Euro,978,Yes
+Honduras,Honduras,HN,HND,340,HND,ho,HO, ,504,HON,HO,111,HON,HNL,HONDURAS,2,Lempira,340,Yes
+Hong Kong,Hong Kong,HK,HKG,344,HKG, ,HK,HK,852,HKG,HK,33364,HKG,HKD,HONG KONG,2,Hong Kong Dollar,344,Part of CN
+Hungary,Hongrie,HU,HUN,348,HNG,hu,HU,H,36,HUN,HU,113,HUN,HUF,HUNGARY,2,Forint,348,Yes
+Iceland,Islande,IS,ISL,352,ISL,ic,IL,IS,354,ISL,IC,114,ISL,ISK,ICELAND,0,Iceland Krona,352,Yes
+India,Inde,IN,IND,356,IND,ii,IN,IND,91,IND,IN,115,IND,INR,INDIA,2,Indian Rupee,356,Yes
+Indonesia,Indonésie,ID,IDN,360,INS,io,ID,RI,62,IDN,ID,116,INA,IDR,INDONESIA,2,Rupiah,360,Yes
+"Iran, Islamic Republic of","Iran, République Islamique d'",IR,IRN,364,IRN,ir,IR,IR,98,IRN,IR,117,IRI,IRR,"IRAN, ISLAMIC REPUBLIC OF",2,Iranian Rial,364,Yes
+Iraq,Iraq,IQ,IRQ,368,IRQ,iq,IQ,IRQ,964,IRQ,IZ,118,IRQ,IQD,IRAQ,3,Iraqi Dinar,368,Yes
+Ireland,Irlande,IE,IRL,372,IRL,ie,IE,IRL,353,IRL,EI,119,IRL,EUR,IRELAND,2,Euro,978,Yes
+Isle of Man,Île de Man,IM,IMN,833, ,uik, ,GBM,44,GBM,IM,120, ,GBP,ISLE OF MAN,2,Pound Sterling,826,Crown dependency of GB
+Israel,Israël,IL,ISR,376,ISR,is,IS,IL,972,ISR,IS,121,ISR,ILS,ISRAEL,2,New Israeli Sheqel,376,Yes
+Italy,Italie,IT,ITA,380,I,it,IY,I,39,ITA,IT,122,ITA,EUR,ITALY,2,Euro,978,Yes
+Jamaica,Jamaïque,JM,JAM,388,JMC,jm,JM,JA,1-876,JAM,JM,123,JAM,JMD,JAMAICA,2,Jamaican Dollar,388,Yes
+Japan,Japon,JP,JPN,392,J,ja,JP,J,81,JPN,JA,126,JPN,JPY,JAPAN,0,Yen,392,Yes
+Jersey,Jersey,JE,JEY,832, ,uik, ,GBJ,44,GBJ,JE,128, ,GBP,JERSEY,2,Pound Sterling,826,Crown dependency of GB
+Jordan,Jordanie,JO,JOR,400,JOR,jo,JD,HKJ,962,JOR,JO,130,JOR,JOD,JORDAN,3,Jordanian Dinar,400,Yes
+Kazakhstan,Kazakhstan,KZ,KAZ,398,KAZ,kz,KZ,KZ,7,KAZ,KZ,132,KAZ,KZT,KAZAKHSTAN,2,Tenge,398,Yes
+Kenya,Kenya,KE,KEN,404,KEN,ke,KN,EAK,254,KEN,KE,133,KEN,KES,KENYA,2,Kenyan Shilling,404,Yes
+Kiribati,Kiribati,KI,KIR,296,KIR,gb,KB, ,686,KIR,KR,135,KIR,AUD,KIRIBATI,2,Australian Dollar,036,Yes
+"Korea, Democratic People's Republic of","Corée, République Populaire Démocratique de",KP,PRK,408,KRE,kn,KR, ,850,PRK,KN,67,PRK,KPW,"KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF",2,North Korean Won,408,Yes
+"Korea, Republic of","Corée, République de",KR,KOR,410,KOR,ko,KO,ROK,82,KOR,KS,202,KOR,KRW,"KOREA, REPUBLIC OF",0,Won,410,Yes
+Kuwait,Koweït,KW,KWT,414,KWT,ku,KW,KWT,965,KUW,KU,137,KUW,KWD,KUWAIT,3,Kuwaiti Dinar,414,Yes
+Kyrgyzstan,Kirghizistan,KG,KGZ,417,KGZ,kg,KG,KS,996,KGZ,KG,138,KGZ,KGS,KYRGYZSTAN,2,Som,417,Yes
+Lao People's Democratic Republic,"Lao, République Démocratique Populaire",LA,LAO,418,LAO,ls,LA,LAO,856,LAO,LA,139,LAO,LAK,LAO PEOPLE’S DEMOCRATIC REPUBLIC,2,Kip,418,Yes
+Latvia,Lettonie,LV,LVA,428,LVA,lv,LV,LV,371,LVA,LG,140,LAT,EUR,LATVIA,2,Euro,978,Yes
+Lebanon,Liban,LB,LBN,422,LBN,le,LB,RL,961,LIB,LE,141,LIB,LBP,LEBANON,2,Lebanese Pound,422,Yes
+Lesotho,Lesotho,LS,LSO,426,LSO,lo,LS,LS,266,LES,LT,142,LES,ZAR,LESOTHO,2,Rand,710,Yes
+Liberia,Libéria,LR,LBR,430,LBR,lb,LI,LB,231,LBR,LI,144,LBR,LRD,LIBERIA,2,Liberian Dollar,430,Yes
+Libya,Libye,LY,LBY,434,LBY,ly,LY,LAR,218,LBY,LY,145,LBA,LYD,LIBYA,3,Libyan Dinar,434,Yes
+Liechtenstein,Liechtenstein,LI,LIE,438,LIE,lh, ,FL,423,LIE,LS,146,LIE,CHF,LIECHTENSTEIN,2,Swiss Franc,756,Yes
+Lithuania,Lituanie,LT,LTU,440,LTU,li,LT,LT,370,LTU,LH,147,LTU,EUR,LITHUANIA,2,Euro,978,Yes
+Luxembourg,Luxembourg,LU,LUX,442,LUX,lu,BX,L,352,LUX,LU,148,LUX,EUR,LUXEMBOURG,2,Euro,978,Yes
+Macao,Macao,MO,MAC,446,MAC, ,MU, ,853,MAC,MC,149,MAC,MOP,MACAO,2,Pataca,446,Part of CN
+"Macedonia, the Former Yugoslav Republic of","Macédoine, l'Ex-république Yougoslave de",MK,MKD,807,MKD,xn,MJ,MK,389,MKD,MK,241,MKD,MKD,"MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF",2,Denar,807,Yes
+Madagascar,Madagascar,MG,MDG,450,MDG,mg,MG,RM,261,MAD,MA,150,MAD,MGA,MADAGASCAR,2,Malagasy Ariary,969,Yes
+Malawi,Malawi,MW,MWI,454,MWI,mw,MW,MW,265,MWI,MI,152,MAW,MWK,MALAWI,2,Kwacha,454,Yes
+Malaysia,Malaisie,MY,MYS,458,MLA,my,MS,MAL,60,MAS,MY,153,MAS,MYR,MALAYSIA,2,Malaysian Ringgit,458,Yes
+Maldives,Maldives,MV,MDV,462,MLD,xc,MV, ,960,MDV,MV,154,MDV,MVR,MALDIVES,2,Rufiyaa,462,Yes
+Mali,Mali,ML,MLI,466,MLI,ml,MI,RMM,223,MLI,ML,155,MLI,XOF,MALI,0,CFA Franc BCEAO,952,Yes
+Malta,Malte,MT,MLT,470,MLT,mm,ML,M,356,MLT,MT,156,MLT,EUR,MALTA,2,Euro,978,Yes
+Marshall Islands,"Marshall, Îles",MH,MHL,584,MHL,xe,MH, ,692,MHL,RM,157,MSH,USD,MARSHALL ISLANDS,2,US Dollar,840,Yes
+Martinique,Martinique,MQ,MTQ,474,MRT,mq,MR,F,596,MTQ,MB,158,MRT,EUR,MARTINIQUE,2,Euro,978,Part of FR
+Mauritania,Mauritanie,MR,MRT,478,MTN,mu,MT,RIM,222,MTN,MR,159,MTN,MRO,MAURITANIA,2,Ouguiya,478,Yes
+Mauritius,Maurice,MU,MUS,480,MAU,mf,MA,MS,230,MRI,MP,160,MRI,MUR,MAURITIUS,2,Mauritius Rupee,480,Yes
+Mayotte,Mayotte,YT,MYT,175,MYT,ot, , ,262,MYT,MF,161,MAY,EUR,MAYOTTE,2,Euro,978,Part of FR
+Mexico,Mexique,MX,MEX,484,MEX,mx,MX,MEX,52,MEX,MX,162,MEX,MXN,MEXICO,2,Mexican Peso,484,Yes
+"Micronesia, Federated States of","Micronésie, États Fédérés de",FM,FSM,583,FSM,fm, , ,691,FSM,FM,163,FSM,USD,"MICRONESIA, FEDERATED STATES OF",2,US Dollar,840,Yes
+"Moldova, Republic of","Moldova, République de",MD,MDA,498,MDA,mv,RM,MD,373,MDA,MD,165,MDA,MDL,"MOLDOVA, REPUBLIC OF",2,Moldovan Leu,498,Yes
+Monaco,Monaco,MC,MCO,492,MCO,mc, ,MC,377,MON,MN,166,MON,EUR,MONACO,2,Euro,978,Yes
+Mongolia,Mongolie,MN,MNG,496,MNG,mp,MO,MGL,976,MNG,MG,167,MGL,MNT,MONGOLIA,2,Tugrik,496,Yes
+Montenegro,Monténégro,ME,MNE,499,MNE,mo, ,MNE,382,MNE,MJ,2647,MGO,EUR,MONTENEGRO,2,Euro,978,Yes
+Montserrat,Montserrat,MS,MSR,500,MSR,mj, , ,1-664,MSR,MH,168,MNT,XCD,MONTSERRAT,2,East Caribbean Dollar,951,Territory of GB
+Morocco,Maroc,MA,MAR,504,MRC,mr,MC,MA,212,MAR,MO,169,MAR,MAD,MOROCCO,2,Moroccan Dirham,504,Yes
+Mozambique,Mozambique,MZ,MOZ,508,MOZ,mz,MZ,MOC,258,MOZ,MZ,170,MOZ,MZN,MOZAMBIQUE,2,Mozambique Metical,943,Yes
+Myanmar,Myanmar,MM,MMR,104,MYA,br,BM,BUR,95,MYA,BM,171,MYA,MMK,MYANMAR,2,Kyat,104,Yes
+Namibia,Namibie,NA,NAM,516,NMB,sx,NM,NAM,264,NAM,WA,172,NAM,ZAR,NAMIBIA,2,Rand,710,Yes
+Nauru,Nauru,NR,NRU,520,NRU,nu,NW,NAU,674,NRU,NR,173,NRU,AUD,NAURU,2,Australian Dollar,036,Yes
+Nepal,Népal,NP,NPL,524,NPL,np,NP,NEP,977,NEP,NP,175,NEP,NPR,NEPAL,2,Nepalese Rupee,524,Yes
+Netherlands,Pays-Bas,NL,NLD,528,HOL,ne,NL,NL,31,NED,NL,177,NED,EUR,NETHERLANDS,2,Euro,978,Yes
+New Caledonia,Nouvelle-Calédonie,NC,NCL,540,NCL,nl,NC,F,687,NCL,NC,178,NCD,XPF,NEW CALEDONIA,0,CFP Franc,953,Territory of FR
+New Zealand,Nouvelle-Zélande,NZ,NZL,554,NZL,nz,NZ,NZ,64,NZL,NZ,179,NZL,NZD,NEW ZEALAND,2,New Zealand Dollar,554,Yes
+Nicaragua,Nicaragua,NI,NIC,558,NCG,nq,NK,NIC,505,NCA,NU,180,NCA,NIO,NICARAGUA,2,Cordoba Oro,558,Yes
+Niger,Niger,NE,NER,562,NGR,ng,NR,RN,227,NIG,NG,181,NIG,XOF,NIGER,0,CFA Franc BCEAO,952,Yes
+Nigeria,Nigéria,NG,NGA,566,NIG,nr,NI,NGR,234,NGA,NI,182,NGR,NGN,NIGERIA,2,Naira,566,Yes
+Niue,Niué,NU,NIU,570,NIU,xh, ,NZ,683,NIU,NE,183,NIU,NZD,NIUE,2,New Zealand Dollar,554,Associated with NZ
+Norfolk Island,"Norfolk, Île",NF,NFK,574,NFK,nx,NF,AUS,672,NFK,NF,184,NFI,AUD,NORFOLK ISLAND,2,Australian Dollar,036,Territory of AU
+Northern Mariana Islands,"Mariannes du Nord, Îles",MP,MNP,580,MRA,nw,MY,USA,1-670,NMI,CQ,185,NMA,USD,NORTHERN MARIANA ISLANDS,2,US Dollar,840,Commonwealth of US
+Norway,Norvège,NO,NOR,578,NOR,no,NO,N,47,NOR,NO,186,NOR,NOK,NORWAY,2,Norwegian Krone,578,Yes
+Oman,Oman,OM,OMN,512,OMA,mk,OM, ,968,OMA,MU,187,OMA,OMR,OMAN,3,Rial Omani,512,Yes
+Pakistan,Pakistan,PK,PAK,586,PAK,pk,PK,PK,92,PAK,PK,188,PAK,PKR,PAKISTAN,2,Pakistan Rupee,586,Yes
+Palau,Palaos,PW,PLW,585,PLW,pw, , ,680,PLW,PS,189,PLW,USD,PALAU,2,US Dollar,840,Yes
+"Palestine, State of","Palestine, État de",PS,PSE,275, ,"gz,wj", , ,970,PLE,"GZ,WE","91,267",PLE,,"PALESTINE, STATE OF",,No universal currency,,In contention
+Panama,Panama,PA,PAN,591,PNR,pn,PM,PA,507,PAN,PM,191,PAN,USD,PANAMA,2,US Dollar,840,Yes
+Papua New Guinea,Papouasie-Nouvelle-Guinée,PG,PNG,598,PNG,pp,NG,PNG,675,PNG,PP,192,PNG,PGK,PAPUA NEW GUINEA,2,Kina,598,Yes
+Paraguay,Paraguay,PY,PRY,600,PRG,py,PY,PY,595,PAR,PA,194,PAR,PYG,PARAGUAY,0,Guarani,600,Yes
+Peru,Pérou,PE,PER,604,PRU,pe,PR,PE,51,PER,PE,195,PER,PEN,PERU,2,Nuevo Sol,604,Yes
+Philippines,Philippines,PH,PHL,608,PHL,ph,PH,RP,63,PHI,RP,196,PHI,PHP,PHILIPPINES,2,Philippine Peso,608,Yes
+Pitcairn,Pitcairn,PN,PCN,612,PTC,pc,PT, ,870,PCN,PC,197, ,NZD,PITCAIRN,2,New Zealand Dollar,554,Territory of GB
+Poland,Pologne,PL,POL,616,POL,pl,PL,PL,48,POL,PL,198,POL,PLN,POLAND,2,Zloty,985,Yes
+Portugal,Portugal,PT,PRT,620,POR,po,PO,P,351,POR,PO,199,POR,EUR,PORTUGAL,2,Euro,978,Yes
+Puerto Rico,Porto Rico,PR,PRI,630,PTR,pr,PU,USA,1,PUR,RQ,200,PUR,USD,PUERTO RICO,2,US Dollar,840,Commonwealth of US
+Qatar,Qatar,QA,QAT,634,QAT,qa,QT,Q,974,QAT,QA,201,QAT,QAR,QATAR,2,Qatari Rial,634,Yes
+Romania,Roumanie,RO,ROU,642,ROU,rm,RO,RO,40,ROU,RO,203,ROU,RON,ROMANIA,2,New Romanian Leu,946,Yes
+Russian Federation,"Russie, Fédération de",RU,RUS,643,RUS,ru,RS,RUS,7,RUS,RS,204,RUS,RUB,RUSSIAN FEDERATION,2,Russian Ruble,643,Yes
+Rwanda,Rwanda,RW,RWA,646,RRW,rw,RW,RWA,250,RWA,RW,205,RWA,RWF,RWANDA,0,Rwanda Franc,646,Yes
+Réunion,Réunion,RE,REU,638,REU,re,RE,F,262,REU,RE,206,REU,EUR,RÉUNION,2,Euro,978,Part of FR
+Saint Barthélemy,Saint-Barthélemy,BL,BLM,652, ,sc, , ,590, ,TB,, ,EUR,SAINT BARTHÉLEMY,2,Euro,978,Part of FR
+"Saint Helena, Ascension and Tristan da Cunha","Sainte-Hélène, Ascension et Tristan da Cunha",SH,SHN,654,SHN,xj,HE, ,290 n,SHN,SH,207,HEL,SHP,"SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA",2,Saint Helena Pound,654,Territory of GB
+Saint Kitts and Nevis,Saint-Kitts-Et-Nevis,KN,KNA,659,KNA,xd,AT, ,1-869,SKN,SC,208,SKN,XCD,SAINT KITTS AND NEVIS,2,East Caribbean Dollar,951,Yes
+Saint Lucia,Sainte-Lucie,LC,LCA,662,LCA,xk,LC,WL,1-758,LCA,ST,209,LCA,XCD,SAINT LUCIA,2,East Caribbean Dollar,951,Yes
+Saint Martin (French part),Saint-Martin(partie Française),MF,MAF,663, ,st, , ,590, ,RN,, ,EUR,SAINT MARTIN (FRENCH PART),2,Euro,978,Part of FR
+Saint Pierre and Miquelon,Saint-Pierre-Et-Miquelon,PM,SPM,666,SPM,xl,FP,F,508,SPM,SB,210,SPM,EUR,SAINT PIERRE AND MIQUELON,2,Euro,978,Part of FR
+Saint Vincent and the Grenadines,Saint-Vincent-Et-Les Grenadines,VC,VCT,670,VCT,xm,VG,WV,1-784,VIN,VC,211,VIN,XCD,SAINT VINCENT AND THE GRENADINES,2,East Caribbean Dollar,951,Yes
+Samoa,Samoa,WS,WSM,882,SMO,ws,ZM,WS,685,SAM,WS,212,SAM,WST,SAMOA,2,Tala,882,Yes
+San Marino,Saint-Marin,SM,SMR,674,SMR,sm, ,RSM,378,SMR,SM,213,SMR,EUR,SAN MARINO,2,Euro,978,Yes
+Sao Tome and Principe,Sao Tomé-Et-Principe,ST,STP,678,STP,sf,TP, ,239,STP,TP,214,STP,STD,SAO TOME AND PRINCIPE,2,Dobra,678,Yes
+Saudi Arabia,Arabie Saoudite,SA,SAU,682,ARS,su,SD,SA,966,KSA,SA,215,KSA,SAR,SAUDI ARABIA,2,Saudi Riyal,682,Yes
+Senegal,Sénégal,SN,SEN,686,SEN,sg,SG,SN,221,SEN,SG,217,SEN,XOF,SENEGAL,0,CFA Franc BCEAO,952,Yes
+Serbia,Serbie,RS,SRB,688,SRB,rb,YG,SRB,381 p,SRB,"RI,KV",2648,SRB,RSD,SERBIA,2,Serbian Dinar,941,Yes
+Seychelles,Seychelles,SC,SYC,690,SEY,se,SC,SY,248,SEY,SE,220,SEY,SCR,SEYCHELLES,2,Seychelles Rupee,690,Yes
+Sierra Leone,Sierra Leone,SL,SLE,694,SRL,sl,SL,WAL,232,SLE,SL,221,SLE,SLL,SIERRA LEONE,2,Leone,694,Yes
+Singapore,Singapour,SG,SGP,702,SNG,si,SR,SGP,65,SIN,SN,222,SIN,SGD,SINGAPORE,2,Singapore Dollar,702,Yes
+Sint Maarten (Dutch part),Saint-Martin (Partie Néerlandaise),SX,SXM,534,,sn,,,1-721,,NN,,,ANG,SINT MAARTEN (DUTCH PART),2,Netherlands Antillean Guilder,532,Part of NL
+Slovakia,Slovaquie,SK,SVK,703,SVK,xo,SQ,SK,421,SVK,LO,223,SVK,EUR,SLOVAKIA,2,Euro,978,Yes
+Slovenia,Slovénie,SI,SVN,705,SVN,xv,LJ,SLO,386,SVN,SI,224,SLO,EUR,SLOVENIA,2,Euro,978,Yes
+Solomon Islands,"Salomon, Îles",SB,SLB,090,SLM,bp,SO, ,677,SOL,BP,225,SOL,SBD,SOLOMON ISLANDS,2,Solomon Islands Dollar,090,Yes
+Somalia,Somalie,SO,SOM,706,SOM,so,SI,SO,252,SOM,SO,226,SOM,SOS,SOMALIA,2,Somali Shilling,706,Yes
+South Africa,Afrique du Sud,ZA,ZAF,710,AFS,sa,ZA,ZA,27,RSA,SF,227,RSA,ZAR,SOUTH AFRICA,2,Rand,710,Yes
+South Georgia and the South Sandwich Islands,Géorgie du Sud-Et-Les Îles Sandwich du Sud,GS,SGS,239, ,xs, , ,500,,SX,228, ,,SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS,,No universal currency,,Territory of GB
+South Sudan,Soudan du Sud,SS,SSD,728,SSD,sd,,,211,,OD,,,SSP,SOUTH SUDAN,2,South Sudanese Pound,728,Yes
+Spain,Espagne,ES,ESP,724,E,sp,SP,E,34,ESP,SP,229,ESP,EUR,SPAIN,2,Euro,978,Yes
+Sri Lanka,Sri Lanka,LK,LKA,144,CLN,ce,SB,CL,94,SRI,CE,231,SRI,LKR,SRI LANKA,2,Sri Lanka Rupee,144,Yes
+Sudan,Soudan,SD,SDN,729,SDN,sj,SU,SUD,249,SUD,SU,40764,SUD,SDG,SUDAN,2,Sudanese Pound,938,Yes
+Suriname,Suriname,SR,SUR,740,SUR,sr,SM,SME,597,SUR,NS,233,SUR,SRD,SURINAME,2,Surinam Dollar,968,Yes
+Svalbard and Jan Mayen,Svalbard et Île Jan Mayen,SJ,SJM,744,NOR, ,SZ, ,47,,"SV,JN",234, ,NOK,SVALBARD AND JAN MAYEN,2,Norwegian Krone,578,Territory of NO
+Swaziland,Swaziland,SZ,SWZ,748,SWZ,sq,SV,SD,268,SWZ,WZ,235,SWZ,SZL,SWAZILAND,2,Lilangeni,748,Yes
+Sweden,Suède,SE,SWE,752,S,sw,SN,S,46,SWE,SW,236,SWE,SEK,SWEDEN,2,Swedish Krona,752,Yes
+Switzerland,Suisse,CH,CHE,756,SUI,sz,SW,CH,41,SUI,SZ,237,SUI,CHF,SWITZERLAND,2,Swiss Franc,756,Yes
+Syrian Arab Republic,"Syrienne, République Arabe",SY,SYR,760,SYR,sy,SY,SYR,963,SYR,SY,238,SYR,SYP,SYRIAN ARAB REPUBLIC,2,Syrian Pound,760,Yes
+"Taiwan, Province of China","Taïwan, Province de Chine",TW,TWN,158, ,ch, ,RC,886,TPE,TW,925,TPE,TWD,"TAIWAN, PROVINCE OF CHINA",2,New Taiwan Dollar,901,Yes
+Tajikistan,Tadjikistan,TJ,TJK,762,TJK,ta,TA,TJ,992,TJK,TI,239,TJK,TJS,TAJIKISTAN,2,Somoni,972,Yes
+"Tanzania, United Republic of","Tanzanie, République-Unie de",TZ,TZA,834,TZA,tz,TN,EAT,255,TAN,TZ,257,TAN,TZS,"TANZANIA, UNITED REPUBLIC OF",2,Tanzanian Shilling,834,Yes
+Thailand,Thaïlande,TH,THA,764,THA,th,TH,T,66,THA,TH,240,THA,THB,THAILAND,2,Baht,764,Yes
+Timor-Leste,Timor-Leste,TL,TLS,626,TLS,em,TM, ,670,TLS,TT,242,TLS,USD,TIMOR-LESTE,2,US Dollar,840,Yes
+Togo,Togo,TG,TGO,768,TGO,tg,TG,TG,228,TOG,TO,243,TOG,XOF,TOGO,0,CFA Franc BCEAO,952,Yes
+Tokelau,Tokelau,TK,TKL,772,TKL,tl,TK,NZ,690,TKL,TL,244, ,NZD,TOKELAU,2,New Zealand Dollar,554,Territory of NZ
+Tonga,Tonga,TO,TON,776,TON,to,TO, ,676,TGA,TN,245,TGA,TOP,TONGA,2,Pa’anga,776,Yes
+Trinidad and Tobago,Trinité-Et-Tobago,TT,TTO,780,TRD,tr,TD,TT,1-868,TRI,TD,246,TTO,TTD,TRINIDAD AND TOBAGO,2,Trinidad and Tobago Dollar,780,Yes
+Tunisia,Tunisie,TN,TUN,788,TUN,ti,TS,TN,216,TUN,TS,248,TUN,TND,TUNISIA,3,Tunisian Dinar,788,Yes
+Turkey,Turquie,TR,TUR,792,TUR,tu,TU,TR,90,TUR,TU,249,TUR,TRY,TURKEY,2,Turkish Lira,949,Yes
+Turkmenistan,Turkménistan,TM,TKM,795,TKM,tk,TR,TM,993,TKM,TX,250,TKM,TMT,TURKMENISTAN,2,Turkmenistan New Manat,934,Yes
+Turks and Caicos Islands,"Turks-Et-Caïcos, Îles",TC,TCA,796,TCA,tc,TI, ,1-649,TCA,TK,251,TKS,USD,TURKS AND CAICOS ISLANDS,2,US Dollar,840,Territory of GB
+Tuvalu,Tuvalu,TV,TUV,798,TUV,tv,TV, ,688,TUV,TV,252,TUV,AUD,TUVALU,2,Australian Dollar,036,Yes
+Uganda,Ouganda,UG,UGA,800,UGA,ug,UG,EAU,256,UGA,UG,253,UGA,UGX,UGANDA,0,Uganda Shilling,800,Yes
+Ukraine,Ukraine,UA,UKR,804,UKR,un,UR,UA,380,UKR,UP,254,UKR,UAH,UKRAINE,2,Hryvnia,980,Yes
+United Arab Emirates,Émirats Arabes Unis,AE,ARE,784,UAE,ts,ER, ,971,UAE,AE,255,UAE,AED,UNITED ARAB EMIRATES,2,UAE Dirham,784,Yes
+United Kingdom,Royaume-Uni,GB,GBR,826,G,xxk,UK,GB,44,"ENG,NIR,SCO,WAL",UK,256,GBR,GBP,UNITED KINGDOM,2,Pound Sterling,826,Yes
+United States,États-Unis,US,USA,840,USA,xxu,US,USA,1,USA,US,259,USA,USD,UNITED STATES,2,US Dollar,840,Yes
+United States Minor Outlying Islands,Îles Mineures Éloignées des États-Unis,UM,UMI,581, ,"ji,xf,wk,uc,up", ,USA, ,,"FQ,HQ,DQ,JQ,KQ,MQ,BQ,LQ,WQ",, ,USD,UNITED STATES MINOR OUTLYING ISLANDS,2,US Dollar,840,Territories of US
+Uruguay,Uruguay,UY,URY,858,URG,uy,UY,ROU,598,URU,UY,260,URU,UYU,URUGUAY,2,Peso Uruguayo,858,Yes
+Uzbekistan,Ouzbékistan,UZ,UZB,860,UZB,uz,UZ,UZ,998,UZB,UZ,261,UZB,UZS,UZBEKISTAN,2,Uzbekistan Sum,860,Yes
+Vanuatu,Vanuatu,VU,VUT,548,VUT,nn,NV, ,678,VAN,NH,262,VAN,VUV,VANUATU,0,Vatu,548,Yes
+"Venezuela, Bolivarian Republic of","Venezuela, République Bolivarienne du",VE,VEN,862,VEN,ve,VN,YV,58,VEN,VE,263,VEN,VEF,"VENEZUELA, BOLIVARIAN REPUBLIC OF",2,Bolivar,937,Yes
+Viet Nam,Viet Nam,VN,VNM,704,VTN,vm,VS,VN,84,VIE,VM,264,VIE,VND,VIET NAM,0,Dong,704,Yes
+"Virgin Islands, British",Îles Vierges Britanniques,VG,VGB,092,VRG,vb,VI,BVI,1-284,VGB,VI,39,IVB,USD,VIRGIN ISLANDS (BRITISH),2,US Dollar,840,Territory of GB
+"Virgin Islands, U.S.",Îles Vierges des États-Unis,VI,VIR,850,VIR,vi,VI,USA,1-340,VIR,VQ,258,ISV,USD,VIRGIN ISLANDS (U.S.),2,US Dollar,840,Territory of US
+Wallis and Futuna,Wallis et Futuna,WF,WLF,876,WAL,wf,FW,F,681,WLF,WF,266,WAF,XPF,WALLIS AND FUTUNA,0,CFP Franc,953,Territory of FR
+Western Sahara,Sahara Occidental,EH,ESH,732,AOE,ss, , ,212,SAH,WI,268, ,MAD,WESTERN SAHARA,2,Moroccan Dirham,504,In contention
+Yemen,Yémen,YE,YEM,887,YEM,ye,YE,YAR,967,YEM,YM,269,YEM,YER,YEMEN,2,Yemeni Rial,886,Yes
+Zambia,Zambie,ZM,ZMB,894,ZMB,za,ZB,Z,260,ZAM,ZA,270,ZAM,ZMW,ZAMBIA,2,Zambian Kwacha,967,Yes
+Zimbabwe,Zimbabwe,ZW,ZWE,716,ZWE,rh,ZW,ZW,263,ZIM,ZI,271,ZIM,ZWL,ZIMBABWE,2,Zimbabwe Dollar,932,Yes
+Åland Islands,"Åland, Îles",AX,ALA,248, , , ,FIN,358,ALD, ,1242, ,EUR,ÅLAND ISLANDS,2,Euro,978,Part of FI
