@@ -6,7 +6,7 @@ Format Data Package.
 
 Data comes from multiple sources as follows.
 
-ISO 3166 customary English short names are from
+Customary English short names are from
 [Unicode Common Locale Data Repository (CLDR) Project] (https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json)
 Note: CLDR shorter names "ZZ-alt-short" are used when available
 
