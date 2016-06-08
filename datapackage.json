@@ -25,6 +25,10 @@
     {
       "name": "Statoids",
       "web": "http://www.statoids.com/wab.html"
+    },
+    {
+      "name": "Securities and Exchange Commission",
+      "web": "https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm"
     }
   ],
   "resources": [
@@ -106,6 +110,11 @@
           {
             "name": "IOC",
             "description": "Codes assigned by the International Olympics Committee",
+            "type": "string"
+          },
+          {
+            "name": "SEC",
+            "description": "Codes assigned by the US Securities and Exchange Commission",
             "type": "string"
           },
           {
