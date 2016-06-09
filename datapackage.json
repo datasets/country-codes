@@ -157,26 +157,26 @@
             "description": "Continent from Geonames",
             "type": "string"
           },
-					{
-					  "name": "TLD",
+          {
+            "name": "TLD",
             "description": "Top level domain from Geonames",
             "type": "string"
-					},
-					{
-					  "name": "Languages",
+          },
+          {
+            "name": "Languages",
             "description": "Languages from Geonames",
             "type": "string"
-					},
-					{
-					  "name": "Geoname ID",
+          },
+          {
+            "name": "Geoname ID",
             "description": "Geoname ID",
             "type": "integer"
-					},
-					{
-					  "name": "EDGAR",
+          },
+          {
+            "name": "EDGAR",
             "description": "EDGAR country code from SEC",
             "type": "string"
-					}
+          }
         ]
       }
     }

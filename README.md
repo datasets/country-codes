@@ -10,7 +10,7 @@ Customary English short names are from
 [Unicode Common Locale Data Repository (CLDR) Project] (https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json)
 Note: CLDR shorter names "ZZ-alt-short" are used when available
 
-ISO 3166 official English and French short names were from
+ISO 3166 official English and French short names are from
 [United Nations Statistics Division](http://unstats.un.org/unsd/methods/m49/m49.htm)
 
 ISO 4217 currency codes are from
