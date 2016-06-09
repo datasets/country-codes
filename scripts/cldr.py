@@ -127,7 +127,7 @@ columns_ordered = ['name', 'official_name_en', 'official_name_fr',
 
 df_out = pd.DataFrame(df_cc_indexd.to_records())
 
-df_out.to_csv(os.path.join('data', outinfn),
+df_out.to_csv(os.path.join('data', 'country-codes-cldr.csv'),
               columns=list(columns_ordered),
               sep=',', encoding='utf-8',
               index=False,
