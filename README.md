@@ -1,6 +1,6 @@
 Comprehensive country code information, including ISO 3166 codes, ITU dialing
-codes, ISO 4217 currency codes, and many others. Provided as a Simple Data
-Format Data Package.
+codes, ISO 4217 currency codes, and many others. Provided as a [Simple Data
+Format Data Package](http://dataprotocols.readthedocs.io/en/latest/simple-data-format.html).
 
 ## Data
 
