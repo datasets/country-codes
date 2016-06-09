@@ -24,6 +24,8 @@ Special thanks to Gwillim Law for his excellent
 are excerpted from his site), which is more up-to-date than most similar
 resources and is much easier to scrape than multiple Wikipedia pages.
 
+Capital cities, languages, continents, TLDs, and geonameid from [geonames.org](http://download.geonames.org/export/dump/countryInfo.txt)
+
 ## Preparation
 
 This package includes Python scripts to fetch current country information
