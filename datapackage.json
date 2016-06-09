@@ -31,6 +31,10 @@
       "name": "Geonames",
       "web": "http://download.geonames.org/export/dump/countryInfo.txt"
     },
+    {
+      "name": "US Securities and Exchange Commission",
+      "web": "https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm"
+    },
   ],
   "resources": [
     {
@@ -167,6 +171,11 @@
 					  "name": "Geoname ID",
             "description": "Geoname ID",
             "type": "integer"
+					},
+					{
+					  "name": "EDGAR",
+            "description": "EDGAR country code from SEC",
+            "type": "string"
 					}
         ]
       }
