@@ -3,6 +3,7 @@
   "title": "Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more",
   "format": "csv",
   "datapackage_version": "1.0.0-beta.13",
+  "last_modified": "2016-06-09T13:09:36.048168",
   "licenses": [
     {
       "type": "ODC-PDDL-1.0",
@@ -15,8 +16,8 @@
       "web": "https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json"
     },
     {
-      "name": "International Organization for Standardization",
-      "web": "http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm"
+      "name": "United Nations Statistics Division",
+      "web": "http://unstats.un.org/unsd/methods/m49/m49.htm"
     },
     {
       "name": "SIX Interbank Clearing Ltd (on behalf of ISO)",
@@ -39,7 +40,7 @@
             "type": "string"
           },
           {
-            "name": "official_name",
+            "name": "official_name_en",
             "description": "Country's official English short name",
             "type": "string"
           },
@@ -109,27 +110,27 @@
             "type": "string"
           },
           {
-            "name": "currency_alphabetic_code",
+            "name": "ISO4217-currency_alphabetic_code",
             "description": "ISO 4217 currency alphabetic code",
             "type": "string"
           },
           {
-            "name": "currency_country_name",
+            "name": "ISO4217-currency_country_name",
             "description": "ISO 4217 country name",
             "type": "string"
           },
           {
-            "name": "currency_minor_unit",
+            "name": "ISO4217-currency_minor_unit",
             "description": "ISO 4217 currency number of minor units",
             "type": "integer"
           },
           {
-            "name": "currency_name",
+            "name": "ISO4217-currency_name",
             "description": "ISO 4217 currency name",
             "type": "string"
           },
           {
-            "name": "currency_numeric_code",
+            "name": "ISO4217-currency_numeric_code",
             "description": "ISO 4217 currency numeric code",
             "type": "integer"
           },
