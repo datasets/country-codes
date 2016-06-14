@@ -4,21 +4,24 @@ Format Data Package.
 
 ## Data
 
-Data comes from multiple sources as follows.
+Data comes from multiple sources as follows:
 
-Customary English short names are from
+- Customary English short names are from
 [Unicode Common Locale Data Repository (CLDR) Project] (https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json)
 Note: CLDR shorter names "ZZ-alt-short" are used when available
 
-ISO 3166 official English and French short names were from
+- ISO 3166 official English and French short names were from
 [iso.org](http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm)
 Note: ISO is no longer providing these code lists for free.
 
-ISO 4217 currency codes are from
+- ISO 4217 currency codes are from
 [currency-iso.org](http://www.currency-iso.org/en/home/tables/table-a1.html)
 
-Many other country codes are from
+- Many other country codes are from
 [statoids.com](http://www.statoids.com/wab.html)
+
+- SEC EDGAR's country codes are from:
+[EDGAR](https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm)
 
 Special thanks to Gwillim Law for his excellent
 [statoids.com](http://www.statoids.com) site (some of the field descriptions
@@ -38,20 +41,20 @@ Run **scripts/get_countries_of_earth.py --help** for usage information
 ### data/country-codes.csv
 
 Install requirements:
-
+```py
     pip install -r scripts/requirements.pip
-
+```
 
 Run the python script to generate json file:
-
+```py
     python scripts/get_countries_of_earth.py -l
-
+```
 
 Convert json file to csv (and reorder columns):
-
+```py
     in2csv data/country-codes.json > data/country-codes.csv
     python scripts/reorder_columns.py
-
+```
 
 ## License
 
@@ -73,4 +76,3 @@ use and reuse.
 
 If you intended to use these data in a public or commercial product, please
 check the original sources for any specific restrictions.
-
