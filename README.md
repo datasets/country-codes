@@ -1,6 +1,6 @@
 Comprehensive country code information, including ISO 3166 codes, ITU dialing
-codes, ISO 4217 currency codes, and many others. Provided as a Simple Data
-Format Data Package.
+codes, ISO 4217 currency codes, and many others. Provided as a [Simple Data
+Format Data Package](http://dataprotocols.readthedocs.io/en/latest/simple-data-format.html).
 
 ## Data
 
@@ -10,9 +10,8 @@ Customary English short names are from
 [Unicode Common Locale Data Repository (CLDR) Project] (https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json)
 Note: CLDR shorter names "ZZ-alt-short" are used when available
 
-ISO 3166 official English and French short names were from
-[iso.org](http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm)
-Note: ISO is no longer providing these code lists for free.
+ISO 3166 official English and French short names are from
+[United Nations Statistics Division](http://unstats.un.org/unsd/methods/m49/m49.htm)
 
 ISO 4217 currency codes are from
 [currency-iso.org](http://www.currency-iso.org/en/home/tables/table-a1.html)
@@ -25,15 +24,17 @@ Special thanks to Gwillim Law for his excellent
 are excerpted from his site), which is more up-to-date than most similar
 resources and is much easier to scrape than multiple Wikipedia pages.
 
+Capital cities, languages, continents, TLDs, and geonameid are from [geonames.org](http://download.geonames.org/export/dump/countryInfo.txt)
+
+EDGAR codes are from [sec.gov](https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm)
+
+
 ## Preparation
 
-This package includes a Python script to fetch current country information
-and output a JSON document of combined country code information.
-Per-country JSON documents may be keyed by any of the fields below.
+This package includes Python scripts to fetch current country information
+and output a JSON document and CSV of combined country code information.
 
 CSV output is provided via the `in2csv` and `csvcut` utilities from [csvkit](http://github.com/onyxfish/csvkit)
-
-Run **scripts/get_countries_of_earth.py --help** for usage information
 
 ### data/country-codes.csv
 
@@ -42,16 +43,9 @@ Install requirements:
     pip install -r scripts/requirements.pip
 
 
-Run the python script to generate json file:
+Run GNU Make to generate data file:
 
-    python scripts/get_countries_of_earth.py -l
-
-
-Convert json file to csv (and reorder columns):
-
-    in2csv data/country-codes.json > data/country-codes.csv
-    python scripts/reorder_columns.py
-
+    make country-codes.csv
 
 ## License
 
