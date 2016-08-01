@@ -68,6 +68,10 @@ currency_country_name_map = {
     u"UNITED STATES": u"United States of America",
     u"VENEZUELA, BOLIVARIAN REPUBLIC OF": u"Venezuela (Bolivarian Republic of)",
     u"WALLIS AND FUTUNA": u"Wallis and Futuna Islands",
+    u"VIRGIN ISLANDS (U.S.)": u"UNITED STATES VIRGIN ISLANDS",
+    u"VIRGIN ISLANDS (BRITISH)": u"BRITISH VIRGIN ISLANDS",
+    u"CONGO, DEMOCRATIC REPUBLIC OF THE ": u"DEMOCRATIC REPUBLIC OF THE CONGO",
+    u"KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF": u"DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA",
 }
 
 
@@ -95,15 +99,16 @@ def process_element(country):
             try:
                 currency_numeric = en_names[currency_name]
             except KeyError:
-                currency_numeric = en_names.get(
-                    currency_country_name_map.get(currency_name))
+                mapped_name = currency_country_name_map.get(currency_name)
+                if mapped_name is not None:
+                    currency_numeric = en_names.get(mapped_name.upper())
 
             if currency_numeric:
                 country_info[currency_numeric].update(currency_dict)
             else:
-                if currency_name not in currency_country_name_map:
-                    print('Failed to match currency data for country: "%s"'
-                          % currency_name)
+                print('Failed to match currency data for country: "%s"'
+                        % currency_name)
+
     return
 
 for iso_currency_table in currencies.iterchildren():
