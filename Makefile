@@ -1,3 +1,8 @@
+default: diff
+
+diff:
+	scripts/compare.py
+
 all:
 
 .SECONDARY:
@@ -36,3 +41,5 @@ clean:
 	@rm data/*.json
 	@rm data/*.csv
 	@rm data/*.tsv
+
+.PHONY: diff

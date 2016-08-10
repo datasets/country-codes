@@ -1,0 +1,230 @@
+  1. name
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 249
+	Max length: 38
+  2. official_name_en
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 241
+	Max length: 52
+  3. official_name_fr
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 241
+	Max length: 62
+  4. ISO3166-1-Alpha-2
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 248
+	Max length: 4
+  5. ISO3166-1-Alpha-3
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 249
+	Max length: 4
+  6. ISO3166-1-numeric
+	<type 'unicode'>
+	Nulls: False
+	Unique values: 251
+	Max length: 3
+  7. ITU
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 232
+	5 most frequent values:
+		NOR:	2
+		LIE:	1
+		EGY:	1
+		AGL:	1
+		BGD:	1
+	Max length: 4
+  8. MARC
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 243
+	5 most frequent values:
+		uik:	3
+		gw:	1
+		gv:	1
+		gu:	1
+		gt:	1
+	Max length: 14
+  9. WMO
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 213
+	5 most frequent values:
+		BX:	2
+		NU:	2
+		VI:	2
+		AT:	2
+		BD:	1
+	Max length: 4
+ 10. DS
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 175
+	5 most frequent values:
+		F:	10
+		USA:	7
+		AUS:	5
+		NZ:	4
+		FIN:	2
+	Max length: 4
+ 11. Dial
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 228
+	5 most frequent values:
+		44:	4
+		672:	3
+		262:	3
+		590:	3
+		61:	3
+	Max length: 17
+ 12. FIFA
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 237
+	Max length: 15
+ 13. FIPS
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 247
+	5 most frequent values:
+		NL:	2
+		BD:	1
+		BE:	1
+		BF:	1
+		BG:	1
+	Max length: 26
+ 14. GAUL
+	<type 'int'>
+	Nulls: True
+	Min: 1
+	Max: 91267
+	Sum: 245883
+	Mean: 1011.86419753
+	Median: 145
+	Standard Deviation: 7183.59897321
+	Unique values: 243
+ 15. IOC
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 226
+	Max length: 4
+ 16. ISO4217-currency_alphabetic_code
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 149
+	5 most frequent values:
+		EUR:	33
+		USD:	17
+		XOF:	8
+		XCD:	8
+		XAF:	6
+	Max length: 4
+ 17. ISO4217-currency_country_name
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 238
+	Max length: 44
+ 18. ISO4217-currency_minor_unit
+	<type 'int'>
+	Nulls: True
+	Values: 0, 2, 3
+ 19. ISO4217-currency_name
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 150
+	5 most frequent values:
+		Euro:	33
+		US Dollar:	17
+		CFA Franc BCEAO:	8
+		East Caribbean Dollar:	8
+		CFA Franc BEAC:	6
+	Max length: 29
+ 20. ISO4217-currency_numeric_code
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 149
+	5 most frequent values:
+		978:	33
+		840:	17
+		951:	8
+		952:	8
+		950:	6
+	Max length: 4
+ 21. is_independent
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 18
+	5 most frequent values:
+		Yes:	195
+		Territory of GB:	12
+		Part of FR:	8
+		Territory of AU:	4
+		Part of NL:	4
+	Max length: 22
+ 22. Capital
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 242
+	5 most frequent values:
+		Kingston:	2
+		Kinshasa:	1
+		East Jerusalem:	1
+		Kiev:	1
+		Paris:	1
+	Max length: 19
+ 23. Continent
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 6
+	5 most frequent values:
+		AF:	58
+		AS:	52
+		EU:	52
+		OC:	27
+		SA:	14
+	Max length: 4
+ 24. TLD
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 246
+	5 most frequent values:
+		.gp:	3
+		.cx:	1
+		.cy:	1
+		.cz:	1
+		.ro:	1
+	Max length: 4
+ 25. Languages
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 243
+	5 most frequent values:
+		fr:	3
+		en:	2
+		fr-CI:	1
+		zh-CN,yue,wuu,dta,ug,za:	1
+		ar-TN,fr:	1
+	Max length: 89
+ 26. geonameid
+	<type 'int'>
+	Nulls: True
+	Min: 49518
+	Max: 7909807
+	Sum: 593982118
+	Mean: 2385470.35341
+	Median: 2363686
+	Standard Deviation: 1541571.57676
+	Unique values: 249
+ 27. EDGAR
+	<type 'unicode'>
+	Nulls: True
+	Unique values: 214
+	Max length: 4
+
+Row count: 251
