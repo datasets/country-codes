@@ -5,6 +5,8 @@ import csv
 
 from lxml import html
 
+import utils
+
 url = "https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm"
 
 content = urllib.urlopen(url).read()
@@ -19,7 +21,7 @@ data = []
 
 for row in rows:
     if seen_other_countries is not True:
-        if row.text_content().replace('\n', '') != 'Other Countries':
+        if utils.clean(row.text_content()) != 'Other Countries':
             print('SKIPPING', row.text_content())
             continue
         else:
@@ -34,8 +36,8 @@ for row in rows:
             print(cell)
             print(cell.text_content())
         continue
-    code = cells[0].text_content().replace('\n', '')
-    name = cells[1].text_content().replace('\n', '')
+    code = utils.clean(cells[0].text_content())
+    name = utils.clean(cells[1].text_content())
     data.append((code, name))
 
 with open('data/edgar.csv', 'wb') as csv_file:

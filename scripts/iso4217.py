@@ -5,6 +5,8 @@ import json
 
 from lxml import etree
 
+import utils
+
 country_info = json.loads(open("data/iso3166.json").read())
 # mapping of names to ISO3166-1-numeric
 en_names = {v.get('official_name_en').upper(): k
@@ -92,7 +94,7 @@ def process_element(country):
                 currency_tag_map[currency_tag.tag]: currency_tag.text})
             currency_numeric = None
             # remove random line breaks, etc
-            currency_name = currency_dict['ISO4217-currency_country_name'].replace(u'\xa0', u'').replace(u'\n', u'').replace(u'\r', u'')
+            currency_name = utils.clean(currency_dict['ISO4217-currency_country_name'])
             if currency_name is not None:
                 # replace name with line breaks, etc removed
                 currency_dict['ISO4217-currency_country_name'] = currency_name
