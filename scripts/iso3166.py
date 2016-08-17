@@ -5,16 +5,16 @@ import json
 import codecs
 import urllib
 
-from lxml import html
+from bs4 import BeautifulSoup
+
+import utils
+
 
 un_iso3166_en_url = "http://unstats.un.org/unsd/methods/m49/m49alpha.htm"
 un_iso3166_fr_url = "http://unstats.un.org/unsd/methods/m49/m49alphaf.htm"
 
 content_en = urllib.urlopen(un_iso3166_en_url).read()
-doc_en = html.fromstring(content_en)
-
-# get last table, then its tbody
-tbody_en = doc_en.xpath('//table[last()]')[0].getchildren()[0]
+soup_en = BeautifulSoup(content_en)
 
 # dict for iso3166 english and french, keyed by ISO3166-1-numeric
 #
@@ -30,17 +30,20 @@ iso3166 = {u'729': {u'ISO3166-1-Alpha-3': u'SDN',
                     u'ISO3166-1-numeric': u'729',
                     u'official_name_en': u'Sudan'}}
 
-for row in tbody_en.iterchildren():
-    cells = row.getchildren()
+rows_en = soup_en.find_all('tr')
+
+for row in rows_en:
+    cells = row.find_all('td')
     if len(cells) != 3:
         print('ERROR IN CELL COUNT')
-        for cell in cells:
-            print(cell)
-            print(cell.text_content())
+        print(cells)
         continue
-    numerical = cells[0].text_content().replace('\r\n','').strip()
-    name = cells[1].text_content().replace('\r\n','').strip()
-    alpha3 = cells[2].text_content().replace('\r\n','').strip()
+    if cells[0] is not None:
+        if cells[0].text.startswith('South') or cells[0].text.startswith('Sudan'):
+            continue
+    numerical = utils.clean(cells[0].text)
+    name = utils.clean(cells[1].text)
+    alpha3 = utils.clean(cells[2].text)
     if alpha3.startswith('ISO ALPHA-3'):
         # skip first row of column headers
         print('SKIPPING', numerical, name, alpha3)
@@ -50,22 +53,20 @@ for row in tbody_en.iterchildren():
 
 # fetch French
 content_fr = urllib.urlopen(un_iso3166_fr_url).read()
-doc_fr = html.fromstring(content_fr)
+soup_fr = BeautifulSoup(content_fr)
 
-# of course the French version of the STANDARD has different markup...
-table_fr = doc_fr.xpath('//table')[6]
 
-for row in table_fr.iterchildren():
-    cells = row.getchildren()
+rows_fr = soup_fr.find_all('tr')
+
+for row in rows_fr:
+    cells = row.find_all('td')
     if len(cells) != 3:
         print('ERROR IN CELL COUNT')
-        for cell in cells:
-            print(cell)
-            print(cell.text_content())
+        print(cells)
         continue
-    numerical = cells[0].text_content().replace('\r\n','').strip()
-    name = cells[1].text_content().replace('\r\n','').strip()
-    alpha3 = cells[2].text_content().replace('\r\n','').strip()
+    numerical = utils.clean(cells[0].text)
+    name = utils.clean(cells[1].text)
+    alpha3 = utils.clean(cells[2].text)
     if alpha3.startswith('Code ISO'):
         # skip first row of column headers
         print('SKIPPING', numerical, name, alpha3)
