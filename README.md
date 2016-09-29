@@ -4,7 +4,7 @@ Format Data Package](http://dataprotocols.readthedocs.io/en/latest/simple-data-f
 
 ## Data
 
-Data comes from multiple sources as follows.
+Data comes from multiple sources as follows:
 
 Customary English short names are from
 [Unicode Common Locale Data Repository (CLDR) Project] (https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json)
