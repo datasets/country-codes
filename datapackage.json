@@ -3,7 +3,7 @@
   "title": "Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more",
   "format": "csv",
   "datapackage_version": "1.0.0-beta.13",
-  "last_modified": "2016-08-17",
+  "last_modified": "2016-12-01",
   "licenses": [
     {
       "type": "ODC-PDDL-1.0",
@@ -68,8 +68,8 @@
             "type": "string"
           },
           {
-            "name": "ISO3166-1-numeric",
-            "description": "Numeric codes from ISO 3166-1 (synonymous with UN Statistics M49 Codes)",
+            "name": "UN Statistics M49 numeric codes",
+            "description": "UN Statistics M49 numeric codes (nearly synonymous with ISO 3166-1 numeric codes, which are based on UN M49. ISO 3166-1 does not include Channel Islands or Sark, for example)",
             "type": "integer"
           },
           {
