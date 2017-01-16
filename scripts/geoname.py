@@ -18,7 +18,7 @@ def get_data():
             # iso3166-alpha3, capital, continent code, tld, languages, geoname id
             yield splited[1], splited[5], splited[8], splited[9], splited[15], splited[16]
 
-header = ['ISO3166-1-Alpha-3', 'Capital', 'Continent', 'TLD', 'Languages', 'geonameid']
+header = ['ISO3166-1-Alpha-3', 'Capital', 'Continent', 'TLD', 'Languages', 'Geoname ID']
 with open('data/geoname.csv', 'wb') as csv_file:
     csv_writer = csv.writer(csv_file)
     csv_writer.writerow(header)
