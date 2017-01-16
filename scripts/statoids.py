@@ -62,6 +62,9 @@ def capitalize_country_name(name):
 def process_statoids_row(tr):
     row = []
     for td in tr.iterchildren():
+        if len(td.getchildren()) == 0:
+            row.append(td.text_content())
+            continue
         if len(td.keys()) > 0:
             if td.get('colspan') is not None:
                 # if a cell is taking up more than one column,
