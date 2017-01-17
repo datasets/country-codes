@@ -177,7 +177,7 @@ Philippines,Philippines,Philippines,PH,PHL,608,PHL,ph,PH,RP,63,PHI,RP,196,PHI,PH
 Pitcairn Islands,Pitcairn,Pitcairn,PN,PCN,612,PTC,pc,PT,,870,PCN,PC,197,,NZD,PITCAIRN,2,New Zealand Dollar,554,Territory of GB,Adamstown,OC,.pn,en-PN,4030699,R8
 Poland,Poland,Pologne,PL,POL,616,POL,pl,PL,PL,48,POL,PL,198,POL,PLN,POLAND,2,Zloty,985,Yes,Warsaw,EU,.pl,pl,798544,R9
 Portugal,Portugal,Portugal,PT,PRT,620,POR,po,PO,P,351,POR,PO,199,POR,EUR,PORTUGAL,2,Euro,978,Yes,Lisbon,EU,.pt,"pt-PT,mwl",2264397,S1
-Puerto Rico,Puerto Rico,Porto Rico,PR,PRI,630,PTR,pr,PU,USA,1,PUR,RQ,200,PUR,USD,PUERTO RICO,2,US Dollar,840,Commonwealth of US,San Juan,NA,.pr,"en-PR,es-PR",4566966,PR
+Puerto Rico,Puerto Rico,Porto Rico,PR,PRI,630,PTR,pr,PU,USA,"1-787,1-939",PUR,RQ,200,PUR,USD,PUERTO RICO,2,US Dollar,840,Commonwealth of US,San Juan,NA,.pr,"en-PR,es-PR",4566966,PR
 Qatar,Qatar,Qatar,QA,QAT,634,QAT,qa,QT,Q,974,QAT,QA,201,QAT,QAR,QATAR,2,Qatari Rial,634,Yes,Doha,AS,.qa,"ar-QA,es",289688,S3
 Romania,Romania,Roumanie,RO,ROU,642,ROU,rm,RO,RO,40,ROU,RO,203,ROU,RON,ROMANIA,2,New Romanian Leu,946,Yes,Bucharest,EU,.ro,"ro,hu,rom",798549,S5
 Russia,Russian Federation,Fédération de Russie,RU,RUS,643,RUS,ru,RS,RUS,7,RUS,RS,204,RUS,RUB,RUSSIAN FEDERATION,2,Russian Ruble,643,Yes,Moscow,EU,.ru,"ru,tt,xal,cau,ady,kv,ce,tyv,cv,udm,tut,mns,bua,myv,mdf,chm,ba,inh,tut,kbd,krc,ava,sah,nog",2017370,1Z
