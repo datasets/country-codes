@@ -38,6 +38,8 @@
   ],
   "resources": [
     {
+      "name": "country-codes",
+      "format": "csv",
       "url": "https://raw.github.com/datasets/country-codes/master/data/country-codes.csv",
       "path": "data/country-codes.csv",
       "schema": {
