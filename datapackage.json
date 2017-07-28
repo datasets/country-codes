@@ -72,7 +72,7 @@
           {
             "name": "M49",
             "description": "UN Statistics M49 numeric codes (nearly synonymous with ISO 3166-1 numeric codes, which are based on UN M49. ISO 3166-1 does not include Channel Islands or Sark, for example)",
-            "type": "integer"
+            "type": "number"
           },
           {
             "name": "ITU",
@@ -132,7 +132,7 @@
           {
             "name": "ISO4217-currency_minor_unit",
             "description": "ISO 4217 currency number of minor units",
-            "type": "integer"
+            "type": "number"
           },
           {
             "name": "ISO4217-currency_name",
@@ -142,7 +142,7 @@
           {
             "name": "ISO4217-currency_numeric_code",
             "description": "ISO 4217 currency numeric code",
-            "type": "integer"
+            "type": "number"
           },
           {
             "name": "is_independent",
@@ -172,7 +172,7 @@
           {
             "name": "Geoname ID",
             "description": "Geoname ID",
-            "type": "integer"
+            "type": "number"
           },
           {
             "name": "EDGAR",
