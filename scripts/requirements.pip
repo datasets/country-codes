@@ -3,3 +3,4 @@ csvkit
 PyICU # https://github.com/Homebrew/legacy-homebrew/issues/34170#issuecomment-63192387
 bs4
 daff
+fuzzywuzzy[speedup]
