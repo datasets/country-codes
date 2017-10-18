@@ -1,6 +1,5 @@
 Comprehensive country code information, including ISO 3166 codes, ITU dialing
-codes, ISO 4217 currency codes, and many others. Provided as a [Simple Data
-Format Data Package](http://dataprotocols.readthedocs.io/en/latest/simple-data-format.html) here: http://datahub.io/core/country-codes
+codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Package](http://frictionlessdata.io/data-packages/).
 
 ## Data
 
@@ -10,7 +9,8 @@ Official formal and short names (in English, French, Spanish, Arabic, Chinese, a
 [United Nations Protocol and Liaison Service](https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp)
 
 Customary English short names are from
-[Unicode Common Locale Data Repository (CLDR) Project](https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json)
+[Unicode Common Locale Data Repository (CLDR) Project](https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json).
+
 Note: CLDR shorter names "ZZ-alt-short" are used when available
 
 ISO 3166 official short names (in English, French, Spanish, Arabic, Chinese, and Russian) are from
