@@ -64,8 +64,6 @@ country-codes.csv: data/country-codes.json data/geoname.csv data/cldr.csv data/e
 	cp data/country-codes-edgar.csv data/country-codes.csv
 	csvcut -n data/country-codes.csv > data/columns.csv
 	scripts/reorder_columns.py
-	export COLS=$$(cat data/column-order.txt)
-	csvcut -c $$COLS data/country-codes.csv > data/country-codes-reordered.csv
 	scripts/reorder_rows.py
 	cp data/country-codes-reordered-sorted.csv data/country-codes.csv
 

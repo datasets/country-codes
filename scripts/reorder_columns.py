@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import csv
 import operator
 
 import utils
@@ -32,8 +33,13 @@ ordered = sorted(official, key=get_column_name) + \
           sorted(unterm, key=get_column_name) + \
           sorted(columns, key=get_column_name)
 
-# join column numbers with commas for use as argument to csvcut
-ordered_column_numbers = ','.join(map(str, map(get_column_number, ordered)))
-
-with open('data/column-order.txt', 'w') as f:
-    f.write(ordered_column_numbers + "\n")
+# graciously cribbed from https://stackoverflow.com/a/33002011/979056
+with open('data/country-codes.csv', 'r') as infile, open('data/country-codes-reordered.csv', 'a') as outfile:
+    # output dict needs a list for new column ordering
+    fieldnames = map(get_column_name, ordered)
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+    # reorder the header first
+    writer.writeheader()
+    for row in csv.DictReader(infile):
+        # writes the reordered rows to the new file
+        writer.writerow(row)
