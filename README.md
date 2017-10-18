@@ -35,7 +35,7 @@ EDGAR codes are from [sec.gov](https://www.sec.gov/edgar/searchedgar/edgarstatec
 ## Preparation
 
 This package includes Python scripts to fetch current country information
-and output a JSON document and CSV of combined country code information.
+from various data sources and output CSV of combined country code information.
 
 CSV output is provided via the `in2csv` and `csvcut` utilities from [csvkit](http://github.com/onyxfish/csvkit)
 
