@@ -3,7 +3,7 @@
   "title": "Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more",
   "format": "csv",
   "datapackage_version": "1.0.0-beta.13",
-  "last_modified": "2017-01-16",
+  "last_modified": "2017-10-16",
   "licenses": [
     {
       "type": "ODC-PDDL-1.0",
@@ -12,16 +12,20 @@
   ],
   "sources": [
     {
+      "name": "United Nations Protocol and Liaison Service",
+      "web": "https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp"
+    },
+    {
       "name": "Unicode Common Locale Data Repository (CLDR) Project",
       "web": "https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json"
     },
     {
-      "name": "United Nations Statistics Division",
-      "web": "http://unstats.un.org/unsd/methods/m49/m49.htm"
+      "name": "United Nations Department of Ecoonomic and Social Affairs Statistics Division",
+      "web": "https://unstats.un.org/unsd/methodology/m49/overview/"
     },
     {
       "name": "SIX Interbank Clearing Ltd (on behalf of ISO)",
-      "web": "http://www.currency-iso.org/dam/downloads/dl_iso_table_a1.xls"
+      "web": "https://www.currency-iso.org/dam/downloads/lists/list_one.xml"
     },
     {
       "name": "Statoids",
@@ -43,18 +47,98 @@
       "schema": {
         "fields": [
           {
-            "name": "name",
+            "name": "CLDR display name",
             "description": "Country's customary English short name (CLDR)",
             "type": "string"
           },
           {
             "name": "official_name_en",
-            "description": "Country's official English short name",
+            "description": "Country or Area official English short name from UN Statistics Divsion",
             "type": "string"
           },
           {
             "name": "official_name_fr",
-            "description": "Country's offical French short name",
+            "description": "Country or Area official French short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "official_name_ar",
+            "description": "Country or Area official Arabic short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "official_name_cn",
+            "description": "Country or Area official Chinese short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "official_name_es",
+            "description": "Country or Area official Spanish short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "official_name_ru",
+            "description": "Country or Area official Russian short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Chinese Formal",
+            "description": "Country's formal Chinese name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Chinese Short",
+            "description": "Country's short Chinese name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM French Formal",
+            "description": "Country's formal French name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM French Short",
+            "description": "Country's short French name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM English Formal",
+            "description": "Country's formal English name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM English Short",
+            "description": "Country's short English name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Spanish Formal",
+            "description": "Country's formal Spanish name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Spanish Short",
+            "description": "Country's short Spanish name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Russian Formal",
+            "description": "Country's formal Russian name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Russian Short",
+            "description": "Country's short Russian name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Arabic Formal",
+            "description": "Country's formal Arabic name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Arabic Short",
+            "description": "Country's short Arabic name from UN Protocol and Liaison Service",
             "type": "string"
           },
           {
@@ -141,6 +225,56 @@
             "name": "ISO4217-currency_numeric_code",
             "description": "ISO 4217 currency numeric code",
             "type": "integer"
+          },
+          {
+            "name": "Developed / Developing Countries",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Small Island Developing States (SIDS)",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Global Code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Region Code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Sub-region Code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Intermediate Region Code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Global Name",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Region Name",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Sub-region Name",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Intermediate Region Name",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
           },
           {
             "name": "is_independent",

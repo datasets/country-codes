@@ -14,7 +14,6 @@ def get_data():
     for line in dest.readlines():
         if line[0] != '#' and line[0] != '\n':
             splited = line.split('\t')
-            print splited
             # iso3166-alpha3, capital, continent code, tld, languages, geoname id
             yield splited[1], splited[5], splited[8], splited[9], splited[15], splited[16]
 

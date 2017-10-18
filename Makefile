@@ -1,14 +1,34 @@
+SHELL := '/bin/bash'
+
 default: diff
 
 diff:
-	scripts/compare.py
+	daff 2017-01-16_country-codes.csv data/country-codes.csv > daffdiff.csv
+	daff render daffdiff.csv > daffdiff.html
 
 all:
 
 .SECONDARY:
 
-data/iso3166.json:
-	scripts/iso3166.py
+data/iso3166.csv:
+	csvcut -c 10,9 source/UNSD-fr.csv > data/UNSD-fr-cut.csv
+	sed -i '' 's/Country or Area/official_name_fr/' data/UNSD-fr-cut.csv
+	csvcut -c 10,9 source/UNSD-ar.csv > data/UNSD-ar-cut.csv
+	sed -i '' 's/Country or Area/official_name_ar/' data/UNSD-ar-cut.csv
+	csvcut -c 10,9 source/UNSD-cn.csv > data/UNSD-cn-cut.csv
+	sed -i '' 's/Country or Area/official_name_cn/' data/UNSD-cn-cut.csv
+	csvcut -c 10,9 source/UNSD-es.csv > data/UNSD-es-cut.csv
+	sed -i '' 's/Country or Area/official_name_es/' data/UNSD-es-cut.csv
+	csvcut -c 10,9 source/UNSD-ru.csv > data/UNSD-ru-cut.csv
+	sed -i '' 's/Country or Area/official_name_ru/' data/UNSD-ru-cut.csv
+	csvjoin --left -c "M49 Code" source/UNSD-en.csv data/UNSD-fr-cut.csv data/UNSD-ar-cut.csv data/UNSD-cn-cut.csv data/UNSD-es-cut.csv data/UNSD-ru-cut.csv > data/iso3166.csv
+	sed -i '' 's/M49 Code/M49/' data/iso3166.csv
+	sed -i '' 's/Country or Area/official_name_en/' data/iso3166.csv
+	sed -i '' 's/ISO-alpha3 Code/ISO3166-1-Alpha-3/' data/iso3166.csv
+
+data/iso3166.json: data/iso3166.csv
+	csvjson data/iso3166.csv > data/iso3166-flat.json
+	scripts/format_json.py
 
 data/iso4217.json: data/iso3166.json
 	scripts/iso4217.py
@@ -26,23 +46,31 @@ data/geoname.csv:
 data/edgar.csv:
 	scripts/edgar.py
 
-country-codes.csv: data/country-codes.json data/geoname.csv data/edgar.csv
-	in2csv data/country-codes.json > data/country-codes.csv
-	# cldr.py expects existing data/country-codes.csv and outputs to the same
+data/cldr.csv:
 	scripts/cldr.py
-	csvjoin --left -c ISO3166-1-Alpha-3 data/country-codes-cldr.csv data/geoname.csv > data/country-codes.csv
-	csvjoin --left -c "ISO4217-currency_country_name,name" data/country-codes.csv data/edgar.csv > data/country-codes-edgar.csv
-	# csvjoin includes the `name` column from data/edgar.csv which duplicates `ISO4217-currency_country_name`, so use csvcut to include what we want in correct order
-	csvcut -c "name","official_name_en","official_name_fr","ISO3166-1-Alpha-2","ISO3166-1-Alpha-3","ISO3166-1-numeric","ITU","MARC","WMO","DS","Dial","FIFA","FIPS","GAUL","IOC","ISO4217-currency_alphabetic_code","ISO4217-currency_country_name","ISO4217-currency_minor_unit","ISO4217-currency_name","ISO4217-currency_numeric_code","is_independent","Capital","Continent","TLD","Languages","Geoname ID","EDGAR" data/country-codes-edgar.csv > data/country-codes-reordered.csv
-	# quick fix to misnamed column
-	# TODO update scripts to use M49 column name
-	sed -i '' 's/ISO3166-1-numeric/M49/' data/country-codes-reordered.csv
-	csvsort --no-inference -c "name" data/country-codes-reordered.csv > data/country-codes-reordered-sorted.csv
+
+data/unterm_names.csv: data/country-codes.json
+	scripts/unterm_names.py
+	scripts/join_unterm.py
+	cp data/country-codes-joined.json data/country-codes.json
+
+country-codes.csv: data/country-codes.json data/geoname.csv data/cldr.csv data/edgar.csv data/unterm_names.csv
+	in2csv --no-inference data/country-codes.json > data/country-codes.csv
+	csvjoin --no-inference --left -c ISO3166-1-Alpha-3 data/country-codes.csv data/geoname.csv > data/country-codes-geoname.csv
+	cp data/country-codes-geoname.csv data/country-codes.csv
+	csvjoin --no-inference --left -c ISO3166-1-Alpha-2 data/country-codes.csv data/cldr.csv > data/country-codes-cldr.csv
+	cp data/country-codes-cldr.csv data/country-codes.csv
+	csvjoin --no-inference --left -c "ISO4217-currency_country_name,name" data/country-codes.csv data/edgar.csv > data/country-codes-edgar.csv
+	cp data/country-codes-edgar.csv data/country-codes.csv
+	csvcut -n data/country-codes.csv > data/columns.csv
+	scripts/reorder_columns.py
+	export COLS=$$(cat data/column-order.txt)
+	csvcut -c $$COLS data/country-codes.csv > data/country-codes-reordered.csv
+	scripts/reorder_rows.py
 	cp data/country-codes-reordered-sorted.csv data/country-codes.csv
 
 clean:
-	@rm data/*.json
 	@rm data/*.csv
-	@rm data/*.tsv
+	@rm data/*.json
 
 .PHONY: diff

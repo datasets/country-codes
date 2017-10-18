@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 import codecs
 import json
+import urllib
 
 from lxml import etree
+from fuzzywuzzy import process
 
 import utils
 
@@ -12,7 +14,9 @@ country_info = json.loads(open("data/iso3166.json").read())
 en_names = {v.get('official_name_en').upper(): k
             for k, v in country_info.iteritems()}
 
-currencies_xml_str = open("source/table_a1.xml").read()
+iso4217_url = "https://www.currency-iso.org/dam/downloads/lists/list_one.xml"
+#currencies_xml_str = open("source/table_a1.xml").read()
+currencies_xml_str = urllib.urlopen(iso4217_url).read()
 currencies = etree.fromstring(currencies_xml_str)
 
 # map source's tag names to our property names
@@ -29,9 +33,7 @@ currency_country_name_map = {
     u"MACEDONIA, THE FORMER \nYUGOSLAV REPUBLIC OF": "MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF",
     u"SAINT HELENA, ASCENSION AND \nTRISTAN DA CUNHA": "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA",
     u"CABO VERDE": "CAPE VERDE",
-    u"CONGO, DEMOCRATIC REPUBLIC OF THE ": "CONGO, DEMOCRATIC REPUBLIC OF THE",
     u"HEARD ISLAND AND McDONALD ISLANDS": "HEARD ISLAND AND MCDONALD ISLANDS",
-    u"KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF": "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",
     u"LAO PEOPLE’S DEMOCRATIC REPUBLIC": "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
     u"SERBIA ": "SERBIA",
     u"PALESTINIAN TERRITORY, OCCUPIED": "PALESTINE, STATE OF",
@@ -55,13 +57,9 @@ currency_country_name_map = {
     u"ZZ11_Silver": None,
     u"BOLIVIA, PLURINATIONAL STATE OF": u"Bolivia (Plurinational State of)",
     u"HOLY SEE (VATICAN CITY STATE)": u"Holy See",
-    u"HONG KONG": u"China,  Hong Kong Special Administrative Region",
     u"IRAN, ISLAMIC REPUBLIC OF": u"Iran (Islamic Republic of)",
-    u"KOREA, REPUBLIC OF": u"Republic of Korea",
     u"MACAO": u"China, Macao Special Administrative Region",
-    u"MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF": u"The former Yugoslav Republic of Macedonia",
     u"MICRONESIA, FEDERATED STATES OF": u"Micronesia (Federated States of)",
-    u"MOLDOVA, REPUBLIC OF": u"Republic of Moldova",
     u"PALESTINE, STATE OF": u"State of Palestine",
     u"SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA": u"Saint Helena",
     u"SVALBARD AND JAN MAYEN": u"Svalbard and Jan Mayen Islands",
@@ -72,13 +70,20 @@ currency_country_name_map = {
     u"WALLIS AND FUTUNA": u"Wallis and Futuna Islands",
     u"VIRGIN ISLANDS (U.S.)": u"UNITED STATES VIRGIN ISLANDS",
     u"VIRGIN ISLANDS (BRITISH)": u"BRITISH VIRGIN ISLANDS",
-    u"CONGO, DEMOCRATIC REPUBLIC OF THE ": u"DEMOCRATIC REPUBLIC OF THE CONGO",
-    u"KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF": u"DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA",
+
+    u"CONGO (THE DEMOCRATIC REPUBLIC OF THE)": "DEMOCRATIC REPUBLIC OF THE CONGO",
+    u"KOREA (THE DEMOCRATIC PEOPLE’S REPUBLIC OF)": u"DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA",
+    u"KOREA (THE REPUBLIC OF)": u"REPUBLIC OF KOREA",
+    u"FALKLAND ISLANDS [MALVINAS]": u"FALKLAND ISLANDS",
+    u"HONG KONG": u'CHINA, HONG KONG SPECIAL ADMINISTRATIVE REGION',
+    u"MACEDONIA (THE FORMER YUGOSLAV REPUBLIC OF)": U"THE FORMER YUGOSLAV REPUBLIC OF MACEDONIA",
+    u"MOLDOVA (THE REPUBLIC OF)": u"REPUBLIC OF MOLDOVA",
 }
 
 
 def process_element(country):
     currency_dict = {}
+    currency_name = None
     for currency_tag in country.iterchildren():
         # ignore newly added additional info field
         if currency_tag_map[currency_tag.tag] ==\
@@ -92,24 +97,26 @@ def process_element(country):
         else:
             currency_dict.update({
                 currency_tag_map[currency_tag.tag]: currency_tag.text})
-            currency_numeric = None
             # remove random line breaks, etc
-            currency_name = utils.clean(currency_dict['ISO4217-currency_country_name'])
+            currency_name = utils.clean(currency_dict['ISO4217-currency_country_name']).upper().replace(' (THE)', '')
             if currency_name is not None:
                 # replace name with line breaks, etc removed
                 currency_dict['ISO4217-currency_country_name'] = currency_name
-            try:
-                currency_numeric = en_names[currency_name]
-            except KeyError:
-                mapped_name = currency_country_name_map.get(currency_name)
-                if mapped_name is not None:
-                    currency_numeric = en_names.get(mapped_name.upper())
 
-            if currency_numeric:
-                country_info[currency_numeric].update(currency_dict)
-            else:
-                print('Failed to match currency data for country: "%s"'
-                        % currency_name)
+    country_code = None
+    try:
+        country_code = en_names[currency_name]
+    except KeyError:
+        mapped_name = currency_country_name_map.get(currency_name)
+        if mapped_name is not None:
+            country_code = en_names.get(mapped_name.upper())
+
+
+    if country_code:
+        country_info[country_code].update(currency_dict)
+    else:
+        print('Failed to match currency data for country: "%s"'
+                % currency_name)
 
     return
 
