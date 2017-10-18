@@ -4,3 +4,4 @@ PyICU # https://github.com/Homebrew/legacy-homebrew/issues/34170#issuecomment-63
 bs4
 daff
 fuzzywuzzy[speedup]
+openpyxl
