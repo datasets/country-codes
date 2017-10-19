@@ -113,7 +113,17 @@ def process_element(country):
 
 
     if country_code:
-        country_info[country_code].update(currency_dict)
+        # some countries have multiple currency records in source dataset
+        # so check whether we have already added keys for currency info
+        # to our country_info dict
+        if set(currency_dict.keys()).issubset(set(country_info[country_code].keys())):
+            for k, v in currency_dict.items():
+                # don't duplicate name of country
+                if k != "ISO4217-currency_country_name":
+                    existing_value = country_info[country_code][k]
+                    country_info[country_code][k] = ','.join([existing_value, v])
+        else:
+            country_info[country_code].update(currency_dict)
     else:
         print('Failed to match currency data for country: "%s"'
                 % currency_name)
