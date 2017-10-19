@@ -82,6 +82,13 @@ def process_statoids_row(tr):
                     row.append(','.join(map(''.join,
                                             zip(*[iter(td.text_content())]*5))))
                     continue
+        if ((len(row) > 1) and (row[1] in ["SH", "RS"])):
+            # Saint Helena and Serbia dial cells have anchors to footnotes
+            # so just append the number
+            if td.text_content()[:3].isdigit():
+                code = td.text_content().split(' ')[0]
+                row.append(code)
+                continue
         if len(td.getchildren()) == 1:
             if td.find('.//br') is not None:
                 if len(td.getchildren()) == 1:
