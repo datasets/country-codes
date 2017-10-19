@@ -5,16 +5,19 @@ codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Pac
 
 Data comes from multiple sources as follows:
 
+Official formal and short names (in English, French, Spanish, Arabic, Chinese, and Russian) are from
+[United Nations Protocol and Liaison Service](https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp)
+
 Customary English short names are from
 [Unicode Common Locale Data Repository (CLDR) Project](https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json).
 
 Note: CLDR shorter names "ZZ-alt-short" are used when available
 
-ISO 3166 official English and French short names are from
-[United Nations Statistics Division](http://unstats.un.org/unsd/methods/m49/m49.htm)
+ISO 3166 official short names (in English, French, Spanish, Arabic, Chinese, and Russian) are from
+[United Nations Department of Ecoonomic and Social Affairs Statistics Division](https://unstats.un.org/unsd/methodology/m49/overview/)
 
 ISO 4217 currency codes are from
-[currency-iso.org](http://www.currency-iso.org/en/home/tables/table-a1.html)
+[currency-iso.org](https://www.currency-iso.org/dam/downloads/lists/list_one.xml)
 
 Many other country codes are from
 [statoids.com](http://www.statoids.com/wab.html)
@@ -32,9 +35,11 @@ EDGAR codes are from [sec.gov](https://www.sec.gov/edgar/searchedgar/edgarstatec
 ## Preparation
 
 This package includes Python scripts to fetch current country information
-and output a JSON document and CSV of combined country code information.
+from various data sources and output CSV of combined country code information.
 
 CSV output is provided via the `in2csv` and `csvcut` utilities from [csvkit](http://github.com/onyxfish/csvkit)
+
+NOTE/TODO: currently, preparation requires manual process to download and rename 6 CSV files from https://unstats.un.org/unsd/methodology/m49/overview/
 
 ### data/country-codes.csv
 

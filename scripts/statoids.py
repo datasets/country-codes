@@ -172,7 +172,7 @@ for tr in doc.find_class('o'):
     row_dict.pop('Entity')
     table_rows.update({row_dict[alpha2_key]: row_dict})
 
-keyed_by = "ISO3166-1-numeric"
+keyed_by = "ISO3166-1-Alpha-3"
 
 # iterate through all the table_rows
 # TODO this assumes that statoids will have all of

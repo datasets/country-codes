@@ -3,7 +3,7 @@
   "title": "Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more",
   "format": "csv",
   "datapackage_version": "1.0.0-beta.13",
-  "last_modified": "2017-01-16",
+  "last_modified": "2017-10-19",
   "licenses": [
     {
       "type": "ODC-PDDL-1.0",
@@ -12,16 +12,20 @@
   ],
   "sources": [
     {
+      "name": "United Nations Protocol and Liaison Service",
+      "web": "https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp"
+    },
+    {
       "name": "Unicode Common Locale Data Repository (CLDR) Project",
       "web": "https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json"
     },
     {
-      "name": "United Nations Statistics Division",
-      "web": "http://unstats.un.org/unsd/methods/m49/m49.htm"
+      "name": "United Nations Department of Ecoonomic and Social Affairs Statistics Division",
+      "web": "https://unstats.un.org/unsd/methodology/m49/overview/"
     },
     {
       "name": "SIX Interbank Clearing Ltd (on behalf of ISO)",
-      "web": "http://www.currency-iso.org/dam/downloads/dl_iso_table_a1.xls"
+      "web": "https://www.currency-iso.org/dam/downloads/lists/list_one.xml"
     },
     {
       "name": "Statoids",
@@ -45,18 +49,33 @@
       "schema": {
         "fields": [
           {
-            "name": "name",
-            "description": "Country's customary English short name (CLDR)",
+            "name": "official_name_ar",
+            "description": "Country or Area official Arabic short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "official_name_cn",
+            "description": "Country or Area official Chinese short name from UN Statistics Divsion",
             "type": "string"
           },
           {
             "name": "official_name_en",
-            "description": "Country's official English short name",
+            "description": "Country or Area official English short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "official_name_es",
+            "description": "Country or Area official Spanish short name from UN Statistics Divsion",
             "type": "string"
           },
           {
             "name": "official_name_fr",
-            "description": "Country's offical French short name",
+            "description": "Country or Area official French short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "official_name_ru",
+            "description": "Country or Area official Russian short name from UN Statistics Divsion",
             "type": "string"
           },
           {
@@ -70,53 +89,8 @@
             "type": "string"
           },
           {
-            "name": "M49",
-            "description": "UN Statistics M49 numeric codes (nearly synonymous with ISO 3166-1 numeric codes, which are based on UN M49. ISO 3166-1 does not include Channel Islands or Sark, for example)",
-            "type": "number"
-          },
-          {
-            "name": "ITU",
-            "description": "Codes assigned by the International Telecommunications Union",
-            "type": "string"
-          },
-          {
-            "name": "MARC",
-            "description": "MAchine-Readable Cataloging codes from the Library of Congress",
-            "type": "string"
-          },
-          {
-            "name": "WMO",
-            "description": "Country abbreviations by the World Meteorological Organization",
-            "type": "string"
-          },
-          {
-            "name": "DS",
-            "description": "Distinguishing signs of vehicles in international traffic",
-            "type": "string"
-          },
-          {
-            "name": "Dial",
-            "description": "Country code from ITU-T recommendation E.164, sometimes followed by area code",
-            "type": "string"
-          },
-          {
-            "name": "FIFA",
-            "description": "Codes assigned by the Fédération Internationale de Football Association",
-            "type": "string"
-          },
-          {
-            "name": "FIPS",
-            "description": "Codes from the U.S. standard FIPS PUB 10-4",
-            "type": "string"
-          },
-          {
-            "name": "GAUL",
-            "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
-            "type": "string"
-          },
-          {
-            "name": "IOC",
-            "description": "Codes assigned by the International Olympics Committee",
+            "name": "ISO3166-1-numeric",
+            "description": "Numeric codes from ISO 3166-1",
             "type": "string"
           },
           {
@@ -145,8 +119,73 @@
             "type": "number"
           },
           {
-            "name": "is_independent",
-            "description": "Country status, based on the CIA World Factbook",
+            "name": "M49",
+            "description": "UN Statistics M49 numeric codes (nearly synonymous with ISO 3166-1 numeric codes, which are based on UN M49. ISO 3166-1 does not include Channel Islands or Sark, for example)",
+            "type": "number"
+          },
+          {
+            "name": "UNTERM Arabic Formal",
+            "description": "Country's formal Arabic name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Arabic Short",
+            "description": "Country's short Arabic name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Chinese Formal",
+            "description": "Country's formal Chinese name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Chinese Short",
+            "description": "Country's short Chinese name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM English Formal",
+            "description": "Country's formal English name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM English Short",
+            "description": "Country's short English name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM French Formal",
+            "description": "Country's formal French name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM French Short",
+            "description": "Country's short French name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Russian Formal",
+            "description": "Country's formal Russian name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Russian Short",
+            "description": "Country's short Russian name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Spanish Formal",
+            "description": "Country's formal Spanish name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Spanish Short",
+            "description": "Country's short Spanish name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "CLDR display name",
+            "description": "Country's customary English short name (CLDR)",
             "type": "string"
           },
           {
@@ -160,13 +199,38 @@
             "type": "string"
           },
           {
-            "name": "TLD",
-            "description": "Top level domain from Geonames",
+            "name": "DS",
+            "description": "Distinguishing signs of vehicles in international traffic",
             "type": "string"
           },
           {
-            "name": "Languages",
-            "description": "Languages from Geonames",
+            "name": "Developed / Developing Countries",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Dial",
+            "description": "Country code from ITU-T recommendation E.164, sometimes followed by area code",
+            "type": "string"
+          },
+          {
+            "name": "EDGAR",
+            "description": "EDGAR country code from SEC",
+            "type": "string"
+          },
+          {
+            "name": "FIFA",
+            "description": "Codes assigned by the Fédération Internationale de Football Association",
+            "type": "string"
+          },
+          {
+            "name": "FIPS",
+            "description": "Codes from the U.S. standard FIPS PUB 10-4",
+            "type": "string"
+          },
+          {
+            "name": "GAUL",
+            "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
             "type": "string"
           },
           {
@@ -175,8 +239,93 @@
             "type": "number"
           },
           {
-            "name": "EDGAR",
-            "description": "EDGAR country code from SEC",
+            "name": "Global Code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Global Name",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "IOC",
+            "description": "Codes assigned by the International Olympics Committee",
+            "type": "string"
+          },
+          {
+            "name": "ITU",
+            "description": "Codes assigned by the International Telecommunications Union",
+            "type": "string"
+          },
+          {
+            "name": "Intermediate Region Code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Intermediate Region Name",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Land Locked Developing Countries (LLDC)",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Languages",
+            "description": "Languages from Geonames",
+            "type": "string"
+          },
+          {
+            "name": "Least Developed Countries (LDC)",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "MARC",
+            "description": "MAchine-Readable Cataloging codes from the Library of Congress",
+            "type": "string"
+          },
+          {
+            "name": "Region Code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Region Name",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Small Island Developing States (SIDS)",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Sub-region Code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Sub-region Name",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "TLD",
+            "description": "Top level domain from Geonames",
+            "type": "string"
+          },
+          {
+            "name": "WMO",
+            "description": "Country abbreviations by the World Meteorological Organization",
+            "type": "string"
+          },
+          {
+            "name": "is_independent",
+            "description": "Country status, based on the CIA World Factbook",
             "type": "string"
           }
         ]
