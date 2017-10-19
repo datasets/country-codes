@@ -3,7 +3,7 @@ SHELL := '/bin/bash'
 default: diff
 
 diff:
-	daff 2017-01-16_country-codes.csv data/country-codes.csv > daffdiff.csv
+	daff data/previous-country-codes.csv data/country-codes.csv > daffdiff.csv
 	daff render daffdiff.csv > daffdiff.html
 
 all:
@@ -11,6 +11,7 @@ all:
 .SECONDARY:
 
 data/iso3166.csv:
+	cp data/country-codes.csv data/previous-country-codes.csv
 	csvcut -c 10,9 source/UNSD-fr.csv > data/UNSD-fr-cut.csv
 	sed -i '' 's/Country or Area/official_name_fr/' data/UNSD-fr-cut.csv
 	csvcut -c 10,9 source/UNSD-ar.csv > data/UNSD-ar-cut.csv
