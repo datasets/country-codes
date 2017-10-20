@@ -1,3 +1,4 @@
+goodtables
 lxml==2.3
 csvkit
 PyICU # https://github.com/Homebrew/legacy-homebrew/issues/34170#issuecomment-63192387

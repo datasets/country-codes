@@ -1,5 +1,7 @@
+[![goodtables.io](https://goodtables.io/badge/github/datasets/country-codes.svg)](https://goodtables.io/github/datasets/country-codes)
+
 Comprehensive country code information, including ISO 3166 codes, ITU dialing
-codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Package](http://frictionlessdata.io/data-packages/).
+codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Package](http://frictionlessdata.io/data-packages/): [view datapackage](http://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdatasets%2Fcountry-codes%2Fmaster%2Fdatapackage.json)
 
 ## Data
 
