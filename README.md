@@ -5,7 +5,7 @@ codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Pac
 
 ## Data
 
-Data comes from multiple sources as follows:
+Data are fetchedfrom multiple sources:
 
 Official formal and short names (in English, French, Spanish, Arabic, Chinese, and Russian) are from
 [United Nations Protocol and Liaison Service](https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp)
