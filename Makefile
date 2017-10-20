@@ -1,10 +1,13 @@
 SHELL := '/bin/bash'
 
-default: diff
+default: test
 
 diff:
 	daff previous-country-codes.csv data/country-codes.csv > daffdiff.csv
 	daff render daffdiff.csv > daffdiff.html
+
+test:
+	goodtables datapackage.json
 
 all:
 
@@ -73,3 +76,4 @@ clean:
 	@rm data/*.json
 
 .PHONY: diff
+.PHONY: test
