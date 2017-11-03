@@ -24,13 +24,13 @@ data/iso3166.csv:
 	sed -i '' 's/Country or Area/official_name_es/' data/UNSD-es-cut.csv
 	csvcut -c 10,9 source/UNSD-ru.csv > data/UNSD-ru-cut.csv
 	sed -i '' 's/Country or Area/official_name_ru/' data/UNSD-ru-cut.csv
-	csvjoin --left -c "M49 Code" source/UNSD-en.csv data/UNSD-fr-cut.csv data/UNSD-ar-cut.csv data/UNSD-cn-cut.csv data/UNSD-es-cut.csv data/UNSD-ru-cut.csv > data/iso3166.csv
+	csvjoin --blanks --left -c "M49 Code" source/UNSD-en.csv data/UNSD-fr-cut.csv data/UNSD-ar-cut.csv data/UNSD-cn-cut.csv data/UNSD-es-cut.csv data/UNSD-ru-cut.csv > data/iso3166.csv
 	sed -i '' 's/M49 Code/M49/' data/iso3166.csv
 	sed -i '' 's/Country or Area/official_name_en/' data/iso3166.csv
 	sed -i '' 's/ISO-alpha3 Code/ISO3166-1-Alpha-3/' data/iso3166.csv
 
 data/iso3166.json: data/iso3166.csv
-	csvjson data/iso3166.csv > data/iso3166-flat.json
+	csvjson --blanks data/iso3166.csv > data/iso3166-flat.json
 	scripts/format_json.py
 
 data/iso4217.json: data/iso3166.json
@@ -58,12 +58,12 @@ data/unterm_names.csv: data/country-codes.json
 	cp data/country-codes-joined.json data/country-codes.json
 
 country-codes.csv: data/country-codes.json data/geoname.csv data/cldr.csv data/edgar.csv data/unterm_names.csv
-	in2csv --no-inference data/country-codes.json > data/country-codes.csv
-	csvjoin --no-inference --left -c ISO3166-1-Alpha-3 data/country-codes.csv data/geoname.csv > data/country-codes-geoname.csv
+	in2csv --no-inference --blanks data/country-codes.json > data/country-codes.csv
+	csvjoin --no-inference --blanks --left -c ISO3166-1-Alpha-3 data/country-codes.csv data/geoname.csv > data/country-codes-geoname.csv
 	cp data/country-codes-geoname.csv data/country-codes.csv
-	csvjoin --no-inference --left -c ISO3166-1-Alpha-2 data/country-codes.csv data/cldr.csv > data/country-codes-cldr.csv
+	csvjoin --no-inference --blanks --left -c ISO3166-1-Alpha-2 data/country-codes.csv data/cldr.csv > data/country-codes-cldr.csv
 	cp data/country-codes-cldr.csv data/country-codes.csv
-	csvjoin --no-inference --left -c "ISO4217-currency_country_name,name" data/country-codes.csv data/edgar.csv > data/country-codes-edgar.csv
+	csvjoin --no-inference --blanks --left -c "ISO4217-currency_country_name,name" data/country-codes.csv data/edgar.csv > data/country-codes-edgar.csv
 	cp data/country-codes-edgar.csv data/country-codes.csv
 	csvcut -n data/country-codes.csv > data/columns.csv
 	scripts/reorder_columns.py
