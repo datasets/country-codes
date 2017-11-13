@@ -150,7 +150,7 @@
             "title": "M49",
             "description": "UN Statistics M49 numeric codes (nearly synonymous with ISO 3166-1 numeric codes, which are based on UN M49. ISO 3166-1 does not include Channel Islands or Sark, for example)",
             "type": "number",
-            "constraints" : {"unique": true, "minLength": 3, "maxLength": 3}
+            "constraints" : {"unique": true}
           },
           {
             "name": "UNTERM Arabic Formal",
@@ -267,14 +267,13 @@
             "title": "EDGAR code",
             "description": "EDGAR country code from SEC",
             "type": "string",
-            "constraints" : {"unique": true, "minLength": 2, "maxLength": 2}
+            "constraints" : {"maxLength": 2}
           },
           {
             "name": "FIFA",
             "title": "FIFA code",
             "description": "Codes assigned by the Fédération Internationale de Football Association",
-            "type": "string",
-            "constraints" : {"unique": true}
+            "type": "string"
           },
           {
             "name": "FIPS",
@@ -286,8 +285,7 @@
             "name": "GAUL",
             "title": "GAUL code",
             "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
-            "type": "string",
-            "constraints" : {"unique": true}
+            "type": "string"
           },
           {
             "name": "Geoname ID",
@@ -313,7 +311,7 @@
             "title": "IOC code",
             "description": "Codes assigned by the International Olympics Committee",
             "type": "string",
-            "constraints" : {"unique": true, "minLength": 3, "maxLength": 3}
+            "constraints" : {"maxLength": 3}
           },
           {
             "name": "ITU",
@@ -398,7 +396,7 @@
             "title": "WMO code",
             "description": "Country abbreviations by the World Meteorological Organization",
             "type": "string",
-            "constraints" : {"minLength": 2, "maxLength": 2}
+            "constraints" : {"maxLength": 2}
           },
           {
             "name": "is_independent",
