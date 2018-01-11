@@ -1,7 +1,15 @@
-[![goodtables.io](https://goodtables.io/badge/github/datasets/country-codes.svg)](https://goodtables.io/github/datasets/country-codes)
+#### Important, commonly-used datasets in high quality, easy-to-use & open form as data packages
 
 Comprehensive country code information, including ISO 3166 codes, ITU dialing
 codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Package](http://frictionlessdata.io/data-packages/): [view datapackage](http://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdatasets%2Fcountry-codes%2Fmaster%2Fdatapackage.json)
+
+## Contents
+
+- [Data](#data)
+- [Install](#install)
+- [Usage](#usage)
+- [License](#license)
+
 
 ## Data
 
@@ -33,26 +41,17 @@ Capital cities, languages, continents, TLDs, and geonameid are from [geonames.or
 
 EDGAR codes are from [sec.gov](https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm)
 
+## Install 
 
-## Preparation
+```
+npm install @datasets/country-codes
+```
 
-This package includes Python scripts to fetch current country information
-from various data sources and output CSV of combined country code information.
+## Usage
 
-CSV output is provided via the `in2csv` and `csvcut` utilities from [csvkit](http://github.com/onyxfish/csvkit)
-
-NOTE/TODO: currently, preparation requires manual process to download and rename 6 CSV files from https://unstats.un.org/unsd/methodology/m49/overview/
-
-### data/country-codes.csv
-
-Install requirements:
-
-    pip install -r scripts/requirements.pip
-
-
-Run GNU Make to generate data file:
-
-    make country-codes.csv
+```
+const codes = require('@datasets/country-codes');
+```
 
 ## License
 
