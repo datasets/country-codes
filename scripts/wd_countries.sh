@@ -11,7 +11,10 @@ curl -o wd_countries.csv -G 'https://query.wikidata.org/sparql' \
    BIND ( strafter(str(?item), str(wd:)) AS ?wd_id ).
  } ORDER BY ?iso2_code
 '
+
 # Eliminate duplication (confusion with kingdoms and territories)
 # in the future we can use "P31 Q417175" to eliminate doublets of kingdows, but "territory vs nation" need some check.
 # so, filtering invalid doublets and saving with same name:
-grep -v 'Q756617\|Q29999\|Q29999' wd_countries.csv  | sponge wd_countries.csv
+grep -v 'Q756617\|Q29999\|Q407199\|Q240592\|Q83286\|Q1246' wd_countries.csv  | sponge wd_countries.csv
+# filtering also the last two, that are not in use at ISO: Q83286=old YU, Yugoslavia; Q1246=XK, Kosovo.
+# filtering wrong duplicated Q240592 Macedonia.
