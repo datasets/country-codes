@@ -10,52 +10,52 @@
   },
   "licenses": [
     {
-      "type": "ODC-PDDL-1.0",
-      "url": "http://opendatacommons.org/licenses/pddl/1.0/"
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
     }
   ],
   "sources": [
     {
       "name": "United Nations Protocol and Liaison Service",
       "title": "United Nations Protocol and Liaison Service",
-      "web": "https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp"
+      "path": "https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp"
     },
     {
       "name": "Unicode Common Locale Data Repository (CLDR) Project",
       "title": "Unicode Common Locale Data Repository (CLDR) Project",
-      "web": "https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json"
+      "path": "https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json"
     },
     {
       "name": "United Nations Department of Ecoonomic and Social Affairs Statistics Division",
       "title": "United Nations Department of Ecoonomic and Social Affairs Statistics Division",
-      "web": "https://unstats.un.org/unsd/methodology/m49/overview/"
+      "path": "https://unstats.un.org/unsd/methodology/m49/overview/"
     },
     {
       "name": "SIX Interbank Clearing Ltd (on behalf of ISO)",
       "title": "SIX Interbank Clearing Ltd (on behalf of ISO)",
-      "web": "https://www.currency-iso.org/dam/downloads/lists/list_one.xml"
+      "path": "https://www.currency-iso.org/dam/downloads/lists/list_one.xml"
     },
     {
       "name": "Statoids",
       "title": "Statoids",
-      "web": "http://www.statoids.com/wab.html"
+      "path": "http://www.statoids.com/wab.html"
     },
     {
       "name": "Geonames",
       "title": "Geonames",
-      "web": "http://download.geonames.org/export/dump/countryInfo.txt"
+      "path": "http://download.geonames.org/export/dump/countryInfo.txt"
     },
     {
       "name": "US Securities and Exchange Commission",
       "title": "US Securities and Exchange Commission",
-      "web": "https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm"
+      "path": "https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm"
     }
   ],
   "resources": [
     {
       "name": "country-codes",
       "format": "csv",
-      "url": "https://raw.github.com/datasets/country-codes/master/data/country-codes.csv",
       "path": "data/country-codes.csv",
       "schema": {
         "fields": [
@@ -150,7 +150,7 @@
             "title": "M49",
             "description": "UN Statistics M49 numeric codes (nearly synonymous with ISO 3166-1 numeric codes, which are based on UN M49. ISO 3166-1 does not include Channel Islands or Sark, for example)",
             "type": "number",
-            "constraints" : {"unique": true, "minLength": 3, "maxLength": 3}
+            "constraints" : {"unique": true}
           },
           {
             "name": "UNTERM Arabic Formal",
@@ -267,14 +267,13 @@
             "title": "EDGAR code",
             "description": "EDGAR country code from SEC",
             "type": "string",
-            "constraints" : {"unique": true, "minLength": 2, "maxLength": 2}
+            "constraints" : {"maxLength": 2}
           },
           {
             "name": "FIFA",
             "title": "FIFA code",
             "description": "Codes assigned by the Fédération Internationale de Football Association",
-            "type": "string",
-            "constraints" : {"unique": true}
+            "type": "string"
           },
           {
             "name": "FIPS",
@@ -286,8 +285,7 @@
             "name": "GAUL",
             "title": "GAUL code",
             "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
-            "type": "string",
-            "constraints" : {"unique": true}
+            "type": "string"
           },
           {
             "name": "Geoname ID",
@@ -313,7 +311,7 @@
             "title": "IOC code",
             "description": "Codes assigned by the International Olympics Committee",
             "type": "string",
-            "constraints" : {"unique": true, "minLength": 3, "maxLength": 3}
+            "constraints" : {"maxLength": 3}
           },
           {
             "name": "ITU",
@@ -398,7 +396,7 @@
             "title": "WMO code",
             "description": "Country abbreviations by the World Meteorological Organization",
             "type": "string",
-            "constraints" : {"minLength": 2, "maxLength": 2}
+            "constraints" : {"maxLength": 2}
           },
           {
             "name": "is_independent",
@@ -410,8 +408,37 @@
       }
     }
   ],
-  "maintainers":[{
-    "name": "Evan Wheeler",
-    "web": "https://github.com/datasets/country-codes"
-  }]
+  "contributors": [
+    {
+     "title": "Evan Wheeler",
+     "path": "https://github.com/datasets/country-codes",
+     "role": "maintainer"
+    }
+  ],
+  "related": [
+    {
+      "title": "Country list",
+      "path": "/core/country-list",
+      "publisher": "core",
+      "formats": ["CSV", "JSON"]
+    },
+    {
+      "title": "Language codes",
+      "path": "/core/language-codes",
+      "publisher": "core",
+      "formats": ["CSV", "JSON"]
+    },
+    {
+      "title": "Airport codes",
+      "path": "/core/airport-codes",
+      "publisher": "core",
+      "formats": ["CSV", "JSON"]
+    },
+    {
+      "title": "Continent codes",
+      "path": "/core/continent-codes",
+      "publisher": "core",
+      "formats": ["CSV", "JSON"]
+    }
+  ]
 }
