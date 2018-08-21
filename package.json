@@ -2,7 +2,7 @@
   "name": "@datasets/country-codes",
   "version": "1.0.3",
   "description": "Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more",
-  "main": "country-codes.json",
+  "main": "data.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/datasets/country-codes/issues"
   },
-  "homepage": "https://github.com/datasets/country-codes/tree/npm#readme"
+  "homepage": "https://github.com/datasets/country-codes/tree/npm#readme",
+  "devDependencies": {
+    "papaparse": "^4.6.0",
+    "request": "^2.88.0"
+  }
 }
