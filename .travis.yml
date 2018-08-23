@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "8"
+install: npm i -g data-cli
+script:
+  - git fetch origin npm:npm
+  - git checkout npm
+  - git remote rm origin
+  - git remote add origin $REMOTE_GIT # so that remote URL contains credentials for Github
+after_script:
+  - npm version patch # Update version of the package
+  - git push origin npm # Push to branch and trigger another Travis build for that branch
+  - data push # Publish to DataHub
+branches:
+  only:
+  - master
+  - npm
