@@ -60,9 +60,249 @@
       "schema": {
         "fields": [
           {
+            "name": "FIFA",
+            "title": "FIFA code",
+            "description": "Codes assigned by the Fédération Internationale de Football Association",
+            "type": "string"
+          },
+          {
+            "name": "Dial",
+            "title": "telephone dialing code",
+            "description": "Country code from ITU-T recommendation E.164, sometimes followed by area code",
+            "type": "string"
+          },
+          {
+            "name": "ISO3166-1-Alpha-3",
+            "title": "ISO3166-1-Alpha-3",
+            "description": "Alpha-3 codes from ISO 3166-1 (synonymous with World Bank Codes)",
+            "type": "string",
+            "constraints" : {"unique": true, "minLength": 3, "maxLength": 3}
+          },
+          {
+            "name": "MARC",
+            "title": "MARC code",
+            "description": "MAchine-Readable Cataloging codes from the Library of Congress",
+            "type": "string"
+          },
+          {
+            "name": "is_independent",
+            "title": "independent country",
+            "description": "Country status, based on the CIA World Factbook",
+            "type": "string"
+          },
+          {
+            "name": "ISO3166-1-numeric",
+            "title": "ISO3166-1-numeric",
+            "description": "Numeric codes from ISO 3166-1",
+            "type": "string"
+          },
+          {
+            "name": "GAUL",
+            "title": "GAUL code",
+            "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
+            "type": "string"
+          },
+          {
+            "name": "FIPS",
+            "title": "FIPS code",
+            "description": "Codes from the U.S. standard FIPS PUB 10-4",
+            "type": "string"
+          },
+          {
+            "name": "WMO",
+            "title": "WMO code",
+            "description": "Country abbreviations by the World Meteorological Organization",
+            "type": "string",
+            "constraints" : {"maxLength": 2}
+          },
+          {
+            "name": "ISO3166-1-Alpha-2",
+            "title": "ISO3166-1-Alpha-2",
+            "description": "Alpha-2 codes from ISO 3166-1",
+            "type": "string",
+            "constraints" : {"unique": true, "minLength": 2, "maxLength": 2}
+          },
+          {
+            "name": "ITU",
+            "title": "ITU code",
+            "description": "Codes assigned by the International Telecommunications Union",
+            "type": "string"
+          },
+          {
+            "name": "IOC",
+            "title": "IOC code",
+            "description": "Codes assigned by the International Olympics Committee",
+            "type": "string",
+            "constraints" : {"maxLength": 3}
+          },
+          {
+            "name": "DS",
+            "title": "distinguishing signs of vehicles",
+            "description": "Distinguishing signs of vehicles in international traffic",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Spanish Formal",
+            "title": "UNTERM Spanish Formal",
+            "description": "Country's formal Spanish name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "Global Code",
+            "title": "global code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Intermediate Region Code",
+            "title": "intermediate region code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "official_name_fr",
+            "title": "official name French",
+            "description": "Country or Area official French short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM French Short",
+            "title": "UNTERM French Short",
+            "description": "Country's short French name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "ISO4217-currency_name",
+            "title": "ISO4217-currency_name",
+            "description": "ISO 4217 currency name",
+            "type": "string"
+          },
+          {
+            "name": "Developed / Developing Countries",
+            "title": "developed or developing country",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string",
+            "constraints" : {"enum": ["Developing", "Developed"]}
+          },
+          {
+            "name": "UNTERM Russian Formal",
+            "title": "UNTERM Russian Formal",
+            "description": "Country's formal Russian name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM English Short",
+            "title": "UNTERM English Short",
+            "description": "Country's short English name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "ISO4217-currency_alphabetic_code",
+            "title": "ISO4217-currency_alphabetic_code",
+            "description": "ISO 4217 currency alphabetic code",
+            "type": "string"
+          },
+          {
+            "name": "Small Island Developing States (SIDS)",
+            "title": "small island developing state (SIDS)",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Spanish Short",
+            "title": "UNTERM Spanish Short",
+            "description": "Country's short Spanish name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "ISO4217-currency_numeric_code",
+            "title": "ISO4217-currency_numeric_code",
+            "description": "ISO 4217 currency numeric code",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Chinese Formal",
+            "title": "UNTERM Chinese Formal",
+            "description": "Country's formal Chinese name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM French Formal",
+            "title": "UNTERM French Formal",
+            "description": "Country's formal French name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Russian Short",
+            "title": "UNTERM Russian Short",
+            "description": "Country's short Russian name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "M49",
+            "title": "M49",
+            "description": "UN Statistics M49 numeric codes (nearly synonymous with ISO 3166-1 numeric codes, which are based on UN M49. ISO 3166-1 does not include Channel Islands or Sark, for example)",
+            "type": "number",
+            "constraints" : {"unique": true}
+          },
+          {
+            "name": "Sub-region Code",
+            "title": "sub-region code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Region Code",
+            "title": "region code",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
             "name": "official_name_ar",
             "title": "official name Arabic",
             "description": "Country or Area official Arabic short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "ISO4217-currency_minor_unit",
+            "title": "ISO4217-currency_minor_unit",
+            "description": "ISO 4217 currency number of minor units",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Arabic Formal",
+            "title": "UNTERM Arabic Formal",
+            "description": "Country's formal Arabic name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM Chinese Short",
+            "title": "UNTERM Chinese Short",
+            "description": "Country's short Chinese name from UN Protocol and Liaison Service",
+            "type": "string"
+          },
+          {
+            "name": "Land Locked Developing Countries (LLDC)",
+            "title": "land locked developing country (LLDC)",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "Intermediate Region Name",
+            "title": "intermediate region name",
+            "description": "Country classification from United Nations Statistics Division",
+            "type": "string"
+          },
+          {
+            "name": "official_name_es",
+            "title": "official name Spanish",
+            "description": "Country or Area official Spanish short name from UN Statistics Divsion",
+            "type": "string"
+          },
+          {
+            "name": "UNTERM English Formal",
+            "title": "UNTERM English Formal",
+            "description": "Country's formal English name from UN Protocol and Liaison Service",
             "type": "string"
           },
           {
@@ -78,84 +318,21 @@
             "type": "string"
           },
           {
-            "name": "official_name_es",
-            "title": "official name Spanish",
-            "description": "Country or Area official Spanish short name from UN Statistics Divsion",
-            "type": "string"
-          },
-          {
-            "name": "official_name_fr",
-            "title": "official name French",
-            "description": "Country or Area official French short name from UN Statistics Divsion",
-            "type": "string"
-          },
-          {
-            "name": "official_name_ru",
-            "title": "official name Russian",
-            "description": "Country or Area official Russian short name from UN Statistics Divsion",
-            "type": "string"
-          },
-          {
-            "name": "ISO3166-1-Alpha-2",
-            "title": "ISO3166-1-Alpha-2",
-            "description": "Alpha-2 codes from ISO 3166-1",
-            "type": "string",
-            "constraints" : {"unique": true, "minLength": 2, "maxLength": 2}
-          },
-          {
-            "name": "ISO3166-1-Alpha-3",
-            "title": "ISO3166-1-Alpha-3",
-            "description": "Alpha-3 codes from ISO 3166-1 (synonymous with World Bank Codes)",
-            "type": "string",
-            "constraints" : {"unique": true, "minLength": 3, "maxLength": 3}
-          },
-          {
-            "name": "ISO3166-1-numeric",
-            "title": "ISO3166-1-numeric",
-            "description": "Numeric codes from ISO 3166-1",
-            "type": "string"
-          },
-          {
-            "name": "ISO4217-currency_alphabetic_code",
-            "title": "ISO4217-currency_alphabetic_code",
-            "description": "ISO 4217 currency alphabetic code",
-            "type": "string"
-          },
-          {
             "name": "ISO4217-currency_country_name",
             "title": "ISO4217-currency_country_name",
             "description": "ISO 4217 country name",
             "type": "string"
           },
           {
-            "name": "ISO4217-currency_minor_unit",
-            "title": "ISO4217-currency_minor_unit",
-            "description": "ISO 4217 currency number of minor units",
+            "name": "Least Developed Countries (LDC)",
+            "title": "least developed country (LDC)",
+            "description": "Country classification from United Nations Statistics Division",
             "type": "string"
           },
           {
-            "name": "ISO4217-currency_name",
-            "title": "ISO4217-currency_name",
-            "description": "ISO 4217 currency name",
-            "type": "string"
-          },
-          {
-            "name": "ISO4217-currency_numeric_code",
-            "title": "ISO4217-currency_numeric_code",
-            "description": "ISO 4217 currency numeric code",
-            "type": "string"
-          },
-          {
-            "name": "M49",
-            "title": "M49",
-            "description": "UN Statistics M49 numeric codes (nearly synonymous with ISO 3166-1 numeric codes, which are based on UN M49. ISO 3166-1 does not include Channel Islands or Sark, for example)",
-            "type": "number",
-            "constraints" : {"unique": true}
-          },
-          {
-            "name": "UNTERM Arabic Formal",
-            "title": "UNTERM Arabic Formal",
-            "description": "Country's formal Arabic name from UN Protocol and Liaison Service",
+            "name": "Region Name",
+            "title": "region name",
+            "description": "Country classification from United Nations Statistics Division",
             "type": "string"
           },
           {
@@ -165,69 +342,21 @@
             "type": "string"
           },
           {
-            "name": "UNTERM Chinese Formal",
-            "title": "UNTERM Chinese Formal",
-            "description": "Country's formal Chinese name from UN Protocol and Liaison Service",
+            "name": "Sub-region Name",
+            "title": "sub-region name",
+            "description": "Country classification from United Nations Statistics Division",
             "type": "string"
           },
           {
-            "name": "UNTERM Chinese Short",
-            "title": "UNTERM Chinese Short",
-            "description": "Country's short Chinese name from UN Protocol and Liaison Service",
+            "name": "official_name_ru",
+            "title": "official name Russian",
+            "description": "Country or Area official Russian short name from UN Statistics Divsion",
             "type": "string"
           },
           {
-            "name": "UNTERM English Formal",
-            "title": "UNTERM English Formal",
-            "description": "Country's formal English name from UN Protocol and Liaison Service",
-            "type": "string"
-          },
-          {
-            "name": "UNTERM English Short",
-            "title": "UNTERM English Short",
-            "description": "Country's short English name from UN Protocol and Liaison Service",
-            "type": "string"
-          },
-          {
-            "name": "UNTERM French Formal",
-            "title": "UNTERM French Formal",
-            "description": "Country's formal French name from UN Protocol and Liaison Service",
-            "type": "string"
-          },
-          {
-            "name": "UNTERM French Short",
-            "title": "UNTERM French Short",
-            "description": "Country's short French name from UN Protocol and Liaison Service",
-            "type": "string"
-          },
-          {
-            "name": "UNTERM Russian Formal",
-            "title": "UNTERM Russian Formal",
-            "description": "Country's formal Russian name from UN Protocol and Liaison Service",
-            "type": "string"
-          },
-          {
-            "name": "UNTERM Russian Short",
-            "title": "UNTERM Russian Short",
-            "description": "Country's short Russian name from UN Protocol and Liaison Service",
-            "type": "string"
-          },
-          {
-            "name": "UNTERM Spanish Formal",
-            "title": "UNTERM Spanish Formal",
-            "description": "Country's formal Spanish name from UN Protocol and Liaison Service",
-            "type": "string"
-          },
-          {
-            "name": "UNTERM Spanish Short",
-            "title": "UNTERM Spanish Short",
-            "description": "Country's short Spanish name from UN Protocol and Liaison Service",
-            "type": "string"
-          },
-          {
-            "name": "CLDR display name",
-            "title": "CLDR display name",
-            "description": "Country's customary English short name (CLDR)",
+            "name": "Global Name",
+            "title": "global name",
+            "description": "Country classification from United Nations Statistics Division",
             "type": "string"
           },
           {
@@ -244,47 +373,15 @@
             "constraints" : {"minLength": 2, "maxLength": 2}
           },
           {
-            "name": "DS",
-            "title": "distinguishing signs of vehicles",
-            "description": "Distinguishing signs of vehicles in international traffic",
+            "name": "TLD",
+            "title": "TLD",
+            "description": "Top level domain from Geonames",
             "type": "string"
           },
           {
-            "name": "Developed / Developing Countries",
-            "title": "developed or developing country",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string",
-            "constraints" : {"enum": ["Developing", "Developed"]}
-          },
-          {
-            "name": "Dial",
-            "title": "telephone dialing code",
-            "description": "Country code from ITU-T recommendation E.164, sometimes followed by area code",
-            "type": "string"
-          },
-          {
-            "name": "EDGAR",
-            "title": "EDGAR code",
-            "description": "EDGAR country code from SEC",
-            "type": "string",
-            "constraints" : {"maxLength": 2}
-          },
-          {
-            "name": "FIFA",
-            "title": "FIFA code",
-            "description": "Codes assigned by the Fédération Internationale de Football Association",
-            "type": "string"
-          },
-          {
-            "name": "FIPS",
-            "title": "FIPS code",
-            "description": "Codes from the U.S. standard FIPS PUB 10-4",
-            "type": "string"
-          },
-          {
-            "name": "GAUL",
-            "title": "GAUL code",
-            "description": "Global Administrative Unit Layers from the Food and Agriculture Organization",
+            "name": "Languages",
+            "title": "languages",
+            "description": "Languages from Geonames",
             "type": "string"
           },
           {
@@ -295,114 +392,17 @@
             "constraints" : {"unique": true}
           },
           {
-            "name": "Global Code",
-            "title": "global code",
-            "description": "Country classification from United Nations Statistics Division",
+            "name": "CLDR display name",
+            "title": "CLDR display name",
+            "description": "Country's customary English short name (CLDR)",
             "type": "string"
           },
           {
-            "name": "Global Name",
-            "title": "global name",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "IOC",
-            "title": "IOC code",
-            "description": "Codes assigned by the International Olympics Committee",
-            "type": "string",
-            "constraints" : {"maxLength": 3}
-          },
-          {
-            "name": "ITU",
-            "title": "ITU code",
-            "description": "Codes assigned by the International Telecommunications Union",
-            "type": "string"
-          },
-          {
-            "name": "Intermediate Region Code",
-            "title": "intermediate region code",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "Intermediate Region Name",
-            "title": "intermediate region name",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "Land Locked Developing Countries (LLDC)",
-            "title": "land locked developing country (LLDC)",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "Languages",
-            "title": "languages",
-            "description": "Languages from Geonames",
-            "type": "string"
-          },
-          {
-            "name": "Least Developed Countries (LDC)",
-            "title": "least developed country (LDC)",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "MARC",
-            "title": "MARC code",
-            "description": "MAchine-Readable Cataloging codes from the Library of Congress",
-            "type": "string"
-          },
-          {
-            "name": "Region Code",
-            "title": "region code",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "Region Name",
-            "title": "region name",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "Small Island Developing States (SIDS)",
-            "title": "small island developing state (SIDS)",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "Sub-region Code",
-            "title": "sub-region code",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "Sub-region Name",
-            "title": "sub-region name",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string"
-          },
-          {
-            "name": "TLD",
-            "title": "TLD",
-            "description": "Top level domain from Geonames",
-            "type": "string"
-          },
-          {
-            "name": "WMO",
-            "title": "WMO code",
-            "description": "Country abbreviations by the World Meteorological Organization",
+            "name": "EDGAR",
+            "title": "EDGAR code",
+            "description": "EDGAR country code from SEC",
             "type": "string",
             "constraints" : {"maxLength": 2}
-          },
-          {
-            "name": "is_independent",
-            "title": "independent country",
-            "description": "Country status, based on the CIA World Factbook",
-            "type": "string"
           }
         ]
       }
