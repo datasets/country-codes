@@ -1,6 +1,6 @@
 {
   "name": "@datasets/country-codes",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more",
   "main": "data.json",
   "scripts": {
