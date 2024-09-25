@@ -1,47 +1,51 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import urllib
+
 import csv
 
-from lxml import html
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
-import utils
+# Set up Selenium in headless mode
+chrome_options = Options()
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
 
-url = "https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm"
+# Initialize the WebDriver
+driver = webdriver.Chrome(options=chrome_options)
 
-content = urllib.urlopen(url).read()
-doc = html.fromstring(content)
+def run():
+    driver.get(config.EDGAR_URL)
+    # Find the first table element on the page
+    table = driver.find_element(By.TAG_NAME, 'table')
 
-rows = doc.xpath('//table')[3].getchildren()
+    # Get all the rows within the table
+    rows = table.find_elements(By.TAG_NAME, 'tr')
 
-seen_other_countries = False
-header = ['EDGAR', 'name']
+    # Prepare a list to store the extracted data
+    data = []
 
-data = []
+    # Loop through each row (starting from the second row to skip the header)
+    for row in rows[1:]:
+        cells = row.find_elements(By.TAG_NAME, 'td')
+        
+        if len(cells) > 1:  # Make sure there are enough cells
+            edgar_code = cells[0].text.strip()  # First column: EDGAR code
+            name = cells[1].text.strip()        # Second column: Name
+            data.append([edgar_code, name])
 
-for row in rows:
-    if seen_other_countries is not True:
-        if utils.clean(row.text_content()) != 'Other Countries':
-            print('SKIPPING', row.text_content())
-            continue
-        else:
-            seen_other_countries = True
-            print('SEEN OTHER COUNTRIES', row.text_content())
-            continue
+    driver.quit()
 
-    cells = row.getchildren()
-    if len(cells) != 2:
-        print('ERROR IN CELL COUNT')
-        for cell in cells:
-            print(cell)
-            print(cell.text_content())
-        continue
-    code = utils.clean(cells[0].text_content())
-    name = utils.clean(cells[1].text_content())
-    data.append((code, name))
+    # Save the extracted data to a CSV file
+    with open(config.EDGAR_FILE_NAME, 'w', newline='', encoding='utf-8') as csv_file:
+        csv_writer = csv.writer(csv_file)
+        
+        # Write the header
+        csv_writer.writerow(config.EDGAR_HEADERS)
+        
+        # Write the rows
+        csv_writer.writerows(data)
 
-with open('data/edgar.csv', 'wb') as csv_file:
-    csv_writer = csv.writer(csv_file)
-    csv_writer.writerow(header)
-    for row in data:
-        csv_writer.writerow(row)
+if __name__ == '__main__':
+    run()
