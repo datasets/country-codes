@@ -1,0 +1,54 @@
+name: Run Makefile with Selenium
+
+on:
+  # Schedule to run every 2 minutes
+  schedule:
+    - cron: '*/2 * * * *'
+
+  # Run on push to master branch
+  push:
+    branches:
+      - master
+
+  # Run on pull requests targeting the master branch
+  pull_request:
+    branches:
+      - master
+
+  # Allows manual triggering of the workflow
+  workflow_dispatch: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install Python dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install --upgrade pip
+        pip install -r scripts/requirements.txt
+
+    - name: Install Xvfb and dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y xvfb
+        sudo apt-get install -y chromium-browser
+
+    - name: Run Makefile with Xvfb
+      run: |
+        Xvfb :99 -screen 0 1024x768x24 &
+        export DISPLAY=:99
+        make all
+
+    - name: Run Make Clean
+      run: make clean

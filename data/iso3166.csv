@@ -1,0 +1,250 @@
+Global Code,Global Name,Region Code,Region Name,Sub-region Code,Sub-region Name,Intermediate Region Code,Intermediate Region Name,official_name_en,M49,ISO-alpha2 Code,ISO3166-1-Alpha-3,Least Developed Countries (LDC),Land Locked Developing Countries (LLDC),Small Island Developing States (SIDS),official_name_fr,official_name_ar,official_name_cn,official_name_es,official_name_ru
+1,World,2.0,Africa,15.0,Northern Africa,,,Algeria,12,DZ,DZA,,,,Algérie,الجزائر,阿尔及利亚,Argelia,Алжир
+1,World,2.0,Africa,15.0,Northern Africa,,,Egypt,818,EG,EGY,,,,Égypte,مصر,埃及,Egipto,Египет
+1,World,2.0,Africa,15.0,Northern Africa,,,Libya,434,LY,LBY,,,,Libye,ليبيا,利比亚,Libia,Ливия
+1,World,2.0,Africa,15.0,Northern Africa,,,Morocco,504,MA,MAR,,,,Maroc,المغرب,摩洛哥,Marruecos,Марокко
+1,World,2.0,Africa,15.0,Northern Africa,,,Sudan,729,SD,SDN,x,,,Soudan,السودان,苏丹,Sudán,Судан
+1,World,2.0,Africa,15.0,Northern Africa,,,Tunisia,788,TN,TUN,,,,Tunisie,تونس,突尼斯,Túnez,Тунис
+1,World,2.0,Africa,15.0,Northern Africa,,,Western Sahara,732,EH,ESH,,,,Sahara occidental,الصحراء الغربية,西撒哈拉,Sáhara Occidental,Западная Сахара
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,British Indian Ocean Territory,86,IO,IOT,,,,Territoire britannique de l'océan Indien,المحيط الهندي الإقليم البريطاني في,英属印度洋领土,Territorio Británico del Océano Índico,Британская территория в Индийском океане
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Burundi,108,BI,BDI,x,x,,Burundi,بوروندي,布隆迪,Burundi,Бурунди
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Comoros,174,KM,COM,x,,x,Comores,جزر القمر,科摩罗,Comoras,Коморские Острова
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Djibouti,262,DJ,DJI,x,,,Djibouti,جيبوتي,吉布提,Djibouti,Джибути
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Eritrea,232,ER,ERI,x,,,Érythrée,إريتريا,厄立特里亚,Eritrea,Эритрея
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Ethiopia,231,ET,ETH,x,x,,Éthiopie,إثيوبيا,埃塞俄比亚,Etiopía,Эфиопия
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,French Southern Territories,260,TF,ATF,,,,Terres australes françaises,الأراضي الفرنسية الجنوبية الجنوبية,法属南方领地,Territorio de las Tierras Australes Francesas,Южные земли (французская заморская территория)
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Kenya,404,KE,KEN,,,,Kenya,كينيا,肯尼亚,Kenya,Кения
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Madagascar,450,MG,MDG,x,,,Madagascar,مدغشقر,马达加斯加,Madagascar,Мадагаскар
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Malawi,454,MW,MWI,x,x,,Malawi,ملاوي,马拉维,Malawi,Малави
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Mauritius,480,MU,MUS,,,x,Maurice,موريشيوس,毛里求斯,Mauricio,Маврикий
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Mayotte,175,YT,MYT,,,,Mayotte,مايوت,马约特,Mayotte,Остров Майотта
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Mozambique,508,MZ,MOZ,x,,,Mozambique,موزامبيق,莫桑比克,Mozambique,Мозамбик
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Réunion,638,RE,REU,,,,Réunion,ريونيون,留尼汪,Reunión,Реюньон
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Rwanda,646,RW,RWA,x,x,,Rwanda,رواندا,卢旺达,Rwanda,Руанда
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Seychelles,690,SC,SYC,,,x,Seychelles,سيشيل,塞舌尔,Seychelles,Сейшельские Острова
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Somalia,706,SO,SOM,x,,,Somalie,الصومال,索马里,Somalia,Сомали
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,South Sudan,728,SS,SSD,x,x,,Soudan du Sud,جنوب السودان,南苏丹,Sudán del Sur,Южный Судан
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Uganda,800,UG,UGA,x,x,,Ouganda,أوغندا,乌干达,Uganda,Уганда
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,United Republic of Tanzania,834,TZ,TZA,x,,,République-Unie de Tanzanie,جمهورية تنزانيا المتحدة,坦桑尼亚联合共和国,República Unida de Tanzanía,Объединенная Республика Танзания
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Zambia,894,ZM,ZMB,x,x,,Zambie,زامبيا,赞比亚,Zambia,Замбия
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,14.0,Eastern Africa,Zimbabwe,716,ZW,ZWE,,x,,Zimbabwe,زمبابوي,津巴布韦,Zimbabwe,Зимбабве
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,17.0,Middle Africa,Angola,24,AO,AGO,x,,,Angola,أنغولا,安哥拉,Angola,Ангола
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,17.0,Middle Africa,Cameroon,120,CM,CMR,,,,Cameroun,الكاميرون,喀麦隆,Camerún,Камерун
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,17.0,Middle Africa,Central African Republic,140,CF,CAF,x,x,,République centrafricaine,جمهورية أفريقيا الوسطى,中非共和国,República Centroafricana,Центральноафриканская Республика
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,17.0,Middle Africa,Chad,148,TD,TCD,x,x,,Tchad,تشاد,乍得,Chad,Чад
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,17.0,Middle Africa,Congo,178,CG,COG,,,,Congo,الكونغو,刚果,Congo,Конго
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,17.0,Middle Africa,Democratic Republic of the Congo,180,CD,COD,x,,,République démocratique du Congo,جمهورية الكونغو الديمقراطية,刚果民主共和国,República Democrática del Congo,Демократическая Республика Конго
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,17.0,Middle Africa,Equatorial Guinea,226,GQ,GNQ,,,,Guinée équatoriale,غينيا الاستوائية,赤道几内亚,Guinea Ecuatorial,Экваториальная Гвинея
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,17.0,Middle Africa,Gabon,266,GA,GAB,,,,Gabon,غابون,加蓬,Gabón,Габон
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,17.0,Middle Africa,Sao Tome and Principe,678,ST,STP,x,,x,Sao Tomé-et-Principe,سان تومي وبرينسيبي,圣多美和普林西比,Santo Tomé y Príncipe,Сан-Томе и Принсипи
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,18.0,Southern Africa,Botswana,72,BW,BWA,,x,,Botswana,بوتسوانا,博茨瓦纳,Botswana,Ботсвана
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,18.0,Southern Africa,Eswatini,748,SZ,SWZ,,x,,Eswatini,إسواتيني,斯威士兰,Eswatini,Эсватини
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,18.0,Southern Africa,Lesotho,426,LS,LSO,x,x,,Lesotho,ليسوتو,莱索托,Lesotho,Лесото
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,18.0,Southern Africa,Namibia,516,,NAM,,,,Namibie,ناميبيا,纳米比亚,Namibia,Намибия
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,18.0,Southern Africa,South Africa,710,ZA,ZAF,,,,Afrique du Sud,جنوب أفريقيا,南非,Sudáfrica,Южная Африка
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Benin,204,BJ,BEN,x,,,Bénin,بنن,贝宁,Benin,Бенин
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Burkina Faso,854,BF,BFA,x,x,,Burkina Faso,بوركينا فاسو,布基纳法索,Burkina Faso,Буркина-Фасо
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Cabo Verde,132,CV,CPV,,,x,Cabo Verde,كابو فيردي,佛得角,Cabo Verde,Кабо-Верде
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Ivory Coast,384,CI,CIV,,,,Côte d’Ivoire,كوت ديفوار,科特迪瓦,Côte d’Ivoire,Кот-д'Ивуар
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Gambia,270,GM,GMB,x,,,Gambie,غامبيا,冈比亚,Gambia,Гамбия
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Ghana,288,GH,GHA,,,,Ghana,غانا,加纳,Ghana,Гана
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Guinea,324,GN,GIN,x,,,Guinée,غينيا,几内亚,Guinea,Гвинея
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Guinea-Bissau,624,GW,GNB,x,,x,Guinée-Bissau,غينيا - بيساو,几内亚比绍,Guinea-Bissau,Гвинея-Бисау
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Liberia,430,LR,LBR,x,,,Libéria,ليبريا,利比里亚,Liberia,Либерия
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Mali,466,ML,MLI,x,x,,Mali,مالي,马里,Malí,Мали
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Mauritania,478,MR,MRT,x,,,Mauritanie,موريتانيا,毛里塔尼亚,Mauritania,Мавритания
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Niger,562,NE,NER,x,x,,Niger,النيجر,尼日尔,Níger,Нигер
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Nigeria,566,NG,NGA,,,,Nigéria,نيجيريا,尼日利亚,Nigeria,Нигерия
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Saint Helena,654,SH,SHN,,,,Sainte-Hélène,سانت هيلانة,圣赫勒拿,Santa Elena,Остров Святой Елены
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Senegal,686,SN,SEN,x,,,Sénégal,السنغال,塞内加尔,Senegal,Сенегал
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Sierra Leone,694,SL,SLE,x,,,Sierra Leone,سيراليون,塞拉利昂,Sierra Leona,Сьерра-Леоне
+1,World,2.0,Africa,202.0,Sub-Saharan Africa,11.0,Western Africa,Togo,768,TG,TGO,x,,,Togo,توغو,多哥,Togo,Того
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Anguilla,660,AI,AIA,,,x,Anguilla,أنغويلا,安圭拉,Anguila,Ангилья
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Antigua and Barbuda,28,AG,ATG,,,x,Antigua-et-Barbuda,أنتيغوا وبربودا,安提瓜和巴布达,Antigua y Barbuda,Антигуа и Барбуда
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Aruba,533,AW,ABW,,,x,Aruba,أروبا,阿鲁巴,Aruba,Аруба
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Bahamas,44,BS,BHS,,,x,Bahamas,جزر البهاما,巴哈马,Bahamas,Багамские Острова
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Barbados,52,BB,BRB,,,x,Barbade,بربادوس,巴巴多斯,Barbados,Барбадос
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,"Bonaire, Sint Eustatius and Saba",535,BQ,BES,,,x,"Bonaire, Saint-Eustache et Saba",بونير وسانت يوستاشيوس وسابا,博纳尔，圣俄斯塔休斯和萨巴,"Bonaire, San Eustaquio y Saba","Бонайре, Синт-Эстатиус и Саба"
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,British Virgin Islands,92,VG,VGB,,,x,Îles Vierges britanniques,جزر فرجن البريطانية,英属维尔京群岛,Islas Vírgenes Británicas,Британские Виргинские острова
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Cayman Islands,136,KY,CYM,,,,Îles Caïmanes,جزر كايمان,开曼群岛,Islas Caimán,Кайман острова
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Cuba,192,CU,CUB,,,x,Cuba,كوبا,古巴,Cuba,Куба
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Curaçao,531,CW,CUW,,,x,Curaçao,كوراساو,库拉索,Curazao,Кюрасао
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Dominica,212,DM,DMA,,,x,Dominique,دومينيكا,多米尼克,Dominica,Доминика
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Dominican Republic,214,DO,DOM,,,x,République dominicaine,الجمهورية الدومينيكية,多米尼加,República Dominicana,Доминиканская Республика
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Grenada,308,GD,GRD,,,x,Grenade,غرينادا,格林纳达,Granada,Гренада
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Guadeloupe,312,GP,GLP,,,,Guadeloupe,غوادلوب,瓜德罗普,Guadalupe,Гваделупа
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Haiti,332,HT,HTI,x,,x,Haïti,هايتي,海地,Haití,Гаити
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Jamaica,388,JM,JAM,,,x,Jamaïque,جامايكا,牙买加,Jamaica,Ямайка
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Martinique,474,MQ,MTQ,,,,Martinique,مارتينيك,马提尼克,Martinica,Мартиника
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Montserrat,500,MS,MSR,,,x,Montserrat,مونتسيرات,蒙特塞拉特,Montserrat,Монтсеррат
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Puerto Rico,630,PR,PRI,,,x,Porto Rico,بورتوريكو,波多黎各,Puerto Rico,Пуэрто-Рико
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Saint Barthélemy,652,BL,BLM,,,,Saint-Barthélemy,سان بارتليمي,圣巴泰勒米,San Barthélemy,Сен-Бартелеми
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Saint Kitts and Nevis,659,KN,KNA,,,x,Saint-Kitts-et-Nevis,سانت كيتس ونيفس,圣基茨和尼维斯,Saint Kitts y Nevis,Сент-Китс и Невис
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Saint Lucia,662,LC,LCA,,,x,Sainte-Lucie,سانت لوسيا,圣卢西亚,Santa Lucía,Сент-Люсия
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Saint Martin (French Part),663,MF,MAF,,,,Saint-Martin (partie française),سانت مارتن (الجزء الفرنسي),圣马丁（法属）,San Martín (parte francesa),Сен-Мартен (французская часть)
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Saint Vincent and the Grenadines,670,VC,VCT,,,x,Saint-Vincent-et-les Grenadines,سانت فنسنت وجزر غرينادين,圣文森特和格林纳丁斯,San Vicente y las Granadinas,Сент-Винсент и Гренадины
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Sint Maarten (Dutch part),534,SX,SXM,,,x,Saint-Martin (partie néerlandaise),سانت مارتن (الجزء الهولندي),圣马丁（荷属）,San Martín (parte Holandesa),Синт-Мартен (нидерландская часть)
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Trinidad and Tobago,780,TT,TTO,,,x,Trinité-et-Tobago,ترينيداد وتوباغو,特立尼达和多巴哥,Trinidad y Tabago,Тринидад и Тобаго
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,Turks and Caicos Islands,796,TC,TCA,,,,Îles Turques-et-Caïques,جزر تركس وكايكوس,特克斯和凯科斯群岛,Islas Turcas y Caicos,Острова Теркс и Кайкос
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,29.0,Caribbean,United States Virgin Islands,850,VI,VIR,,,x,Îles Vierges américaines,جزر فرجن التابعة للولايات المتحدة,美属维尔京群岛,Islas Vírgenes de los Estados Unidos,Виргинские острова Соединенных Штатов
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,13.0,Central America,Belize,84,BZ,BLZ,,,x,Belize,بليز,伯利兹,Belice,Белиз
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,13.0,Central America,Costa Rica,188,CR,CRI,,,,Costa Rica,كوستاريكا,哥斯达黎加,Costa Rica,Коста-Рика
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,13.0,Central America,El Salvador,222,SV,SLV,,,,El Salvador,السلفادور,萨尔瓦多,El Salvador,Сальвадор
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,13.0,Central America,Guatemala,320,GT,GTM,,,,Guatemala,غواتيمالا,危地马拉,Guatemala,Гватемала
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,13.0,Central America,Honduras,340,HN,HND,,,,Honduras,هندوراس,洪都拉斯,Honduras,Гондурас
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,13.0,Central America,Mexico,484,MX,MEX,,,,Mexique,المكسيك,墨西哥,México,Мексика
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,13.0,Central America,Nicaragua,558,NI,NIC,,,,Nicaragua,نيكاراغوا,尼加拉瓜,Nicaragua,Никарагуа
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,13.0,Central America,Panama,591,PA,PAN,,,,Panama,بنما,巴拿马,Panamá,Панама
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Argentina,32,AR,ARG,,,,Argentine,الأرجنتين,阿根廷,Argentina,Аргентина
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Bolivia (Plurinational State of),68,BO,BOL,,x,,Bolivie (État plurinational de),بوليفيا (دولة - المتعددة القوميات),多民族玻利维亚国,Bolivia (Estado Plurinacional de),Боливия (Многонациональное Государство)
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Bouvet Island,74,BV,BVT,,,,Île Bouvet,جزيرة بوفيت,布维岛,Isla Bouvet,Остров Буве
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Brazil,76,BR,BRA,,,,Brésil,البرازيل,巴西,Brasil,Бразилия
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Chile,152,CL,CHL,,,,Chili,شيلي,智利,Chile,Чили
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Colombia,170,CO,COL,,,,Colombie,كولومبيا,哥伦比亚,Colombia,Колумбия
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Ecuador,218,EC,ECU,,,,Équateur,إكوادور,厄瓜多尔,Ecuador,Эквадор
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Falkland Islands,238,FK,FLK,,,,Îles Falkland (Malvinas),جزر فوكلاند (مالفيناس),福克兰群岛（马尔维纳斯）,Islas Malvinas (Falkland),Фолклендские (Мальвинские) острова
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,French Guiana,254,GF,GUF,,,,Guyane française,غيانا الفرنسية,法属圭亚那,Guayana Francesa,Французская Гвиана
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Guyana,328,GY,GUY,,,x,Guyana,غيانا,圭亚那,Guyana,Гайана
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Paraguay,600,PY,PRY,,x,,Paraguay,باراغواي,巴拉圭,Paraguay,Парагвай
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Peru,604,PE,PER,,,,Pérou,بيرو,秘鲁,Perú,Перу
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,South Georgia and the South Sandwich Islands,239,GS,SGS,,,,Géorgie du Sud-et-les Îles Sandwich du Sud,جورجيا الجنوبية وجزر ساندويتش الجنوبية,南乔治亚岛和南桑德韦奇岛,Georgia del Sur y las Islas Sandwich del Sur,Южная Джорджия и Южные Сандвичевы острова
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Suriname,740,SR,SUR,,,x,Suriname,سورينام,苏里南,Suriname,Суринам
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Uruguay,858,UY,URY,,,,Uruguay,أوروغواي,乌拉圭,Uruguay,Уругвай
+1,World,19.0,Americas,419.0,Latin America and the Caribbean,5.0,South America,Venezuela (Bolivarian Republic of),862,VE,VEN,,,,Venezuela (République bolivarienne du),فنزويلا (جمهورية - البوليفارية),委内瑞拉玻利瓦尔共和国,Venezuela (República Bolivariana de),Венесуэла (Боливарианская Республика)
+1,World,19.0,Americas,21.0,Northern America,,,Bermuda,60,BM,BMU,,,,Bermudes,برمودا,百慕大,Bermuda,Бермудские острова
+1,World,19.0,Americas,21.0,Northern America,,,Canada,124,CA,CAN,,,,Canada,كندا,加拿大,Canadá,Канада
+1,World,19.0,Americas,21.0,Northern America,,,Greenland,304,GL,GRL,,,,Groenland,غرينلند,格陵兰,Groenlandia,Гренландия
+1,World,19.0,Americas,21.0,Northern America,,,Saint Pierre and Miquelon,666,PM,SPM,,,,Saint-Pierre-et-Miquelon,سان بيير وميكلون,圣皮埃尔和密克隆,San Pedro y Miquelón,Сен-Пьер и Микелон
+1,World,19.0,Americas,21.0,Northern America,,,United States of America,840,US,USA,,,,États-Unis d’Amérique,الولايات المتحدة الأمريكية,美利坚合众国,Estados Unidos de América,Соединенные Штаты Америки
+1,World,,,,,,,Antarctica,10,AQ,ATA,,,,Antarctique,أنتاركتيكا,南极洲,Antártida,Антарктике
+1,World,142.0,Asia,143.0,Central Asia,,,Kazakhstan,398,KZ,KAZ,,x,,Kazakhstan,كازاخستان,哈萨克斯坦,Kazajstán,Казахстан
+1,World,142.0,Asia,143.0,Central Asia,,,Kyrgyzstan,417,KG,KGZ,,x,,Kirghizistan,قيرغيزستان,吉尔吉斯斯坦,Kirguistán,Кыргызстан
+1,World,142.0,Asia,143.0,Central Asia,,,Tajikistan,762,TJ,TJK,,x,,Tadjikistan,طاجيكستان,塔吉克斯坦,Tayikistán,Таджикистан
+1,World,142.0,Asia,143.0,Central Asia,,,Turkmenistan,795,TM,TKM,,x,,Turkménistan,تركمانستان,土库曼斯坦,Turkmenistán,Туркменистан
+1,World,142.0,Asia,143.0,Central Asia,,,Uzbekistan,860,UZ,UZB,,x,,Ouzbékistan,أوزبكستان,乌兹别克斯坦,Uzbekistán,Узбекистан
+1,World,142.0,Asia,30.0,Eastern Asia,,,China,156,CN,CHN,,,,Chine,الصين,中国,China,Китай
+1,World,142.0,Asia,30.0,Eastern Asia,,,"China, Hong Kong Special Administrative Region",344,HK,HKG,,,,"Chine, région administrative spéciale de Hong Kong",الصين، منطقة هونغ كونغ الإدارية الخاصة,中国香港特别行政区,"China, región administrativa especial de Hong Kong","Китай, Специальный административный район Гонконг"
+1,World,142.0,Asia,30.0,Eastern Asia,,,"China, Macao Special Administrative Region",446,MO,MAC,,,,"Chine, région administrative spéciale de Macao",الصين، منطقة ماكاو الإدارية الخاصة,中国澳门特别行政区,"China, región administrativa especial de Macao","Китай, Специальный административный район Макао"
+1,World,142.0,Asia,30.0,Eastern Asia,,,Democratic People's Republic of Korea,408,KP,PRK,,,,République populaire démocratique de Corée,جمهورية كوريا الشعبية الديمقراطية,朝鲜民主主义人民共和国,República Popular Democrática de Corea,Корейская Народно-Демократическая Республика
+1,World,142.0,Asia,30.0,Eastern Asia,,,Japan,392,JP,JPN,,,,Japon,اليابان,日本,Japón,Япония
+1,World,142.0,Asia,30.0,Eastern Asia,,,Mongolia,496,MN,MNG,,x,,Mongolie,منغوليا,蒙古,Mongolia,Монголия
+1,World,142.0,Asia,30.0,Eastern Asia,,,Republic of Korea,410,KR,KOR,,,,République de Corée,جمهورية كوريا,大韩民国,República de Corea,Республика Корея
+1,World,142.0,Asia,30.0,Eastern Asia,,,Taiwan,158,TW,TWN,,,,Taïwan,تايوان,台湾,Taiwán,Тайвань
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Brunei Darussalam,96,BN,BRN,,,,Brunéi Darussalam,بروني دار السلام,文莱达鲁萨兰国,Brunei Darussalam,Бруней-Даруссалам
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Cambodia,116,KH,KHM,x,,,Cambodge,كمبوديا,柬埔寨,Camboya,Камбоджа
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Indonesia,360,ID,IDN,,,,Indonésie,إندونيسيا,印度尼西亚,Indonesia,Индонезия
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Lao People's Democratic Republic,418,LA,LAO,x,x,,République démocratique populaire lao,جمهورية لاو الديمقراطية الشعبية,老挝人民民主共和国,República Democrática Popular Lao,Лаосская Народно-Демократическая Республика
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Malaysia,458,MY,MYS,,,,Malaisie,ماليزيا,马来西亚,Malasia,Малайзия
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Myanmar,104,MM,MMR,x,,,Myanmar,ميانمار,缅甸,Myanmar,Мьянма
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Philippines,608,PH,PHL,,,,Philippines,الفلبين,菲律宾,Filipinas,Филиппины
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Singapore,702,SG,SGP,,,x,Singapour,سنغافورة,新加坡,Singapur,Сингапур
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Thailand,764,TH,THA,,,,Thaïlande,تايلند,泰国,Tailandia,Таиланд
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Timor-Leste,626,TL,TLS,x,,x,Timor-Leste,تيمور - ليشتي,东帝汶,Timor-Leste,Тимор-Лешти
+1,World,142.0,Asia,35.0,South-eastern Asia,,,Viet Nam,704,VN,VNM,,,,Viet Nam,فييت نام,越南,Viet Nam,Вьетнам
+1,World,142.0,Asia,34.0,Southern Asia,,,Afghanistan,4,AF,AFG,x,x,,Afghanistan,أفغانستان,阿富汗,Afganistán,Афганистан
+1,World,142.0,Asia,34.0,Southern Asia,,,Bangladesh,50,BD,BGD,x,,,Bangladesh,بنغلاديش,孟加拉国,Bangladesh,Бангладеш
+1,World,142.0,Asia,34.0,Southern Asia,,,Bhutan,64,BT,BTN,,x,,Bhoutan,بوتان,不丹,Bhután,Бутан
+1,World,142.0,Asia,34.0,Southern Asia,,,India,356,IN,IND,,,,Inde,الهند,印度,India,Индия
+1,World,142.0,Asia,34.0,Southern Asia,,,Iran (Islamic Republic of),364,IR,IRN,,,,Iran (République islamique d’),إيران (جمهورية - الإسلامية),伊朗伊斯兰共和国,Irán (República Islámica del),Иран (Исламская Республика)
+1,World,142.0,Asia,34.0,Southern Asia,,,Maldives,462,MV,MDV,,,x,Maldives,ملديف,马尔代夫,Maldivas,Мальдивские Острова
+1,World,142.0,Asia,34.0,Southern Asia,,,Nepal,524,NP,NPL,x,x,,Népal,نيبال,尼泊尔,Nepal,Непал
+1,World,142.0,Asia,34.0,Southern Asia,,,Pakistan,586,PK,PAK,,,,Pakistan,باكستان,巴基斯坦,Pakistán,Пакистан
+1,World,142.0,Asia,34.0,Southern Asia,,,Sri Lanka,144,LK,LKA,,,,Sri Lanka,سري لانكا,斯里兰卡,Sri Lanka,Шри-Ланка
+1,World,142.0,Asia,145.0,Western Asia,,,Armenia,51,AM,ARM,,x,,Arménie,أرمينيا,亚美尼亚,Armenia,Армения
+1,World,142.0,Asia,145.0,Western Asia,,,Azerbaijan,31,AZ,AZE,,x,,Azerbaïdjan,أذربيجان,阿塞拜疆,Azerbaiyán,Азербайджан
+1,World,142.0,Asia,145.0,Western Asia,,,Bahrain,48,BH,BHR,,,,Bahreïn,البحرين,巴林,Bahrein,Бахрейн
+1,World,142.0,Asia,145.0,Western Asia,,,Cyprus,196,CY,CYP,,,,Chypre,قبرص,塞浦路斯,Chipre,Кипр
+1,World,142.0,Asia,145.0,Western Asia,,,Georgia,268,GE,GEO,,,,Géorgie,جورجيا,格鲁吉亚,Georgia,Грузия
+1,World,142.0,Asia,145.0,Western Asia,,,Iraq,368,IQ,IRQ,,,,Iraq,العراق,伊拉克,Iraq,Ирак
+1,World,142.0,Asia,145.0,Western Asia,,,Israel,376,IL,ISR,,,,Israël,إسرائيل,以色列,Israel,Израиль
+1,World,142.0,Asia,145.0,Western Asia,,,Jordan,400,JO,JOR,,,,Jordanie,الأردن,约旦,Jordania,Иордания
+1,World,142.0,Asia,145.0,Western Asia,,,Kuwait,414,KW,KWT,,,,Koweït,الكويت,科威特,Kuwait,Кувейт
+1,World,142.0,Asia,145.0,Western Asia,,,Lebanon,422,LB,LBN,,,,Liban,لبنان,黎巴嫩,Líbano,Ливан
+1,World,142.0,Asia,145.0,Western Asia,,,Oman,512,OM,OMN,,,,Oman,عمان,阿曼,Omán,Оман
+1,World,142.0,Asia,145.0,Western Asia,,,Qatar,634,QA,QAT,,,,Qatar,قطر,卡塔尔,Qatar,Катар
+1,World,142.0,Asia,145.0,Western Asia,,,Saudi Arabia,682,SA,SAU,,,,Arabie saoudite,المملكة العربية السعودية,沙特阿拉伯,Arabia Saudita,Саудовская Аравия
+1,World,142.0,Asia,145.0,Western Asia,,,State of Palestine,275,PS,PSE,,,,État de Palestine,دولة فلسطين,巴勒斯坦国,Estado de Palestina,Государство Палестина
+1,World,142.0,Asia,145.0,Western Asia,,,Syrian Arab Republic,760,SY,SYR,,,,République arabe syrienne,الجمهورية العربية السورية,阿拉伯叙利亚共和国,República Árabe Siria,Сирийская Арабская Республика
+1,World,142.0,Asia,145.0,Western Asia,,,Turkey,792,TR,TUR,,,,Türkiye,تركيا,土耳其,Türkiye,Турция
+1,World,142.0,Asia,145.0,Western Asia,,,United Arab Emirates,784,AE,ARE,,,,Émirats arabes unis,الإمارات العربية المتحدة,阿拉伯联合酋长国,Emiratos Árabes Unidos,Объединенные Арабские Эмираты
+1,World,142.0,Asia,145.0,Western Asia,,,Yemen,887,YE,YEM,x,,,Yémen,اليمن,也门,Yemen,Йемен
+1,World,150.0,Europe,151.0,Eastern Europe,,,Belarus,112,BY,BLR,,,,Bélarus,بيلاروس,白俄罗斯,Belarús,Беларусь
+1,World,150.0,Europe,151.0,Eastern Europe,,,Bulgaria,100,BG,BGR,,,,Bulgarie,بلغاريا,保加利亚,Bulgaria,Болгария
+1,World,150.0,Europe,151.0,Eastern Europe,,,Czechia,203,CZ,CZE,,,,Tchéquie,تشيكيا,捷克,Chequia,Чехия
+1,World,150.0,Europe,151.0,Eastern Europe,,,Hungary,348,HU,HUN,,,,Hongrie,هنغاريا,匈牙利,Hungría,Венгрия
+1,World,150.0,Europe,151.0,Eastern Europe,,,Poland,616,PL,POL,,,,Pologne,بولندا,波兰,Polonia,Польша
+1,World,150.0,Europe,151.0,Eastern Europe,,,Republic of Moldova,498,MD,MDA,,x,,République de Moldova,جمهورية مولدوفا,摩尔多瓦共和国,República de Moldova,Республика Молдова
+1,World,150.0,Europe,151.0,Eastern Europe,,,Romania,642,RO,ROU,,,,Roumanie,رومانيا,罗马尼亚,Rumania,Румыния
+1,World,150.0,Europe,151.0,Eastern Europe,,,Russian Federation,643,RU,RUS,,,,Fédération de Russie,الاتحاد الروسي,俄罗斯联邦,Federación de Rusia,Российская Федерация
+1,World,150.0,Europe,151.0,Eastern Europe,,,Slovakia,703,SK,SVK,,,,Slovaquie,سلوفاكيا,斯洛伐克,Eslovaquia,Словакия
+1,World,150.0,Europe,151.0,Eastern Europe,,,Ukraine,804,UA,UKR,,,,Ukraine,أوكرانيا,乌克兰,Ucrania,Украина
+1,World,150.0,Europe,154.0,Northern Europe,,,Åland Islands,248,AX,ALA,,,,Îles d’Åland,جزر ألاند,奥兰群岛,Islas Åland,Аландских островов
+1,World,150.0,Europe,154.0,Northern Europe,,,Denmark,208,DK,DNK,,,,Danemark,الدانمرك,丹麦,Dinamarca,Дания
+1,World,150.0,Europe,154.0,Northern Europe,,,Estonia,233,EE,EST,,,,Estonie,إستونيا,爱沙尼亚,Estonia,Эстония
+1,World,150.0,Europe,154.0,Northern Europe,,,Faroe Islands,234,FO,FRO,,,,Îles Féroé,جزر فايرو,法罗群岛,Islas Feroe,Фарерские острова
+1,World,150.0,Europe,154.0,Northern Europe,,,Finland,246,FI,FIN,,,,Finlande,فنلندا,芬兰,Finlandia,Финляндия
+1,World,150.0,Europe,154.0,Northern Europe,,,Guernsey,831,GG,GGY,,,,Guernesey,غيرنسي,格恩西,Guernsey,Гернси
+1,World,150.0,Europe,154.0,Northern Europe,,,Iceland,352,IS,ISL,,,,Islande,آيسلندا,冰岛,Islandia,Исландия
+1,World,150.0,Europe,154.0,Northern Europe,,,Ireland,372,IE,IRL,,,,Irlande,آيرلندا,爱尔兰,Irlanda,Ирландия
+1,World,150.0,Europe,154.0,Northern Europe,,,Isle of Man,833,IM,IMN,,,,Île de Man,جزيرة مان,马恩岛,Isla de Man,Остров Мэн
+1,World,150.0,Europe,154.0,Northern Europe,,,Jersey,832,JE,JEY,,,,Jersey,جيرسي,泽西,Jersey,Джерси
+1,World,150.0,Europe,154.0,Northern Europe,,,Latvia,428,LV,LVA,,,,Lettonie,لاتفيا,拉脱维亚,Letonia,Латвия
+1,World,150.0,Europe,154.0,Northern Europe,,,Lithuania,440,LT,LTU,,,,Lituanie,ليتوانيا,立陶宛,Lituania,Литва
+1,World,150.0,Europe,154.0,Northern Europe,,,Norway,578,NO,NOR,,,,Norvège,النرويج,挪威,Noruega,Норвегия
+1,World,150.0,Europe,154.0,Northern Europe,,,Svalbard and Jan Mayen Islands,744,SJ,SJM,,,,Îles Svalbard-et-Jan Mayen,جزيرتي سفالبارد وجان مايِن,斯瓦尔巴群岛和扬马延岛,Islas Svalbard y Jan Mayen,Острова Свальбард и Ян-Майен
+1,World,150.0,Europe,154.0,Northern Europe,,,Sweden,752,SE,SWE,,,,Suède,السويد,瑞典,Suecia,Швеция
+1,World,150.0,Europe,154.0,Northern Europe,,,United Kingdom of Great Britain and Northern Ireland,826,GB,GBR,,,,Royaume-Uni de Grande-Bretagne et d’Irlande du Nord,المملكة المتحدة لبريطانيا العظمى وآيرلندا الشمالية,大不列颠及北爱尔兰联合王国,Reino Unido de Gran Bretaña e Irlanda del Norte,Соединенное Королевство Великобритании и Северной Ирландии
+1,World,150.0,Europe,39.0,Southern Europe,,,Albania,8,AL,ALB,,,,Albanie,ألبانيا,阿尔巴尼亚,Albania,Албания
+1,World,150.0,Europe,39.0,Southern Europe,,,Andorra,20,AD,AND,,,,Andorre,أندورا,安道尔,Andorra,Андорра
+1,World,150.0,Europe,39.0,Southern Europe,,,Bosnia and Herzegovina,70,BA,BIH,,,,Bosnie-Herzégovine,البوسنة والهرسك,波斯尼亚和黑塞哥维那,Bosnia y Herzegovina,Босния и Герцеговина
+1,World,150.0,Europe,39.0,Southern Europe,,,Croatia,191,HR,HRV,,,,Croatie,كرواتيا,克罗地亚,Croacia,Хорватия
+1,World,150.0,Europe,39.0,Southern Europe,,,Gibraltar,292,GI,GIB,,,,Gibraltar,جبل طارق,直布罗陀,Gibraltar,Гибралтар
+1,World,150.0,Europe,39.0,Southern Europe,,,Greece,300,GR,GRC,,,,Grèce,اليونان,希腊,Grecia,Греция
+1,World,150.0,Europe,39.0,Southern Europe,,,Holy See,336,VA,VAT,,,,Saint-Siège,الكرسي الرسولي,教廷,Santa Sede,Святой Престол
+1,World,150.0,Europe,39.0,Southern Europe,,,Italy,380,IT,ITA,,,,Italie,إيطاليا,意大利,Italia,Италия
+1,World,150.0,Europe,39.0,Southern Europe,,,Malta,470,MT,MLT,,,,Malte,مالطة,马耳他,Malta,Мальта
+1,World,150.0,Europe,39.0,Southern Europe,,,Montenegro,499,ME,MNE,,,,Monténégro,الجبل الأسود,黑山,Montenegro,Черногория
+1,World,150.0,Europe,39.0,Southern Europe,,,North Macedonia,807,MK,MKD,,x,,Macédoine du Nord,مقدونيا الشمالية,北马其顿,Macedonia del Norte,Северная Македония
+1,World,150.0,Europe,39.0,Southern Europe,,,Portugal,620,PT,PRT,,,,Portugal,البرتغال,葡萄牙,Portugal,Португалия
+1,World,150.0,Europe,39.0,Southern Europe,,,San Marino,674,SM,SMR,,,,Saint-Marin,سان مارينو,圣马力诺,San Marino,Сан-Марино
+1,World,150.0,Europe,39.0,Southern Europe,,,Serbia,688,RS,SRB,,,,Serbie,صربيا,塞尔维亚,Serbia,Сербия
+1,World,150.0,Europe,39.0,Southern Europe,,,Slovenia,705,SI,SVN,,,,Slovénie,سلوفينيا,斯洛文尼亚,Eslovenia,Словения
+1,World,150.0,Europe,39.0,Southern Europe,,,Spain,724,ES,ESP,,,,Espagne,إسبانيا,西班牙,España,Испания
+1,World,150.0,Europe,155.0,Western Europe,,,Austria,40,AT,AUT,,,,Autriche,النمسا,奥地利,Austria,Австрия
+1,World,150.0,Europe,155.0,Western Europe,,,Belgium,56,BE,BEL,,,,Belgique,بلجيكا,比利时,Bélgica,Бельгия
+1,World,150.0,Europe,155.0,Western Europe,,,France,250,FR,FRA,,,,France,فرنسا,法国,Francia,Франция
+1,World,150.0,Europe,155.0,Western Europe,,,Germany,276,DE,DEU,,,,Allemagne,ألمانيا,德国,Alemania,Германия
+1,World,150.0,Europe,155.0,Western Europe,,,Liechtenstein,438,LI,LIE,,,,Liechtenstein,ليختنشتاين,列支敦士登,Liechtenstein,Лихтенштейн
+1,World,150.0,Europe,155.0,Western Europe,,,Luxembourg,442,LU,LUX,,,,Luxembourg,لكسمبرغ,卢森堡,Luxemburgo,Люксембург
+1,World,150.0,Europe,155.0,Western Europe,,,Monaco,492,MC,MCO,,,,Monaco,موناكو,摩纳哥,Mónaco,Монако
+1,World,150.0,Europe,155.0,Western Europe,,,Netherlands,528,NL,NLD,,,,Pays-Bas (Royaume des),هولندا (مملكة _),荷兰王国,Países Bajos (Reino de los),Нидерланды (Королевство)
+1,World,150.0,Europe,155.0,Western Europe,,,Switzerland,756,CH,CHE,,,,Suisse,سويسرا,瑞士,Suiza,Швейцария
+1,World,9.0,Oceania,53.0,Australia and New Zealand,,,Australia,36,AU,AUS,,,,Australie,أستراليا,澳大利亚,Australia,Австралия
+1,World,9.0,Oceania,53.0,Australia and New Zealand,,,Christmas Island,162,CX,CXR,,,,Île Christmas,جزيرة عيد الميلاد,圣诞岛,Isla Christmas,остров Рождества
+1,World,9.0,Oceania,53.0,Australia and New Zealand,,,Cocos (Keeling) Islands,166,CC,CCK,,,,Îles des Cocos (Keeling),جزر كوكس (كيلينغ),科科斯（基林）群岛,Islas Cocos (Keeling),Кокосовых (Килинг) островов
+1,World,9.0,Oceania,53.0,Australia and New Zealand,,,Heard Island and McDonald Islands,334,HM,HMD,,,,Île Heard-et-Îles MacDonald,جزيرة هيرد وجزر ماكدونالد,赫德岛和麦克唐纳岛,Islas Heard y McDonald,Остров Херд и острова Макдональд
+1,World,9.0,Oceania,53.0,Australia and New Zealand,,,New Zealand,554,NZ,NZL,,,,Nouvelle-Zélande,نيوزيلندا,新西兰,Nueva Zelandia,Новая Зеландия
+1,World,9.0,Oceania,53.0,Australia and New Zealand,,,Norfolk Island,574,NF,NFK,,,,Île Norfolk,جزيرة نورفولك,诺福克岛,Isla Norfolk,Остров Норфолк
+1,World,9.0,Oceania,54.0,Melanesia,,,Fiji,242,FJ,FJI,,,x,Fidji,فيجي,斐济,Fiji,Фиджи
+1,World,9.0,Oceania,54.0,Melanesia,,,New Caledonia,540,NC,NCL,,,x,Nouvelle-Calédonie,كاليدونيا الجديدة,新喀里多尼亚,Nueva Caledonia,Новая Каледония
+1,World,9.0,Oceania,54.0,Melanesia,,,Papua New Guinea,598,PG,PNG,,,x,Papouasie-Nouvelle-Guinée,بابوا غينيا الجديدة,巴布亚新几内亚,Papua Nueva Guinea,Папуа-Новая Гвинея
+1,World,9.0,Oceania,54.0,Melanesia,,,Solomon Islands,90,SB,SLB,x,,x,Îles Salomon,جزر سليمان,所罗门群岛,Islas Salomón,Соломоновы Острова
+1,World,9.0,Oceania,54.0,Melanesia,,,Vanuatu,548,VU,VUT,,,x,Vanuatu,فانواتو,瓦努阿图,Vanuatu,Вануату
+1,World,9.0,Oceania,57.0,Micronesia,,,Guam,316,GU,GUM,,,x,Guam,غوام,关岛,Guam,Гуам
+1,World,9.0,Oceania,57.0,Micronesia,,,Kiribati,296,KI,KIR,x,,x,Kiribati,كيريباس,基里巴斯,Kiribati,Кирибати
+1,World,9.0,Oceania,57.0,Micronesia,,,Marshall Islands,584,MH,MHL,,,x,Îles Marshall,جزر مارشال,马绍尔群岛,Islas Marshall,Маршалловы Острова
+1,World,9.0,Oceania,57.0,Micronesia,,,Micronesia (Federated States of),583,FM,FSM,,,x,Micronésie (États fédérés de),ميكرونيزيا (ولايات - الموحدة),密克罗尼西亚联邦,Micronesia (Estados Federados de),Микронезия (Федеративные Штаты)
+1,World,9.0,Oceania,57.0,Micronesia,,,Nauru,520,NR,NRU,,,x,Nauru,ناورو,瑙鲁,Nauru,Науру
+1,World,9.0,Oceania,57.0,Micronesia,,,Northern Mariana Islands,580,MP,MNP,,,x,Îles Mariannes du Nord,جزر ماريانا الشمالية,北马里亚纳群岛,Islas Marianas Septentrionales,Северные Марианские острова
+1,World,9.0,Oceania,57.0,Micronesia,,,Palau,585,PW,PLW,,,x,Palaos,بالاو,帕劳,Palau,Палау
+1,World,9.0,Oceania,57.0,Micronesia,,,United States Minor Outlying Islands,581,UM,UMI,,,,Îles mineures éloignées des États-Unis,نائية التابعة للولايات المتحدة,美国本土外小岛屿,Islas menores alejadas de Estados Unidos,Внешние малые острова Соединенных Штатов
+1,World,9.0,Oceania,61.0,Polynesia,,,American Samoa,16,AS,ASM,,,x,Samoa américaines,ساموا الأمريكية,美属萨摩亚,Samoa Americana,Американское Самоа
+1,World,9.0,Oceania,61.0,Polynesia,,,Cook Islands,184,CK,COK,,,x,Îles Cook,جزر كوك,库克群岛,Islas Cook,Острова Кука
+1,World,9.0,Oceania,61.0,Polynesia,,,French Polynesia,258,PF,PYF,,,x,Polynésie française,بولينيزيا الفرنسية,法属波利尼西亚,Polinesia Francesa,Французская Полинезия
+1,World,9.0,Oceania,61.0,Polynesia,,,Niue,570,NU,NIU,,,x,Nioué,نيوي,纽埃,Niue,Ниуэ
+1,World,9.0,Oceania,61.0,Polynesia,,,Pitcairn,612,PN,PCN,,,,Pitcairn,بيتكرن,皮特凯恩,Pitcairn,Питкэрн
+1,World,9.0,Oceania,61.0,Polynesia,,,Samoa,882,WS,WSM,,,x,Samoa,ساموا,萨摩亚,Samoa,Самоа
+1,World,9.0,Oceania,61.0,Polynesia,,,Tokelau,772,TK,TKL,,,,Tokélaou,توكيلاو,托克劳,Tokelau,Токелау
+1,World,9.0,Oceania,61.0,Polynesia,,,Tonga,776,TO,TON,,,x,Tonga,تونغا,汤加,Tonga,Тонга
+1,World,9.0,Oceania,61.0,Polynesia,,,Tuvalu,798,TV,TUV,x,,x,Tuvalu,توفالو,图瓦卢,Tuvalu,Тувалу
+1,World,9.0,Oceania,61.0,Polynesia,,,Wallis and Futuna Islands,876,WF,WLF,,,,Îles Wallis-et-Futuna,جزر واليس وفوتونا,瓦利斯群岛和富图纳群岛,Islas Wallis y Futuna,Острова Уоллис и Футуна

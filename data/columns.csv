@@ -1,0 +1,56 @@
+  1: Global Code
+  2: Global Name
+  3: Region Code
+  4: Region Name
+  5: Sub-region Code
+  6: Sub-region Name
+  7: Intermediate Region Code
+  8: Intermediate Region Name
+  9: official_name_en
+ 10: M49
+ 11: ISO-alpha2 Code
+ 12: ISO3166-1-Alpha-3
+ 13: Least Developed Countries (LDC)
+ 14: Land Locked Developing Countries (LLDC)
+ 15: Small Island Developing States (SIDS)
+ 16: official_name_fr
+ 17: official_name_ar
+ 18: official_name_cn
+ 19: official_name_es
+ 20: official_name_ru
+ 21: ISO4217-currency_country_name
+ 22: ISO4217-currency_name
+ 23: ISO4217-currency_alphabetic_code
+ 24: ISO4217-currency_numeric_code
+ 25: ISO4217-currency_minor_unit
+ 26: ISO3166-1-Alpha-2
+ 27: ISO3166-1-numeric
+ 28: ITU
+ 29: FIPS
+ 30: IOC
+ 31: FIFA
+ 32: DS
+ 33: WMO
+ 34: GAUL
+ 35: MARC
+ 36: Dial
+ 37: is_independent
+ 38: UNTERM English Short
+ 39: UNTERM French Short
+ 40: UNTERM Spanish Short
+ 41: UNTERM Russian Short
+ 42: UNTERM Chinese Short
+ 43: UNTERM Arabic Short
+ 44: UNTERM English Formal
+ 45: UNTERM French Formal
+ 46: UNTERM Spanish Formal
+ 47: UNTERM Russian Formal
+ 48: UNTERM Chinese Formal
+ 49: UNTERM Arabic Formal
+ 50: Capital
+ 51: Continent
+ 52: TLD
+ 53: Languages
+ 54: Geoname ID
+ 55: CLDR display name
+ 56: EDGAR
