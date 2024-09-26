@@ -3,12 +3,13 @@
 # vim: ai ts=4 sts=4 et sw=4
 
 import json
-import codecs
 
-country_info = json.loads(open("data/statoids.json").read())
+with open("data/statoids.json", "r", encoding="utf-8") as f:
+    country_info = json.load(f)
 
 
 def itemgetter(*items):
+    """Helper function to extract item(s) from a dictionary."""
     if len(items) == 1:
         item = items[0]
 
@@ -22,7 +23,8 @@ def itemgetter(*items):
 
 country_info = sorted(country_info.values(), key=itemgetter('official_name_en'))
 
+# Write the flattened JSON to a new file
 output_filename = "data/statoids-flat.json"
-f = open(output_filename, mode='w')
-stream = codecs.getwriter('utf8')(f)
-json.dump(country_info, stream, ensure_ascii=False, indent=2, encoding='utf-8')
+with open(output_filename, mode='w', encoding='utf-8') as f:
+    json.dump(country_info, f, ensure_ascii=False, indent=2)
+
