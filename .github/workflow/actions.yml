@@ -3,17 +3,17 @@ name: Run Makefile with Selenium
 on:
   # Schedule to run every 2 minutes
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '0 0 1 * *'
 
   # Run on push to master branch
   push:
     branches:
-      - master
+      - main
 
   # Run on pull requests targeting the master branch
   pull_request:
     branches:
-      - master
+      - main
 
   # Allows manual triggering of the workflow
   workflow_dispatch: 
@@ -48,7 +48,7 @@ jobs:
       run: |
         Xvfb :99 -screen 0 1024x768x24 &
         export DISPLAY=:99
-        make all
+        make update
 
     - name: Run Make Clean
       run: make clean

@@ -59,13 +59,17 @@ data/country-codes.csv: data/country-codes.json data/geoname.csv data/cldr.csv d
 
 clean:
 	# Delete all .csv files starting with 'country' except 'country-codes.csv'
-	find data/ -name "country*.csv" ! -name "country-codes.csv" -exec rm {} +
+	find data/ -name "*.csv" ! -name "country-codes.csv" -exec rm {} +
 
 	# Delete all .json files
 	find data/ -name "*.json" -exec rm {} +
 
-	# Delete previous-country-codes.csv if it exists
-	rm -f data/previous-country-codes.csv
+update:
+	# Delete the old 'country-codes.csv' if it exists
+	rm -f data/country-codes.csv
+	
+	# Now proceed to update or regenerate 'country-codes.csv'
+	make all
 
 .PHONY: diff
 .PHONY: test
