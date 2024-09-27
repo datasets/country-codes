@@ -2,20 +2,19 @@
 # -*- coding: utf-8 -*-
 
 import json
-import codecs
 
-countries = json.load(open('data/iso3166-flat.json'))
+with open('data/iso3166-flat.json', 'r') as f:
+    countries = json.load(f)
 
-keyed = {}
-for country in countries:
-    # cast floats to string
-    fixed = {k: str(int(v)) for k, v in country.items() 
-             if k in ["Sub-region Code", "M49", "Region Code", "Intermediate Region Code"]
-             and v not in [None, '', ' ']}
-    country.update(fixed)
-    keyed.update({country['ISO3166-1-Alpha-3']: country})
+keyed = {
+    country['ISO3166-1-Alpha-3']: {
+        **country, 
+        **{k: str(int(float(v))) for k, v in country.items() 
+           if k in ["Sub-region Code", "M49", "Region Code", "Intermediate Region Code"] 
+           and v not in [None, '', ' ']}
+    }
+    for country in countries
+}
 
-output_filename = "data/iso3166.json"
-f = open(output_filename, mode='w')
-stream = codecs.getwriter('utf8')(f)
-json.dump(keyed, stream, ensure_ascii=False, indent=2, encoding='utf-8')
+with open('data/iso3166.json', 'w', encoding='utf-8') as f:
+    json.dump(keyed, f, ensure_ascii=False, indent=2)

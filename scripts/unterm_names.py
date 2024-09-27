@@ -1,39 +1,36 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-import urllib
+import csv
+import config
+import urllib.request 
 
 from openpyxl import load_workbook
 
-import utils
 
-url = "https://protocol.un.org/dgacm/pls/site.nsf/files/Country%20Names%20UNTERM2/$FILE/UNTERM%20EFSRCA.xlsx"
+FILE_NAME = 'unterm-efsrca.xlsx'
 
-opener = urllib.URLopener()
-opener.retrieve(url, "UNTERM EFSRCA.xlsx")
+def run():
+    # Setup
+    req = urllib.request.Request(config.UNTERM_EFSRCA_URL, headers=config.CONFIG_HEADERS)
 
-wb = load_workbook("UNTERM EFSRCA.xlsx")
+    # Download the file and save it
+    with urllib.request.urlopen(req) as response, open('/tmp/' + FILE_NAME, 'wb') as out_file:
+        out_file.write(response.read())
 
-sheet1 = wb['Sheet1']
+    wb = load_workbook('/tmp/' + FILE_NAME)
+    sheet1 = wb['Worksheet1']
+    
+    # Write the data to a CSV file
+    with open('data/unterm_names.csv', 'w', newline='', encoding='utf-8') as csv_file:
+        csv_writer = csv.writer(csv_file)
+        csv_writer.writerow(config.UNTERM_HEADERS)
 
-header = ['official_name_en',
-          'UNTERM French Short',
-          'UNTERM Spanish Short',
-          'UNTERM Russian Short',
-          'UNTERM Chinese Short',
-          'UNTERM Arabic Short',
-          'UNTERM English Formal',
-          'UNTERM French Formal',
-          'UNTERM Spanish Formal',
-          'UNTERM Russian Formal',
-          'UNTERM Chinese Formal',
-          'UNTERM Arabic Formal']
+        # Iterate through the rows of the sheet and write to the CSV
+        for row in sheet1.iter_rows(min_row=2, max_col=12, max_row=200):
+            values = [cell.value for cell in row]
 
-with open('data/unterm_names.csv', 'wb') as csv_file:
-    csv_writer = utils.UnicodeWriter(csv_file)
-    csv_writer.writerow(header)
-    for row in sheet1.iter_rows(row_offset=1, max_col=12, max_row=200):
-	values = [cell.value for cell in row]
-	if all(values):
-            csv_writer.writerow(values)
+            if all(values):
+                csv_writer.writerow(values)
 
+if __name__ == '__main__':
+    run()
