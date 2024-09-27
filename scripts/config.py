@@ -61,7 +61,7 @@ COLUMN_NAMES = [
 ]
 
 # URLS
-CLDR_TERRITORIES_URL = 'https://github.com/unicode-org/cldr-json/blob/d38478855dd8342749f0494332cc8acc2895d20d/cldr-json/cldr-localenames-full/main/ms/territories.json'
+CLDR_TERRITORIES_URL = 'https://raw.githubusercontent.com/unicode-org/cldr-json/d38478855dd8342749f0494332cc8acc2895d20d/cldr-json/cldr-localenames-full/main/ms/territories.json'
 EDGAR_URL = 'https://www.sec.gov/submit-filings/filer-support-resources/edgar-state-country-codes'
 GEONAMES_URL = 'http://download.geonames.org/export/dump/countryInfo.txt'
 ISO4217_URL = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml'
@@ -109,6 +109,9 @@ CURRENCY_COUNTRY_NAME_MAP = {
     "HEARD ISLAND AND McDONALD ISLANDS": "HEARD ISLAND AND MCDONALD ISLANDS",
     "LAO PEOPLE’S DEMOCRATIC REPUBLIC": "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
     "SERBIA ": "SERBIA",
+    "TÜRKİYE": "TURKEY",
+    "TAIWAN (PROVINCE OF CHINA)": "TAIWAN",
+    "CÔTE D'IVOIRE": "IVORY COAST",
     "PALESTINIAN TERRITORY, OCCUPIED": "PALESTINE, STATE OF",
     "Vatican City State (HOLY SEE)": "HOLY SEE (VATICAN CITY STATE)",
     "VIRGIN ISLANDS (BRITISH)": "VIRGIN ISLANDS, BRITISH",
@@ -128,7 +131,6 @@ CURRENCY_COUNTRY_NAME_MAP = {
     "WALLIS AND FUTUNA": "Wallis and Futuna Islands",
     "VIRGIN ISLANDS (U.S.)": "UNITED STATES VIRGIN ISLANDS",
     "VIRGIN ISLANDS (BRITISH)": "BRITISH VIRGIN ISLANDS",
-
     "CONGO (THE DEMOCRATIC REPUBLIC OF THE)": "DEMOCRATIC REPUBLIC OF THE CONGO",
     "KOREA (THE DEMOCRATIC PEOPLE’S REPUBLIC OF)": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA",
     "KOREA (THE REPUBLIC OF)": "REPUBLIC OF KOREA",

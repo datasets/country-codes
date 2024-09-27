@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import csv
 import json
-import codecs
-
 from fuzzywuzzy import process
 
-import utils
+
+with open('data/country-codes.json', 'r', encoding='utf-8') as f:
+    country_info = json.load(f)
+
 
 headers = ['UNTERM English Short',
            'UNTERM French Short',
@@ -21,16 +23,13 @@ headers = ['UNTERM English Short',
            'UNTERM Chinese Formal',
            'UNTERM Arabic Formal']
 
-country_info = json.load(open('data/country-codes.json'))
 
-keyed = {}
-for country in country_info:
-    keyed.update({country.get('official_name_en', country['ISO3166-1-Alpha-3']): country})
+keyed = {country.get('official_name_en', country['ISO3166-1-Alpha-3']): country for country in country_info}
 
-with open('data/unterm_names.csv', 'rb') as csvfile:
-    reader = utils.UnicodeReader(csvfile)
-    # ignore header
-    reader.next()
+
+with open('data/unterm_names.csv', 'r', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile)
+    next(reader)  # Skip the header
     for row in reader:
         name = row[0]
         matches = process.extract(name, keyed.keys(), limit=5)
@@ -38,41 +37,35 @@ with open('data/unterm_names.csv', 'rb') as csvfile:
             keyed[matches[0][0]].update(dict(zip(headers, row)))
         else:
             if '(the)' in name:
-                no_the = process.extract(name.replace('(the)', ''),
-                                         keyed.keys(),
-                                         limit=5)
+                no_the = process.extract(name.replace('(the)', ''), keyed.keys(), limit=5)
                 if no_the[0][1] == 100:
                     keyed[no_the[0][0]].update(dict(zip(headers, row)))
                 else:
-                    # looks like UNTERM has not been updated for Czechia
                     if name == "Czech Republic (the)":
                         keyed["Czechia"].update(dict(zip(headers, row)))
                     else:
-                        print "NOT FOUND:"
-                        print name
-                        print matches
+                        print(f"NOT FOUND: {name}")
+                        print(matches)
+
 
 def itemgetter(*items):
     if len(items) == 1:
         item = items[0]
-
-        def g(obj):
-            return obj.get(item, '')
+        return lambda obj: obj.get(item, '')
     else:
-        def g(obj):
-            return tuple(obj.get(item, '') for item in items)
-    return g
+        return lambda obj: tuple(obj.get(item, '') for item in items)
 
 
 keyed = sorted(keyed.values(), key=itemgetter('official_name_en'))
-output_filename = "data/country-codes-joined.json"
 
+# Format certain numeric fields (M49 and ISO3166-1-numeric) with leading zeros
 for country in keyed:
     for k, v in country.items():
         if k in ['M49', 'ISO3166-1-numeric']:
             if v not in [None, 'null', '']:
                 country[k] = str(int(v)).zfill(3)
 
-f = open(output_filename, mode='w')
-stream = codecs.getwriter('utf8')(f)
-json.dump(keyed, stream, ensure_ascii=False, indent=2, encoding='utf-8')
+
+output_filename = "data/country-codes-joined.json"
+with open(output_filename, 'w', encoding='utf-8') as f:
+    json.dump(keyed, f, ensure_ascii=False, indent=2)

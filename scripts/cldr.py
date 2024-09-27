@@ -3,42 +3,46 @@
 
 import csv
 import json
-import urllib
+import urllib.request
+import config
+import utils 
 
-import utils
-
-# Retrive data directly from unicode-cldr project hosted at github
-url = "https://raw.githubusercontent.com/unicode-cldr/cldr-localenames-full/master/main/en/territories.json"
-
-content = json.loads(urllib.urlopen(url).read())
-
-content_en = content['main']['en']['localeDisplayNames']['territories']
-
-# Remove UN regional codes (three digits) and -alt-variants
-territories = {k: v for k, v in content_en.items() if 
-      (k.isdigit() is not True and '-alt-variant' not in k)}
-
-map(lambda discard: territories.pop(discard, None), ['ZZ', 'EZ', 'EU'])
-
-# sort as tuples so that XX-alt-short will come after XX
-territories = sorted([(k, v) for k, v in territories.iteritems()])
-
-cldr = {}
-for territory in territories:
-    name = territory[0]
-
-    # use -alt-short if it exists
-    if "-alt-short" in territory[0]:
-        name = name.replace("-alt-short", "")
-        cldr.pop(name, None)
-
-    cldr.update({name: territory[1]})
-
-
-
+url = config.CLDR_TERRITORIES_URL
 header = ['ISO3166-1-Alpha-2', 'CLDR display name']
-with open('data/cldr.csv', 'wb') as csv_file:
-    csv_writer = utils.UnicodeWriter(csv_file)
-    csv_writer.writerow(header)
-    for row in [(k, v) for k, v in cldr.iteritems()]:
-        csv_writer.writerow(row)
+
+def run():
+    content = json.loads(urllib.request.urlopen(url).read())
+
+    # Adjust the path based on your JSON structure (specifically 'ms' instead of 'en')
+    content_territories = content['main']['ms']['localeDisplayNames']['territories']
+
+    # Remove UN regional codes (three digits) and -alt-variants
+    territories = {k: v for k, v in content_territories.items() if not k.isdigit() and '-alt-variant' not in k}
+
+    for discard in ['ZZ', 'EZ', 'EU']:
+        territories.pop(discard, None)
+
+    # Sort the territories (replace .iteritems() with .items() in Python 3)
+    territories = sorted(territories.items())
+
+    cldr = {}
+    for territory in territories:
+        name = territory[0]
+
+        # Use -alt-short if it exists
+        if "-alt-short" in territory[0]:
+            name = name.replace("-alt-short", "")
+            cldr.pop(name, None)
+
+        cldr[name] = territory[1]
+
+    # Write to CSV file
+    with open('data/cldr.csv', 'w', newline='', encoding='utf-8') as csv_file:
+        csv_writer = csv.writer(csv_file)
+        csv_writer.writerow(header)
+        for row in cldr.items():
+            csv_writer.writerow(row)
+
+
+if __name__ == '__main__':
+    run()

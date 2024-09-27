@@ -5,6 +5,7 @@ from functools import reduce
 
 # Path to the folders
 source_dir = 'tmp/'
+output_dir = 'data/'
 
 # List of UNSD CSV files (for different languages) and the corresponding official name column
 languages = ['fr', 'ar', 'cn', 'es', 'ru']
@@ -36,7 +37,8 @@ def run():
         'Country or Area': 'official_name_en',
         'ISO-alpha3 Code': 'ISO3166-1-Alpha-3'
     })
-    df_final.to_csv(os.path.join(source_dir, 'iso3166.csv'), index=False)
+    df_final['official_name_en'] = df_final['official_name_en'].replace('Türkiye', 'Turkey')
+    df_final.to_csv(os.path.join(output_dir, 'iso3166.csv'), index=False)
 
 if __name__ == '__main__':
     run()

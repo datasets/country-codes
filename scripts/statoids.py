@@ -3,18 +3,22 @@
 import json
 import codecs
 import collections
-import urllib
+import urllib.request
 
 from lxml import html
 
 country_info = json.loads(open("data/iso4217.json").read())
 
+def find_country_by_key(country_info, ckey):
+    for country in country_info:
+        if country.get("ISO3166-1-Alpha-3") == ckey:
+            return country
+    return None
 
 def capitalize_country_name(name):
     # replace all-caps name with capitalized country name
     cap_list = []
-    always_lower = ['AND', 'THE', 'OF', 'PART', 'DA', 'DE', 'ET', 'DU', 'DES',
-                    'LA']
+    always_lower = ['AND', 'THE', 'OF', 'PART', 'DA', 'DE', 'ET', 'DU', 'DES', 'LA']
     for w in name.split():
         if w == 'MCDONALD':
             cap_list.append('McDonald')
@@ -70,7 +74,7 @@ def process_statoids_row(tr):
                 # if a cell is taking up more than one column,
                 # append the same number of blanks to the row
                 assert td.get('colspan').isdigit()
-                for col in xrange(int(td.get('colspan'))):
+                for _ in range(int(td.get('colspan'))):
                     row.append('')
                 continue
         if len(td.getchildren()) > 1:
@@ -79,8 +83,7 @@ def process_statoids_row(tr):
                     # TIL dominican republic has three dialing codes
                     # td.text_content() is '1-8091-8291-849'
                     # so split into list of 5 chars each and join with commas
-                    row.append(','.join(map(''.join,
-                                            zip(*[iter(td.text_content())]*5))))
+                    row.append(','.join(map(''.join, zip(*[iter(td.text_content())]*5))))
                     continue
         if ((len(row) > 1) and (row[1] in ["SH", "RS"])):
             # Saint Helena and Serbia dial cells have anchors to footnotes
@@ -102,8 +105,7 @@ def process_statoids_row(tr):
                 # that appears after the child element (<br>)
                 if len(td.find("code").getchildren()) > 0:
                     if td.find('.//br') is not None:
-                        row.append(td.find('code').text + ','
-                                   + td.find('.//br').tail)
+                        row.append(td.find('code').text + ',' + td.find('.//br').tail)
                         continue
                     if td.find('.//a') is not None:
                         anchor = td.find('.//a')
@@ -137,7 +139,7 @@ def process_statoids_row(tr):
 
 statoids_url = "http://www.statoids.com/wab.html"
 print('Fetching other country codes...')
-content = urllib.urlopen(statoids_url).read()
+content = urllib.request.urlopen(statoids_url).read()
 doc = html.fromstring(content)
 
 # i dislike some of statoid's column names, so here i have renamed
@@ -146,45 +148,27 @@ column_names = ["Entity", "ISO3166-1-Alpha-2", "ISO3166-1-Alpha-3",
                 "ISO3166-1-numeric", "ITU", "FIPS", "IOC", "FIFA", "DS",
                 "WMO", "GAUL", "MARC", "Dial", "is_independent"]
 alpha2_key = "ISO3166-1-Alpha-2"
-
-# comment out the preceding two lines and
-# uncomment these lines to use statoids.com column names
-"""
-column_names = []
-alpha2_key = 'A-2'
-for tr in doc.find_class('hd'):
-    for th in tr.iterchildren():
-        column_names.append(th.text_content())
-"""
+keyed_by = "ISO3166-1-Alpha-3"
 
 # dict to hold dicts of all table rows
 table_rows = {}
 
-# the country code info is in a table where the trs have
-# alternating classes of `e` and `o`
-# so fetch half of the rows and zip each row together
-# with the corresponding column name
 for tr in doc.find_class('e'):
-    row = process_statoids_row(tr)
+    row = [td.text_content() for td in tr.iterchildren()]
     row_dict = collections.OrderedDict(zip(column_names, row))
-    # statoids-assigned 'Entity' name is not really a standard
     row_dict.pop('Entity')
     table_rows.update({row_dict[alpha2_key]: row_dict})
 
-# and again for the other half
 for tr in doc.find_class('o'):
-    row = process_statoids_row(tr)
+    row = [td.text_content() for td in tr.iterchildren()]
     row_dict = collections.OrderedDict(zip(column_names, row))
-    # statoids-assigned 'Entity' name is not really a standard
     row_dict.pop('Entity')
     table_rows.update({row_dict[alpha2_key]: row_dict})
-
-keyed_by = "ISO3166-1-Alpha-3"
 
 # iterate through all the table_rows
 # TODO this assumes that statoids will have all of
 # the items that are pulled from iso.org
-for alpha2, info in table_rows.iteritems():
+for alpha2, info in table_rows.items():
     # ignore this crap that was parsed from other tables on the page
     if alpha2 in ['', 'Codes', 'Codes Codes', 'Codes Codes Codes']:
         continue
@@ -200,7 +184,8 @@ for alpha2, info in table_rows.iteritems():
         print('NOT FOUND', cinfo)
         country_info.update({ckey: cinfo})
 
+# Write updated country_info back to the JSON file
 output_filename = "data/statoids.json"
-f = open(output_filename, mode='w')
-stream = codecs.getwriter('utf8')(f)
-json.dump(country_info, stream, ensure_ascii=False, indent=2, encoding='utf-8')
+with open(output_filename, mode='w', encoding='utf-8') as f:
+    json.dump(country_info, f, ensure_ascii=False, indent=2)
+

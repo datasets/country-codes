@@ -3,7 +3,7 @@
   "title": "Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more",
   "format": "csv",
   "datapackage_version": "1.0.0-beta.13",
-  "last_modified": "2017-11-03",
+  "last_modified": "2023-09-25",
   "repository": {
     "type": "git",
     "url": "https://github.com/datasets/country-codes"
@@ -19,22 +19,22 @@
     {
       "name": "United Nations Protocol and Liaison Service",
       "title": "United Nations Protocol and Liaison Service",
-      "path": "https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp"
+      "path": "https://www.un.org/dgacm/sites/www.un.org.dgacm/files/Documents_Protocol/unterm-efsrca.xlsx"
     },
     {
       "name": "Unicode Common Locale Data Repository (CLDR) Project",
       "title": "Unicode Common Locale Data Repository (CLDR) Project",
-      "path": "https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json"
+      "path": "https://github.com/unicode-org/cldr-json/blob/d38478855dd8342749f0494332cc8acc2895d20d/cldr-json/cldr-localenames-full/main/ms/territories.json"
     },
     {
-      "name": "United Nations Department of Ecoonomic and Social Affairs Statistics Division",
-      "title": "United Nations Department of Ecoonomic and Social Affairs Statistics Division",
+      "name": "United Nations Department of Economic and Social Affairs Statistics Division",
+      "title": "United Nations Department of Economic and Social Affairs Statistics Division",
       "path": "https://unstats.un.org/unsd/methodology/m49/overview/"
     },
     {
       "name": "SIX Interbank Clearing Ltd (on behalf of ISO)",
       "title": "SIX Interbank Clearing Ltd (on behalf of ISO)",
-      "path": "https://www.currency-iso.org/dam/downloads/lists/list_one.xml"
+      "path": "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml"
     },
     {
       "name": "Statoids",
@@ -49,7 +49,7 @@
     {
       "name": "US Securities and Exchange Commission",
       "title": "US Securities and Exchange Commission",
-      "path": "https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm"
+      "path": "https://www.sec.gov/submit-filings/filer-support-resources/edgar-state-country-codes"
     }
   ],
   "resources": [
@@ -162,7 +162,7 @@
           {
             "name": "official_name_fr",
             "title": "official name French",
-            "description": "Country or Area official French short name from UN Statistics Divsion",
+            "description": "Country or Area official French short name from UN Statistics Division",
             "type": "string"
           },
           {
@@ -176,13 +176,6 @@
             "title": "ISO4217-currency_name",
             "description": "ISO 4217 currency name",
             "type": "string"
-          },
-          {
-            "name": "Developed / Developing Countries",
-            "title": "developed or developing country",
-            "description": "Country classification from United Nations Statistics Division",
-            "type": "string",
-            "constraints" : {"enum": ["Developing", "Developed"]}
           },
           {
             "name": "UNTERM Russian Formal",
@@ -260,7 +253,7 @@
           {
             "name": "official_name_ar",
             "title": "official name Arabic",
-            "description": "Country or Area official Arabic short name from UN Statistics Divsion",
+            "description": "Country or Area official Arabic short name from UN Statistics Division",
             "type": "string"
           },
           {
@@ -296,7 +289,7 @@
           {
             "name": "official_name_es",
             "title": "official name Spanish",
-            "description": "Country or Area official Spanish short name from UN Statistics Divsion",
+            "description": "Country or Area official Spanish short name from UN Statistics Division",
             "type": "string"
           },
           {
@@ -308,13 +301,13 @@
           {
             "name": "official_name_cn",
             "title": "official name Chinese",
-            "description": "Country or Area official Chinese short name from UN Statistics Divsion",
+            "description": "Country or Area official Chinese short name from UN Statistics Division",
             "type": "string"
           },
           {
             "name": "official_name_en",
             "title": "official name English",
-            "description": "Country or Area official English short name from UN Statistics Divsion",
+            "description": "Country or Area official English short name from UN Statistics Division",
             "type": "string"
           },
           {
@@ -350,7 +343,7 @@
           {
             "name": "official_name_ru",
             "title": "official name Russian",
-            "description": "Country or Area official Russian short name from UN Statistics Divsion",
+            "description": "Country or Area official Russian short name from UN Statistics Division",
             "type": "string"
           },
           {
