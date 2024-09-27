@@ -1,7 +1,7 @@
 name: Run Makefile with Selenium
 
 on:
-  # Schedule to run every 2 minutes
+  # Schedule to run every 1st day of a month at 00 UTC
   schedule:
     - cron: '0 0 1 * *'
 
