@@ -64,6 +64,4 @@ jobs:
       run: |
         git config --global user.email "${{env.CI_COMMIT_EMAIL}}"
         git config --global user.name "${{env.CI_COMMIT_NAME}}"
-        git add .
-        git commit -m "${{env.COMMIT_MESSAGE}}"
-        git push
+        git diff --quiet && echo "No changes to commit" || (git add data/country-codes.csv && git commit -m "${{env.CI_COMMIT_MESSAGE}}" && git push)
