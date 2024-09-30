@@ -1,7 +1,7 @@
 name: Run Makefile with Selenium
 
 on:
-  # Schedule to run every 1st day of a month at 00 UTC
+  # Schedule to run on the 1st day of each month
   schedule:
     - cron: '0 0 1 * *'
 
@@ -48,7 +48,10 @@ jobs:
       run: |
         Xvfb :99 -screen 0 1024x768x24 &
         export DISPLAY=:99
-        make update
+        source venv/bin/activate   
+        make update                
 
     - name: Run Make Clean
-      run: make clean
+      run: |
+        source venv/bin/activate  
+        make clean                 
