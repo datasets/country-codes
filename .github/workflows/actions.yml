@@ -54,4 +54,16 @@ jobs:
     - name: Run Make Clean
       run: |
         source venv/bin/activate  
-        make clean                 
+        make clean          
+
+    - name: Push and Commit      
+      env:
+        CI_COMMIT_NAME: "Automated commit"
+        CI_COMMIT_EMAIL: "actions@users.noreply.github.com"
+        CI_COMMIT_MESSAGE: "Automated commit"
+      run: |
+        git config --global user.email "${{env.CI_COMMIT_EMAIL}}"
+        git config --global user.name "${{env.CI_COMMIT_NAME}}"
+        git add .
+        git commit -m "${{env.COMMIT_MESSAGE}}"
+        git push

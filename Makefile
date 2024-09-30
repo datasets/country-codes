@@ -58,7 +58,7 @@ data/country-codes.csv: data/country-codes.json data/geoname.csv data/cldr.csv d
 	cp data/country-codes.csv data/previous-country-codes.csv
 
 clean:
-	# Delete all .csv files starting with 'country' except 'country-codes.csv'
+	# Delete all .csv files except 'country-codes.csv'
 	find data/ -name "*.csv" ! -name "country-codes.csv" -exec rm {} +
 
 	# Delete all .json files
