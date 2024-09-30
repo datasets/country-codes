@@ -13,6 +13,9 @@ all: data/country-codes.csv
 
 .SECONDARY:
 
+data/wd_countries.csv:
+	./scripts/wikidata.sh
+
 data/iso3166.json:
 	python3 scripts/iso3166.py  # Calls your custom iso3166 script
 	python3 scripts/csvtojson.py data/iso3166.csv data/iso3166-flat.json  # Use your csvtojson function
@@ -54,7 +57,8 @@ data/country-codes.csv: data/country-codes.json data/geoname.csv data/cldr.csv d
 	python3 scripts/reorder_columns.py
 	python3 scripts/reorder_rows.py
 	cp data/country-codes-reordered-sorted.csv data/country-codes.csv
-	python3 scripts/cleanup.py  # Ensure final column order
+	python3 scripts/wd_countries.py
+	python3 scripts/cleanup.py 
 	cp data/country-codes.csv data/previous-country-codes.csv
 
 clean:
