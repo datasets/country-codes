@@ -27,7 +27,7 @@ def cleanup():
         "Intermediate Region Name", "official_name_es", "UNTERM English Formal", "official_name_cn", 
         "official_name_en", "ISO4217-currency_country_name", "Least Developed Countries (LDC)", "Region Name", 
         "UNTERM Arabic Short", "Sub-region Name", "official_name_ru", "Global Name", "Capital", 
-        "Continent", "TLD", "Languages", "Geoname ID", "CLDR display name", "EDGAR"
+        "Continent", "TLD", "Languages", "Geoname ID", "CLDR display name", "EDGAR","wikidata_id"
     ]
     
     # Only reorder the columns that exist in both the dataframe and the desired order

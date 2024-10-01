@@ -54,11 +54,13 @@ data/country-codes.csv: data/country-codes.json data/geoname.csv data/cldr.csv d
 	python3 scripts/reorder_columns.py
 	python3 scripts/reorder_rows.py
 	cp data/country-codes-reordered-sorted.csv data/country-codes.csv
-	python3 scripts/cleanup.py  # Ensure final column order
+	./scripts/wd_countries.sh
+	python3 scripts/wd_countries.py
+	python3 scripts/cleanup.py 
 	cp data/country-codes.csv data/previous-country-codes.csv
 
 clean:
-	# Delete all .csv files starting with 'country' except 'country-codes.csv'
+	# Delete all .csv files except 'country-codes.csv'
 	find data/ -name "*.csv" ! -name "country-codes.csv" -exec rm {} +
 
 	# Delete all .json files
