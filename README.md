@@ -1,4 +1,4 @@
-[![goodtables.io](https://goodtables.io/badge/github/datasets/country-codes.svg)](https://goodtables.io/github/datasets/country-codes)
+## Description
 
 Comprehensive country code information, including ISO 3166 codes, ITU dialing
 codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Package](http://frictionlessdata.io/data-packages/): [view datapackage](http://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdatasets%2Fcountry-codes%2Fmaster%2Fdatapackage.json)
@@ -7,21 +7,21 @@ codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Pac
 
 Data are fetched from multiple sources:
 
-Official formal and short names (in English, French, Spanish, Arabic, Chinese, and Russian) are from
+- Official formal and short names (in English, French, Spanish, Arabic, Chinese, and Russian) are from
 [United Nations Protocol and Liaison Service](https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp)
 
-Customary English short names are from
-[Unicode Common Locale Data Repository (CLDR) Project](https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json).
+- Customary English short names are from
+[Unicode Common Locale Data Repository (CLDR) Project](https://raw.githubusercontent.com/unicode-org/cldr-json/d38478855dd8342749f0494332cc8acc2895d20d/cldr-json/cldr-localenames-full/main/ms/territories.json).
 
-Note: CLDR shorter names "ZZ-alt-short" are used when available
+> Note: CLDR shorter names "ZZ-alt-short" are used when available
 
-ISO 3166 official short names (in English, French, Spanish, Arabic, Chinese, and Russian) are from
-[United Nations Department of Ecoonomic and Social Affairs Statistics Division](https://unstats.un.org/unsd/methodology/m49/overview/)
+- ISO 3166 official short names (in English, French, Spanish, Arabic, Chinese, and Russian) are from
+[United Nations Department of Economic and Social Affairs Statistics Division](https://unstats.un.org/unsd/methodology/m49/overview/)
 
-ISO 4217 currency codes are from
-[currency-iso.org](https://www.currency-iso.org/dam/downloads/lists/list_one.xml)
+- ISO 4217 currency codes are from
+[currency-iso.org](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml)
 
-Many other country codes are from
+- Many other country codes are from
 [statoids.com](http://www.statoids.com/wab.html)
 
 Special thanks to Gwillim Law for his excellent
@@ -29,9 +29,9 @@ Special thanks to Gwillim Law for his excellent
 are excerpted from his site), which is more up-to-date than most similar
 resources and is much easier to scrape than multiple Wikipedia pages.
 
-Capital cities, languages, continents, TLDs, and geonameid are from [geonames.org](http://download.geonames.org/export/dump/countryInfo.txt)
+- Capital cities, languages, continents, TLDs, and geonameid are from [geonames.org](http://download.geonames.org/export/dump/countryInfo.txt)
 
-EDGAR codes are from [sec.gov](https://www.sec.gov/edgar/searchedgar/edgarstatecodes.htm)
+- EDGAR codes are from [sec.gov](https://www.sec.gov/submit-filings/filer-support-resources/edgar-state-country-codes)
 
 
 ## Preparation
@@ -47,12 +47,14 @@ NOTE/TODO: currently, preparation requires manual process to download and rename
 
 Install requirements:
 
-    pip install -r scripts/requirements.pip
+    pip install -r scripts/requirements.txt
 
 
 Run GNU Make to generate data file:
 
-    make country-codes.csv
+    make update
+    #then
+    make clean
 
 ## License
 
