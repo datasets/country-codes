@@ -1,4 +1,13 @@
+import re
 import pandas as pd
+
+def format_dial_codes(dial):
+    if isinstance(dial, str):
+        # Detect if 'Dial' has a pattern like '1-8091-8291-849'
+        match = re.match(r'(1-\d{3})(1-\d{3})(1-\d{3})', dial)
+        if match:
+            return ','.join(match.groups())
+    return dial
 
 def cleanup():
     # Load the CSV into a DataFrame
@@ -13,7 +22,9 @@ def cleanup():
     
     # Drop duplicates
     df_cleaned = df.drop_duplicates()
-    
+
+    df_cleaned['Dial'] = df_cleaned['Dial'].apply(format_dial_codes)
+
     # Define the desired column order
     desired_order = [
         "FIFA", "Dial", "ISO3166-1-Alpha-3", "MARC", "is_independent", "ISO3166-1-numeric", "GAUL", "FIPS", 
@@ -35,7 +46,7 @@ def cleanup():
     
     # Reorder the columns based on the desired order
     df_reordered = df_cleaned[existing_columns]
-    
+
     # Write the reordered DataFrame back to the same file
     df_reordered.to_csv('data/country-codes.csv', index=False)
     print(f"Saved cleaned and reordered data to 'data/country-codes.csv'. Total rows after cleanup: {len(df_reordered)}")
