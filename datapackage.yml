@@ -1,4 +1,5 @@
 collection: reference-data
+has_premium: true
 contributors:
 - path: https://github.com/datasets/country-codes
   role: maintainer
