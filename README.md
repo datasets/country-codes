@@ -3,7 +3,7 @@
 ## Description
 
 Comprehensive country code information, including ISO 3166 codes, ITU dialing
-codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Package](http://frictionlessdata.io/data-packages/): [view datapackage](http://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdatasets%2Fcountry-codes%2Fmaster%2Fdatapackage.json)
+codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Package](https://specs.frictionlessdata.io/tabular-data-package): [view datapackage](https://raw.githubusercontent.com/datasets/country-codes/refs/heads/update-readme/datapackage.yml)
 
 ## Data
 
