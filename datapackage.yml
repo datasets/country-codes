@@ -1,5 +1,7 @@
 collection: reference-data
 has_premium: true
+has_solutions:
+- global-geo-data
 contributors:
 - path: https://github.com/datasets/country-codes
   role: maintainer
