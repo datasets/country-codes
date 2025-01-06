@@ -11,16 +11,9 @@ def format_dial_codes(dial):
 
 def cleanup():
     # Load the CSV into a DataFrame
-    df = pd.read_csv('data/country-codes.csv')
+    df = pd.read_csv('data/country-codes.csv', keep_default_na=False)
     
-    # Check for exact duplicate rows (global duplicates)
-    duplicates = df[df.duplicated()]
-    
-    if not duplicates.empty:
-        print(f"Found {len(duplicates)} exact duplicate rows:")
-        print(duplicates)
-    
-    # Drop duplicates
+    # Drop duplicate rows
     df_cleaned = df.drop_duplicates()
 
     df_cleaned['Dial'] = df_cleaned['Dial'].apply(format_dial_codes)
@@ -46,7 +39,7 @@ def cleanup():
     
     # Reorder the columns based on the desired order
     df_reordered = df_cleaned[existing_columns]
-
+    
     # Write the reordered DataFrame back to the same file
     df_reordered.to_csv('data/country-codes.csv', index=False)
     print(f"Saved cleaned and reordered data to 'data/country-codes.csv'. Total rows after cleanup: {len(df_reordered)}")
