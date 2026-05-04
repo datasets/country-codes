@@ -45,6 +45,7 @@ repository:
 resources:
 - format: csv
   name: country-codes
+  description: Comprehensive country code reference combining ISO 3166 alpha-2/alpha-3/numeric codes with ITU, FIFA, IOC, MARC, FIPS, and UN codes, plus country names in multiple languages, currency codes, regional classifications, and geographic metadata.
   path: data/country-codes.csv
   schema:
     fields:
@@ -322,3 +323,4 @@ sources:
   title: US Securities and Exchange Commission
 title: 'Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many
   more'
+
