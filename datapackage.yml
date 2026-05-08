@@ -14,6 +14,9 @@ licenses:
   path: http://opendatacommons.org/licenses/pddl/
   title: Open Data Commons Public Domain Dedication and License v1.0
 name: country-codes
+description: Comprehensive dataset of country codes combining ISO 3166 alpha-2/alpha-3/numeric,
+  ITU dialing codes, ISO 4217 currency codes, UN M49 region codes, Geonames, CLDR
+  display names, EDGAR codes, and Wikidata identifiers for all countries and territories.
 related:
 - formats:
   - CSV
@@ -46,6 +49,9 @@ resources:
 - format: csv
   name: country-codes
   path: data/country-codes.csv
+  description: One row per country or territory with code columns from multiple international
+    standards bodies including ISO 3166, ITU, ISO 4217, UN M49, Geonames, CLDR, EDGAR,
+    and Wikidata.
   schema:
     fields:
     - description: "Codes assigned by the F\xE9d\xE9ration Internationale de Football\
@@ -182,7 +188,7 @@ resources:
         Islands or Sark, for example)
       name: M49
       title: M49
-      type: number
+      type: integer
     - description: Country classification from United Nations Statistics Division
       name: Sub-region Code
       title: sub-region code
@@ -287,7 +293,7 @@ resources:
       description: Geoname ID
       name: Geoname ID
       title: Geoname ID
-      type: number
+      type: integer
     - description: Country's customary English short name (CLDR)
       name: CLDR display name
       title: CLDR display name
@@ -297,6 +303,11 @@ resources:
       description: EDGAR country code from SEC
       name: EDGAR
       title: EDGAR code
+      type: string
+    - description: Wikidata entity URL for the country, sourced via Wikidata SPARQL
+        query on ISO 3166-1 alpha-2 property (P297)
+      name: wikidata_id
+      title: Wikidata ID
       type: string
 sources:
 - name: United Nations Protocol and Liaison Service
@@ -320,5 +331,8 @@ sources:
 - name: US Securities and Exchange Commission
   path: https://www.sec.gov/submit-filings/filer-support-resources/edgar-state-country-codes
   title: US Securities and Exchange Commission
+- name: Wikidata
+  path: https://query.wikidata.org/sparql
+  title: Wikidata SPARQL endpoint
 title: 'Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many
   more'
