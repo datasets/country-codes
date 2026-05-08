@@ -10,7 +10,7 @@ codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Pac
 Data are fetched from multiple sources:
 
 - Official formal and short names (in English, French, Spanish, Arabic, Chinese, and Russian) are from
-[United Nations Protocol and Liaison Service](https://protocol.un.org/dgacm/pls/site.nsf/PermanentMissions.xsp)
+[United Nations Protocol and Liaison Service](https://www.un.org/dgacm/sites/www.un.org.dgacm/files/Documents_Protocol/unterm-efsrca.xlsx)
 
 - Customary English short names are from
 [Unicode Common Locale Data Repository (CLDR) Project](https://raw.githubusercontent.com/unicode-org/cldr-json/d38478855dd8342749f0494332cc8acc2895d20d/cldr-json/cldr-localenames-full/main/ms/territories.json).
@@ -34,6 +34,8 @@ resources and is much easier to scrape than multiple Wikipedia pages.
 - Capital cities, languages, continents, TLDs, and geonameid are from [geonames.org](http://download.geonames.org/export/dump/countryInfo.txt)
 
 - EDGAR codes are from [sec.gov](https://www.sec.gov/submit-filings/filer-support-resources/edgar-state-country-codes)
+
+- Wikidata entity URLs (`wikidata_id`) are fetched via the [Wikidata SPARQL endpoint](https://query.wikidata.org/sparql) using the ISO 3166-1 alpha-2 property (P297)
 
 
 ## Preparation
