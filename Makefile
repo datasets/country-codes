@@ -56,7 +56,8 @@ data/country-codes.csv: data/country-codes.json data/geoname.csv data/cldr.csv d
 	cp data/country-codes-reordered-sorted.csv data/country-codes.csv
 	./scripts/wd_countries.sh
 	python3 scripts/wd_countries.py
-	python3 scripts/cleanup.py 
+	python3 scripts/cleanup.py
+	python3 scripts/corrections.py
 
 clean:
 	# Delete all .csv files except 'country-codes.csv'
