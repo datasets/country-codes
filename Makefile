@@ -7,7 +7,7 @@ diff:
 	daff render daffdiff.csv > daffdiff.html
 
 test:
-	goodtables datapackage.json
+	frictionless validate datapackage.yml
 
 all: data/country-codes.csv
 

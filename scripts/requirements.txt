@@ -5,5 +5,5 @@ pandas==2.2.3
 rapidfuzz==3.10.0
 selenium==4.25.0
 csvkit==2.0.1
-goodtables==2.5.4
+frictionless==5.19.0
 urllib3==2.2.3
