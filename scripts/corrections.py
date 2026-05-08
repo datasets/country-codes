@@ -27,122 +27,58 @@ Append an entry to CORRECTIONS below. Each dict requires:
   reason      — plain-English explanation of why the upstream value is wrong
   source      — URL or citation confirming the correct value
 
-WHY NO AUTOMATED SOURCE FOR FIFA CODES?
-----------------------------------------
-FIFA codes are the primary driver of this script. There is no single
-authoritative, machine-readable, freely-licensed list of FIFA codes:
-
-statoids.com (current source for FIFA codes in this pipeline)
-  Gwillim Law's reference site is well-researched and covers many code
-  systems simultaneously, making it the most practical single scrape
-  target. However, it is a personal project that is no longer actively
-  maintained. Some FIFA codes have not been updated to reflect changes
-  made by FIFA over the past decade (code changes, newly admitted
-  associations). Statoids remains the source for all other codes it
-  provides (IOC, FIPS, DS, WMO, etc.); only specific FIFA values are
-  overridden here.
-
-FIFA's own website (https://www.fifa.com/associations/)
-  Authoritative, but FIFA provides no downloadable or machine-readable
-  list. The association pages use JavaScript rendering. The project
-  already uses Selenium for EDGAR scraping, so adding a FIFA scraper
-  is technically feasible, but FIFA's page structure changes without
-  notice and would require ongoing maintenance. A dedicated FIFA scraper
-  would also be slower and less stable than the statoids scrape.
-
-footballsquads.co.uk (https://www.footballsquads.co.uk/fifacodes.htm)
-  Scrapeable without JavaScript, but covers only ~142 of FIFA's ~211
-  member associations (Sudan and South Sudan are absent entirely). It
-  also contains some of the same outdated codes as statoids (e.g. LIB
-  for Lebanon instead of LBN), so substituting it would not eliminate
-  the need for this correction layer.
-
-Wikipedia (https://en.wikipedia.org/wiki/List_of_FIFA_country_codes)
-  Generally more complete and more current than statoids or
-  footballsquads. However: (1) Wikipedia's content licence (CC BY-SA
-  4.0) requires attribution and share-alike, which conflicts with this
-  dataset's public-domain dedication; (2) the page structure changes
-  without notice, making scrapers fragile; (3) Wikipedia itself
-  sometimes lags FIFA announcements by weeks or months.
-
-Bottom line: the correction layer is the pragmatic choice. It keeps the
-statoids pipeline intact (which correctly supplies many other fields),
-and surfaces divergences explicitly in version-controlled code rather
-than silently in data.
+NOTE ON FIFA CODES
+------------------
+FIFA codes are handled automatically by scripts/fifa.py, which fetches the
+authoritative list of member codes directly from inside.fifa.com on every
+pipeline run. Add FIFA corrections there only if the ISO 3166-1 alpha-3
+fallback in fifa.py cannot resolve them automatically.
 """
 
-import pandas as pd
+import csv
 
 CORRECTIONS = [
-    {
-        'match_col': 'ISO3166-1-Alpha-2',
-        'match_val': 'SD',
-        'field': 'FIFA',
-        'correct_val': 'SDN',
-        'reason': (
-            'Statoids lists SUD, the historical code used before FIFA aligned '
-            'its codes more closely with ISO 3166-1 alpha-3. The current FIFA '
-            'designation for the Sudan Football Association is SDN.'
-        ),
-        'source': 'https://www.fifa.com/associations/association/SDN/',
-    },
-    {
-        'match_col': 'ISO3166-1-Alpha-2',
-        'match_val': 'SS',
-        'field': 'FIFA',
-        'correct_val': 'SSD',
-        'reason': (
-            'South Sudan was admitted to FIFA in 2012 and assigned the code '
-            'SSD. Statoids has no FIFA entry for South Sudan.'
-        ),
-        'source': 'https://www.fifa.com/associations/association/SSD/',
-    },
-    {
-        'match_col': 'ISO3166-1-Alpha-2',
-        'match_val': 'LB',
-        'field': 'FIFA',
-        'correct_val': 'LBN',
-        'reason': (
-            'Statoids lists LIB, which is Lebanon\'s MARC library cataloguing '
-            'code, not its FIFA code. The Lebanese Football Association is '
-            'designated LBN by FIFA.'
-        ),
-        'source': 'https://www.fifa.com/associations/association/LBN/',
-    },
-    {
-        'match_col': 'ISO3166-1-Alpha-2',
-        'match_val': 'GI',
-        'field': 'FIFA',
-        'correct_val': 'GIB',
-        'reason': (
-            'Gibraltar was admitted to FIFA in 2016 and assigned the code GIB. '
-            'Statoids still lists GBZ, which is the vehicle distinguishing sign '
-            'for Gibraltar, not its FIFA code.'
-        ),
-        'source': 'https://www.fifa.com/associations/association/GIB/',
-    },
+    # No entries yet. Add field-specific overrides here as needed.
+    # Example:
+    # {
+    #     'match_col': 'ISO3166-1-Alpha-2',
+    #     'match_val': 'XX',
+    #     'field': 'SomeField',
+    #     'correct_val': 'correct value',
+    #     'reason': 'Why the upstream value is wrong.',
+    #     'source': 'https://example.com/reference',
+    # },
 ]
 
 
-def apply_corrections(df: pd.DataFrame) -> pd.DataFrame:
+def apply_corrections(rows: list, fieldnames: list) -> list:
+    if not CORRECTIONS:
+        print('No corrections defined.')
+        return rows
     for c in CORRECTIONS:
-        mask = df[c['match_col']] == c['match_val']
-        if not mask.any():
-            print(f"WARNING: no row matched {c['match_col']}={c['match_val']!r} — correction skipped")
-            continue
-        old = df.loc[mask, c['field']].iloc[0]
-        if old == c['correct_val']:
-            print(f"OK (already correct): {c['match_val']} {c['field']}={c['correct_val']!r}")
+        for row in rows:
+            if row[c['match_col']] == c['match_val']:
+                old = row[c['field']]
+                if old == c['correct_val']:
+                    print(f"OK (already correct): {c['match_val']} {c['field']}={c['correct_val']!r}")
+                else:
+                    row[c['field']] = c['correct_val']
+                    print(f"CORRECTED: {c['match_val']} {c['field']} {old!r} -> {c['correct_val']!r}")
+                break
         else:
-            df.loc[mask, c['field']] = c['correct_val']
-            print(f"CORRECTED: {c['match_val']} {c['field']} {old!r} -> {c['correct_val']!r}")
-    return df
+            print(f"WARNING: no row matched {c['match_col']}={c['match_val']!r} — correction skipped")
+    return rows
 
 
 def run():
-    df = pd.read_csv('data/country-codes.csv', keep_default_na=False)
-    df = apply_corrections(df)
-    df.to_csv('data/country-codes.csv', index=False)
+    with open('data/country-codes.csv', newline='', encoding='utf-8') as f:
+        rows = list(csv.DictReader(f))
+        fieldnames = list(rows[0].keys())
+    rows = apply_corrections(rows, fieldnames)
+    with open('data/country-codes.csv', 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 if __name__ == '__main__':
