@@ -36,8 +36,8 @@ with open('data/country-codes.csv', 'r', encoding='utf-8') as infile, \
      open('data/country-codes-reordered.csv', 'w', newline='', encoding='utf-8') as outfile:
     
     fieldnames = [get_column_name(c) for c in ordered]
-    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
-    
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames, lineterminator='\n')
+
     writer.writeheader()
     
     for row in csv.DictReader(infile):

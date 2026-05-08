@@ -41,7 +41,7 @@ def cleanup():
     df_reordered = df_cleaned[existing_columns]
     
     # Write the reordered DataFrame back to the same file
-    df_reordered.to_csv('data/country-codes.csv', index=False)
+    df_reordered.to_csv('data/country-codes.csv', index=False, lineterminator='\n')
     print(f"Saved cleaned and reordered data to 'data/country-codes.csv'. Total rows after cleanup: {len(df_reordered)}")
 
 if __name__ == '__main__':
