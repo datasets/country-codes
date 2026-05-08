@@ -21,7 +21,6 @@ COLUMN_NAMES = [
     "official_name_fr",
     "UNTERM French Short",
     "ISO4217-currency_name",
-    "Developed / Developing Countries",
     "UNTERM Russian Formal",
     "UNTERM English Short",
     "ISO4217-currency_alphabetic_code",
