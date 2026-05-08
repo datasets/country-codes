@@ -76,7 +76,7 @@ def run():
         fieldnames = list(rows[0].keys())
     rows = apply_corrections(rows, fieldnames)
     with open('data/country-codes.csv', 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
 

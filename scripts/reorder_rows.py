@@ -25,6 +25,6 @@ sorted_rows = sorted(rows, key=lambda row: collator(row[headers.index('official_
 
 # Write the sorted rows to a new CSV file
 with open('data/country-codes-reordered-sorted.csv', 'w', newline='', encoding='utf-8') as f:
-    csv_writer = csv.writer(f)
+    csv_writer = csv.writer(f, lineterminator='\n')
     csv_writer.writerow(headers)  # Write the headers first
     csv_writer.writerows(sorted_rows)  # Write the sorted rows
