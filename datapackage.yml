@@ -83,7 +83,7 @@ resources:
     - description: Numeric codes from ISO 3166-1
       name: ISO3166-1-numeric
       title: ISO3166-1-numeric
-      type: integer
+      type: string
     - description: Global Administrative Unit Layers from the Food and Agriculture
         Organization
       name: GAUL
@@ -128,11 +128,11 @@ resources:
     - description: Country classification from United Nations Statistics Division
       name: Global Code
       title: global code
-      type: integer
+      type: string
     - description: Country classification from United Nations Statistics Division
       name: Intermediate Region Code
       title: intermediate region code
-      type: integer
+      type: string
     - description: Country or Area official French short name from UN Statistics Division
       name: official_name_fr
       title: official name French
@@ -192,11 +192,11 @@ resources:
     - description: Country classification from United Nations Statistics Division
       name: Sub-region Code
       title: sub-region code
-      type: integer
+      type: string
     - description: Country classification from United Nations Statistics Division
       name: Region Code
       title: region code
-      type: integer
+      type: string
     - description: Country or Area official Arabic short name from UN Statistics Division
       name: official_name_ar
       title: official name Arabic
