@@ -20,7 +20,7 @@ def get_data():
 
 def run():
     with open('data/geoname.csv', 'w', newline='', encoding='utf-8') as csv_file:
-        csv_writer = csv.writer(csv_file)
+        csv_writer = csv.writer(csv_file, lineterminator='\n')
         csv_writer.writerow(header)
         for row in get_data():
             csv_writer.writerow(row)

@@ -40,7 +40,7 @@ def run():
 
     # Save the filtered data to a CSV file
     with open(config.EDGAR_FILE_NAME, 'w', newline='', encoding='utf-8') as csv_file:
-        csv_writer = csv.writer(csv_file)
+        csv_writer = csv.writer(csv_file, lineterminator='\n')
         csv_writer.writerow(config.EDGAR_HEADERS)
 
         csv_writer.writerows(data)

@@ -16,7 +16,7 @@ def run():
 
     merged_data['wikidata_id'] = merged_data['wd_id'].fillna('')
 
-    merged_data.to_csv('data/country-codes.csv', index=False)
+    merged_data.to_csv('data/country-codes.csv', index=False, lineterminator='\n')
 
 if __name__ == '__main__':
     run()

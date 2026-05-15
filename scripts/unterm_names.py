@@ -22,7 +22,7 @@ def run():
     
     # Write the data to a CSV file
     with open('data/unterm_names.csv', 'w', newline='', encoding='utf-8') as csv_file:
-        csv_writer = csv.writer(csv_file)
+        csv_writer = csv.writer(csv_file, lineterminator='\n')
         csv_writer.writerow(config.UNTERM_HEADERS)
 
         # Iterate through the rows of the sheet and write to the CSV

@@ -38,7 +38,7 @@ def run():
 
     # Write to CSV file
     with open('data/cldr.csv', 'w', newline='', encoding='utf-8') as csv_file:
-        csv_writer = csv.writer(csv_file)
+        csv_writer = csv.writer(csv_file, lineterminator='\n')
         csv_writer.writerow(header)
         for row in cldr.items():
             csv_writer.writerow(row)
