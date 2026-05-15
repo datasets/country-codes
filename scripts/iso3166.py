@@ -37,7 +37,6 @@ def run():
         'Country or Area': 'official_name_en',
         'ISO-alpha3 Code': 'ISO3166-1-Alpha-3'
     })
-    df_final['official_name_en'] = df_final['official_name_en'].replace('Türkiye', 'Turkey')
     df_final.to_csv(os.path.join(output_dir, 'iso3166.csv'), index=False, lineterminator='\n')
 
 if __name__ == '__main__':
