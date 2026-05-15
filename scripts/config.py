@@ -60,7 +60,7 @@ COLUMN_NAMES = [
 ]
 
 # URLS
-CLDR_TERRITORIES_URL = 'https://raw.githubusercontent.com/unicode-org/cldr-json/d38478855dd8342749f0494332cc8acc2895d20d/cldr-json/cldr-localenames-full/main/ms/territories.json'
+CLDR_TERRITORIES_URL = 'https://raw.githubusercontent.com/unicode-org/cldr-json/refs/heads/main/cldr-json/cldr-localenames-full/main/en/territories.json'
 EDGAR_URL = 'https://www.sec.gov/submit-filings/filer-support-resources/edgar-state-country-codes'
 GEONAMES_URL = 'http://download.geonames.org/export/dump/countryInfo.txt'
 ISO4217_URL = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml'

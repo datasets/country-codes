@@ -13,8 +13,7 @@ header = ['ISO3166-1-Alpha-2', 'CLDR display name']
 def run():
     content = json.loads(urllib.request.urlopen(url).read())
 
-    # Adjust the path based on your JSON structure (specifically 'ms' instead of 'en')
-    content_territories = content['main']['ms']['localeDisplayNames']['territories']
+    content_territories = content['main']['en']['localeDisplayNames']['territories']
 
     # Remove UN regional codes (three digits) and -alt-variants
     territories = {k: v for k, v in content_territories.items() if not k.isdigit() and '-alt-variant' not in k}
