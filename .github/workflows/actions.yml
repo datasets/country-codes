@@ -37,7 +37,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y xvfb
-        sudo apt-get install -y chromium-browser
+        # Google Chrome and ChromeDriver are already on the runner image; installing 'chromium-browser' (a snap on Ubuntu 24.04) fails there.
 
     - name: Run Makefile with Xvfb
       run: |
