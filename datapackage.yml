@@ -10,11 +10,24 @@ contributors:
   title: Evan Wheeler
 datapackage_version: 1.0.0-beta.13
 format: csv
-last_modified: 2023-09-25
 licenses:
 - name: ODC-PDDL-1.0
-  path: https://opendatacommons.org/licenses/pddl/
-  title: Open Data Commons Public Domain Dedication and License v1.0
+  path: https://opendatacommons.org/licenses/pddl/1.0/
+  title: Open Data Commons Public Domain Dedication and License v1.0. Applies only
+    to the maintainers' own work (the scripts, and the selection and arrangement of
+    the data). It does not cover the data taken from the sources. The UNTERM columns
+    come from a source whose terms do not allow redistribution, and several other
+    sources have unclear terms; see README.md and ATTRIBUTION.txt.
+- name: CC-BY-4.0
+  path: https://creativecommons.org/licenses/by/4.0/
+  title: Creative Commons Attribution 4.0. Applies to the columns Capital, Continent,
+    TLD, Languages and Geoname ID, which come from GeoNames. Credit to GeoNames is
+    required.
+- name: Unicode-3.0
+  path: https://www.unicode.org/license.txt
+  title: Unicode License v3. Applies to the column CLDR display name, which comes
+    from the Unicode CLDR. The copyright and permission notice must travel with the
+    data; it is in ATTRIBUTION.txt.
 name: country-codes
 description: Comprehensive dataset of country codes combining ISO 3166 alpha-2/alpha-3/numeric,
   ITU dialing codes, ISO 4217 currency codes, UN M49 region codes, Geonames, CLDR
@@ -49,6 +62,7 @@ repository:
   url: https://github.com/datasets/country-codes
 resources:
 - format: csv
+  mediatype: text/csv
   name: country-codes
   path: data/country-codes.csv
   description: One row per country or territory with code columns from multiple international
@@ -316,7 +330,7 @@ sources:
   path: https://www.un.org/dgacm/sites/www.un.org.dgacm/files/Documents_Protocol/unterm-efsrca.xlsx
   title: United Nations Protocol and Liaison Service
 - name: Unicode Common Locale Data Repository (CLDR) Project
-  path: https://raw.githubusercontent.com/unicode-org/cldr-json/d38478855dd8342749f0494332cc8acc2895d20d/cldr-json/cldr-localenames-full/main/ms/territories.json
+  path: https://raw.githubusercontent.com/unicode-org/cldr-json/refs/heads/main/cldr-json/cldr-localenames-full/main/en/territories.json
   title: Unicode Common Locale Data Repository (CLDR) Project
 - name: United Nations Department of Economic and Social Affairs Statistics Division
   path: https://unstats.un.org/unsd/methodology/m49/overview/
@@ -325,14 +339,17 @@ sources:
   path: https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml
   title: SIX Interbank Clearing Ltd (on behalf of ISO)
 - name: Statoids
-  path: http://www.statoids.com/wab.html
+  path: https://statoids.com/wab.html
   title: Statoids
 - name: Geonames
-  path: http://download.geonames.org/export/dump/countryInfo.txt
+  path: https://download.geonames.org/export/dump/countryInfo.txt
   title: Geonames
 - name: US Securities and Exchange Commission
   path: https://www.sec.gov/submit-filings/filer-support-resources/edgar-state-country-codes
   title: US Securities and Exchange Commission
+- name: FIFA
+  path: https://inside.fifa.com/associations
+  title: FIFA member associations (inside.fifa.com)
 - name: Wikidata
   path: https://query.wikidata.org/sparql
   title: Wikidata SPARQL endpoint

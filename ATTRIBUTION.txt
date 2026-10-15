@@ -1,0 +1,69 @@
+Attribution for country-codes
+
+This file combines information from the sources below.
+
+Contains information from GeoNames (https://www.geonames.org/), licensed under Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/). Columns: Capital, Continent, TLD, Languages, Geoname ID.
+
+Contains information from the Unicode Common Locale Data Repository (CLDR) (https://github.com/unicode-org/cldr-json), licensed under the Unicode License v3 (https://www.unicode.org/license.txt). Column: CLDR display name. The copyright and permission notice that the licence requires follows in full.
+
+----------------------------------------------------------------------
+UNICODE LICENSE V3
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright © 1991-2026 Unicode, Inc.
+
+NOTICE TO USER: Carefully read the following legal agreement. BY
+DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
+SOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of data files and any associated documentation (the "Data Files") or
+software and any associated documentation (the "Software") to deal in the
+Data Files or Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, and/or sell
+copies of the Data Files or Software, and to permit persons to whom the
+Data Files or Software are furnished to do so, provided that either (a)
+this copyright and permission notice appear with all copies of the Data
+Files or Software, or (b) this copyright and permission notice appear in
+associated Documentation.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+THIRD PARTY RIGHTS.
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE
+BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,
+OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA
+FILES OR SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall
+not be used in advertising or otherwise to promote the sale, use or other
+dealings in these Data Files or Software without prior written
+authorization of the copyright holder.
+----------------------------------------------------------------------
+
+Contains information from the U.S. Securities and Exchange Commission, EDGAR state and country codes (https://www.sec.gov/submit-filings/filer-support-resources/edgar-state-country-codes). The SEC states that information on sec.gov may be copied and distributed without its permission and asks for citation as the source (https://www.sec.gov/privacy.htm). Column: EDGAR.
+
+Contains information from Wikidata (https://www.wikidata.org/), released under CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Column: wikidata_id.
+
+Contains information from the United Nations Protocol and Liaison Service, UNTERM country names (https://www.un.org/dgacm/sites/www.un.org.dgacm/files/Documents_Protocol/unterm-efsrca.xlsx). Restricted: the UN website terms of use (https://www.un.org/en/about-us/terms-of-use) allow downloading and copying "for the User’s personal, non-commercial use, without any right to resell or redistribute them or to compile or create derivative works therefrom". Columns: the UNTERM columns (English, French, Spanish, Russian, Chinese and Arabic, Short and Formal).
+
+Contains information from the United Nations Statistics Division, M49 (https://unstats.un.org/unsd/methodology/m49/overview/). Licence: unclear (none stated by the source). Columns: ISO3166-1-Alpha-3, M49, the official_name_* columns, and the Global, Region, Sub-region and Intermediate Region columns, Least Developed Countries (LDC), Land Locked Developing Countries (LLDC) and Small Island Developing States (SIDS).
+
+Contains information from Statoids (https://statoids.com/wab.html). Licence: unclear (none stated by the source, which carries a copyright notice). Columns: ISO3166-1-Alpha-2, ISO3166-1-numeric, ITU, FIPS, IOC, FIFA (first pass), DS, WMO, GAUL, MARC, Dial, is_independent.
+
+Contains information from the ISO 4217 currency code list published by SIX Group, the ISO 4217 maintenance agency (https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml). Licence: unclear (none stated by the source). Columns: ISO4217-currency_country_name, ISO4217-currency_name, ISO4217-currency_alphabetic_code, ISO4217-currency_numeric_code, ISO4217-currency_minor_unit.
+
+Contains information from the FIFA member associations list (https://inside.fifa.com/associations). Licence: unclear (none stated by the source). Column: FIFA.
+
+The ISO 3166-1 and ISO 4217 codes are published by ISO (https://committee.iso.org/iso-4217-currency-codes.html). Licence: unclear. ISO allows free-of-charge use of its country, currency and language codes and says that any use, including reproduction, requires its written permission.
+
+Changes made to the source data: the scripts in scripts/ download each source and join the tables into one file by ISO alpha-3 code, alpha-2 code or country name. Columns are renamed and reordered, duplicate rows are dropped, and rows are sorted by official_name_en. UNTERM rows that are not complete in all six languages are skipped. SIX entries marked as funds are skipped, and when a country has several currencies the values are joined with commas. For CLDR, where a name has a "-alt-short" form, that shorter name is used; "-alt-variant" names, numeric region codes and the codes ZZ, EZ and EU are ignored. FIFA values that are not on FIFA's list are replaced by the country's ISO alpha-3 code when that code is on the list. For Wikidata, the entity ID is turned into a URL, and a few duplicate or retired items are removed. No GeoNames, CLDR, SEC or Wikidata value is otherwise edited.
+
+Not endorsed by, or affiliated with, the United Nations, ISO, SIX Group, Statoids, FIFA, GeoNames, Unicode, Inc., the U.S. Securities and Exchange Commission or Wikidata.
