@@ -3,7 +3,7 @@
 ## Description
 
 Comprehensive country code information, including ISO 3166 codes, ITU dialing
-codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Package](https://specs.frictionlessdata.io/tabular-data-package): [view datapackage](https://raw.githubusercontent.com/datasets/country-codes/refs/heads/update-readme/datapackage.yml)
+codes, ISO 4217 currency codes, and many others. Provided as a [Tabular Data Package](https://specs.frictionlessdata.io/tabular-data-package): [view datapackage](https://raw.githubusercontent.com/datasets/country-codes/refs/heads/main/datapackage.yml)
 
 ## Data
 
@@ -45,7 +45,13 @@ from various data sources and output CSV of combined country code information.
 
 CSV output is provided via the `in2csv` and `csvcut` utilities from [csvkit](http://github.com/onyxfish/csvkit)
 
-NOTE/TODO: currently, preparation requires manual process to download and rename 6 CSV files from https://unstats.un.org/unsd/methodology/m49/overview/
+NOTE: The six UN M49 files in `tmp/` (`UNSD-en.csv`, `UNSD-fr.csv`, `UNSD-es.csv`,
+`UNSD-ar.csv`, `UNSD-cn.csv`, `UNSD-ru.csv`) are committed to this repository and
+read by `scripts/iso3166.py`. `make update` does not download them, so the UN M49
+region codes and the UN names in six languages only change when someone replaces
+these files. To refresh them, download the six language versions from
+https://unstats.un.org/unsd/methodology/m49/overview/, rename them to the names
+above and copy them into `tmp/`. No manual step is needed for a normal `make update`.
 
 ### data/country-codes.csv
 
@@ -59,6 +65,15 @@ Run GNU Make to generate data file:
     make update
     #then
     make clean
+
+### Reading the CSV: the "NA" trap
+
+Some values in `data/country-codes.csv` are the text `NA`: the `Continent` code for
+North America (41 rows) and the alpha-2 code and `DS` value of Namibia. `pandas.read_csv`
+treats `NA` as a missing value by default, so these cells come back empty. Turn that off:
+
+    import pandas as pd
+    df = pd.read_csv("data/country-codes.csv", dtype=str, keep_default_na=False)
 
 ## License
 

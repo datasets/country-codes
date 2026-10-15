@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import json
+import sys
 import utils
 import codecs
 import config
@@ -72,7 +73,7 @@ def run():
         currencies_xml_str = urlopen(iso4217_url).read()
         currencies = etree.fromstring(currencies_xml_str)
     except Exception as e:
-        print(f"Failed to fetch or parse XML: {e}")
+        sys.exit(f"Failed to fetch or parse XML from {iso4217_url}: {e}")
     for iso_currency_table in currencies.iterchildren():
         for country in iso_currency_table.iterchildren():
             process_element(country, en_names, country_info)

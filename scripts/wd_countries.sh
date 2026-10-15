@@ -16,8 +16,9 @@ curl -o data/wd_countries.csv -G 'https://query.wikidata.org/sparql' \
 
 # Eliminate duplication (confusion with kingdoms and territories)
 # in the future we can use "P31 Q417175" to eliminate doublets of kingdows, but "territory vs nation" need some check.
-# so, filtering invalid doublets and saving with same name:
-grep -v 'Q756617\|Q29999\|Q407199\|Q240592\|Q83286\|Q1246\|Q21590062' data/wd_countries.csv  | sponge data/wd_countries.csv
+# so, filtering invalid doublets and saving with same name (no 'sponge': it is not installed on the GitHub runner):
+grep -v 'Q756617\|Q29999\|Q407199\|Q240592\|Q83286\|Q1246\|Q21590062' data/wd_countries.csv > data/wd_countries.filtered.csv
+mv data/wd_countries.filtered.csv data/wd_countries.csv
 
 # Use awk to modify the second column, write to a temporary file
 awk -F, 'BEGIN {OFS = FS} {if (NR > 1) $2="https://www.wikidata.org/wiki/" $2; print}' "data/wd_countries.csv" > "data/wd_countries.tmp.csv"
